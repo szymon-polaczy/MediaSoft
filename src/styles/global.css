@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 
 html {
     font-size: 16px;
@@ -8,8 +9,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    /*background-color: #36313d;
-    color: #d9d7e0;*/
     color: #222;
 }
 a {
@@ -22,26 +21,57 @@ a:hover {
     color: #99ccff;
 }
 
+.wrapper {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+
+.warning {
+    color: #000;
+    font-size: .75rem;
+    display: flex;
+    padding: 1vh 0;
+    flex-flow: row;
+    align-items: center;
+}
+
+.warning i {
+    padding-right: 1vh;
+    font-size: 1rem;
+}
+
 .main-header {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    width: 100vw;
+    height: 7.5vh;
+    background-color: #fff;
+    box-shadow: 0 0 1vh #eee;
+}
+
+.main-header .wrapper {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    width: 100vw;
-    background-color: #fff;
+    align-items: center;
+}
+
+.main-header img {
+    margin-left: 1vw;
 }
 
 .main-header ul {
     display: flex;
     flex-flow: row;
     list-style-type: none;
-    /*display: none;*/
+    padding: 0;
+    margin: 0;
 }
 
 .main-header ul li {
-    padding: 0 1vw;
+    padding: 0 1.5vw;
 }
 
 .main-footer {
@@ -67,41 +97,47 @@ a:hover {
 }
 
 .main-footer-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    flex-flow: wrap;
     width: 100vw;
     border-top: .2vh solid #99ccff;
     font-size: 1rem;
     letter-spacing: .01vw;
 }
 
-.main-footer-top div {
+.main-footer .wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.main-footer-top .wrapper div {
     margin: 2.5vh 0;
 }
 
-.main-footer-top .contact-section span {
+.main-footer-top p {
+    line-height: 150%;
+}
+
+.main-footer-top .contact-section p {
     line-height: 200%;
 }
 
-.main-footer-top div h3 {
+.main-footer-top .wrapper div h3 {
     font-size: .8rem;
     color: #444;
     text-transform: uppercase;
 }
 
-.main-footer-top div p {
+.main-footer-top .wrapper div p {
     margin: 1.5vh 0;
 }
 
-.main-footer-top div span {
+.main-footer-top .wrapper div span {
     display: block;
     margin: .5vh 0;
 }
 
-.main-footer-top div span b,
-.main-footer-topdiv span b a {
+.main-footer-top .wrapper div span b{
     font-size: .95rem;
     font-weight: 600;
     color: #888;
@@ -111,16 +147,20 @@ a:hover {
     width: 100vw;
     text-align: center;
     border-top: .2vh solid #99ccff;
+}
+
+.main-footer-bottom .wrapper {
     display: flex;
     flex-flow: wrap;
     justify-content: space-around;
+    align-items: center;
 }
 
-.main-footer-bottom div p {
+.main-footer-bottom .wrapper div p {
     margin: 1vh 0;
 }
 
-.main-footer-bottom nav ul {
+.main-footer-bottom .wrapper nav ul {
     list-style-type: none;
     display: flex;
     flex-flow: wrap;
@@ -131,6 +171,47 @@ a:hover {
     margin-bottom: 1vh;
 }
 
-.main-footer-bottom nav ul li {
+.main-footer-bottom .wrapper nav ul li {
     padding: 1vw;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: .5vh;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 10vw;
+    margin-top: 1vh;
+    height: .2vh;
+    background-color: #99ccff;
+}
+
+h1, small {
+    text-align: center;
+}
+
+small {
+    display: block;
+    font-size: .8rem;
+    margin-bottom: 1.5vh;
+}
+
+.contact-main .wrapper {
+    display: flex;
+    flex-flow: column;
+}
+
+.contact-main .wrapper .section-holder {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.contact-main .wrapper .section-holder p {
+    line-height: 150%;
 }
