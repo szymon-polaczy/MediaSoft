@@ -7,7 +7,7 @@ export default () => (
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/websites/">Strony WWW</Link></li>
-            <li><Link to="/hosting/">Hosting & Serwery</Link></li>
+            <li><Link to="/hosting/">Hosting</Link></li>
             <li><Link to="/domains/">Domeny</Link></li>
             <li><Link to="/google/">Linki Sponsorowane</Link></li>
             <li><Link to="/contact/">Kontakt</Link></li>
