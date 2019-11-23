@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 export default () => (
     <footer className="main-footer">
@@ -21,9 +22,9 @@ export default () => (
             <div className="contact-section">
                 <h3>Skontaktuj się z nami:</h3>
                 <p>
-                    <span>E-mail: mediasoft@mediasoft.pl</span>
-                    <span>Tel.stacjonarny: <b>77 433 16 15</b></span>
-                    <span>Tel.komórkowy <b>501 442 493</b></span>
+                    <span>E-mail: <b><a href="mailto:mediasoft@mediasoft.pl">mediasoft@mediasoft.pl</a></b></span>
+                    <span>Tel.stacjonarny: <b><a href="tel:77-433-16-15">77 433 16 15</a></b></span>
+                    <span>Tel.komórkowy <b><a href="tel:501-442-493">501 442 493</a></b></span>
                 </p>
             </div>
         </div>
@@ -33,8 +34,8 @@ export default () => (
             </div>
             <nav>
                 <ul>
-                    <li>Polityka Cookies</li>
-                    <li>Polityka Prywatności</li>
+                    <li><Link to="/cookies-policy/">Polityka Cookies</Link></li>
+                    <li><Link to="/privacy-policy/">Polityka Prywatności</Link></li>
                 </ul>
             </nav>
         </div>

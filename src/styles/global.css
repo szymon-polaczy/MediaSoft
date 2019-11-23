@@ -12,6 +12,15 @@ body {
     color: #d9d7e0;*/
     color: #222;
 }
+a {
+    color: #444;
+    text-decoration: none;
+    transition: transform .1s ease-in-out;
+}
+
+a:hover {
+    color: #99ccff;
+}
 
 .main-header {
     position: sticky;
@@ -35,16 +44,6 @@ body {
     padding: 0 1vw;
 }
 
-.main-header ul li a {
-    color: #444;
-    text-decoration: none;
-    transition: transform .1s ease-in-out;
-}
-
-.main-header ul li:hover a {
-    color: #99ccff;
-}
-
 .main-footer {
     display: flex;
     flex-flow: column;
@@ -53,6 +52,18 @@ body {
     background-color: #fff;
     color: #999;
     font-size: 1rem;
+}
+
+.main-footer-top a {
+    color: #888;
+}
+
+.main-footer-bottom a {
+    color: #999;
+}
+
+.main-footer a:hover {
+    color: #99ccff;
 }
 
 .main-footer-top {
@@ -89,7 +100,8 @@ body {
     margin: .5vh 0;
 }
 
-.main-footer-top div span b {
+.main-footer-top div span b,
+.main-footer-topdiv span b a {
     font-size: .95rem;
     font-weight: 600;
     color: #888;
