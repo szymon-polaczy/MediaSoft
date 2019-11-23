@@ -49,6 +49,7 @@ a:hover {
     height: 7.5vh;
     background-color: #fff;
     box-shadow: 0 0 1vh #eee;
+    z-index: 100;
 }
 
 .main-header .wrapper {
@@ -72,6 +73,20 @@ a:hover {
 
 .main-header ul li {
     padding: 0 1.5vw;
+    position: relative;
+}
+
+.main-header ul a:hover::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: .2vh;
+    background-color: #99ccff;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: calc(100% + .25vh);
+    right: 0;
 }
 
 .main-footer {
@@ -184,7 +199,7 @@ h1::after {
     content: '';
     display: block;
     margin: auto;
-    width: 10vw;
+    width: 25vw;
     margin-top: 1vh;
     height: .2vh;
     background-color: #99ccff;
@@ -214,4 +229,56 @@ small {
 
 .contact-main .wrapper .section-holder p {
     line-height: 150%;
+}
+
+.websites-show-off {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2.5vh 0 5vh 0;
+}
+
+.website-holder {
+    width: 320px;
+    height: 180px;
+    background-color: #efefef;
+    position: relative;
+    box-shadow: 0 0 1vh #ccc;
+    margin: 1vh 0;
+    overflow: hidden;
+}
+
+.website-holder a {
+    color: #99ccff;
+}
+
+.website-holder img,
+.website-holder p {
+    transition: .15s transform ease-out;
+}
+
+.website-holder:hover img,
+.website-holder:hover p {
+    transition: .3 transform ease-in;
+}
+
+.website-holder p {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 1vh 0;
+    transform: translateY(100%);
+}
+
+.website-holder:hover p {
+    transform: translateY(0);
+}
+
+.website-holder:hover img {
+    transform: scale(1.1);
 }

@@ -17,11 +17,11 @@ export default () => (
                         <p>
                             Godziny pracy <br/>
                             Poniedziałek - Piątek <b>9:00-16:00</b>
-                            <span className="warning">
-                                <i class="fas fa-exclamation"></i>
+                            <div className="warning">
+                                <i className="fas fa-exclamation"></i>
                                 <p>Spotkania w naszym biurze <b>wyłącznie</b><br/>
                                 po wcześniejszym umówieniu się telefonicznie.</p>
-                            </span>
+                            </div>
                         </p>
                     </section>
                     <section>
