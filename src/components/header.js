@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-export default props => (
+export default () => (
     <header className="main-header">
         <img src="https://mediasoft.com.pl/jpg/media-logo.png" alt="MediaSoft Logo"/>
         <ul>

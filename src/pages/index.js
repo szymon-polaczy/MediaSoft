@@ -1,9 +1,8 @@
 import React from "react"
-import Header from "../components/header"
+import MainLayout from "../components/MainLayout"
 
 export default () => (
-    <div>
-        <Header headerText="MediaSoft"/>
+    <MainLayout>
         <p>This is MediaSoft Webpage</p>
-    </div>
+    </MainLayout>
 )
