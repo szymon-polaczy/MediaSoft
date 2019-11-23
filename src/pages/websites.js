@@ -1,6 +1,7 @@
 import React from "react"
 import MainLayout from "../components/MainLayout"
 import WebsiteHolder from "../components/WebsiteHolder"
+import ContactUs from "../components/ContactUs"
 import image from "./320x180.png"
 
 export default () => (
@@ -21,5 +22,6 @@ export default () => (
                 </div>
             </div>
         </section>
+        <ContactUs/>
     </MainLayout>
 )
