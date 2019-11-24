@@ -3,6 +3,8 @@ import MainLayout from "../components/MainLayout"
 import WebsiteHolder from "../components/WebsiteHolder"
 import ContactUs from "../components/ContactUs"
 import image from "./320x180.png"
+import image2 from "./320x180 - 2.png"
+import image3 from "./320x180 - 3.png"
 
 export default () => (
     <MainLayout>
@@ -124,13 +126,13 @@ export default () => (
                 <small>Zobacz co ostatnio wykonaliśmy</small>
                 <div className="websites-show-off flex justify-around">
                     <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Pierwsza"/>
-                    <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Druga"/>
+                    <WebsiteHolder img_src={image2} img_alt="Alt do zdjęcia" title="Strona Druga"/>
                     <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Nie Druga"/>
-                    <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Kolejna"/>
+                    <WebsiteHolder img_src={image3} img_alt="Alt do zdjęcia" title="Strona Kolejna"/>
                     <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Jeszcze Inna"/>
-                    <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Strona"/>
-                    <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Nie Strona"/>
-                    <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Hmm"/>
+                    <WebsiteHolder img_src={image3} img_alt="Alt do zdjęcia" title="Strona Strona"/>
+                    <WebsiteHolder img_src={image2} img_alt="Alt do zdjęcia" title="Strona Nie Strona"/>
+                    <WebsiteHolder img_src={image3} img_alt="Alt do zdjęcia" title="Strona Hmm"/>
                 </div>
             </div>
         </section>

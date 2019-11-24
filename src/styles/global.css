@@ -23,6 +23,35 @@ a:hover {
     transition: all .1s ease-in-out;
 }
 
+button {
+    padding: .5vh 1.25vw;
+    background-color: #fff;
+    outline: none;
+    border: .2vh solid #5588bb;
+    color: #222;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+button:hover {
+    background-color: #5588bb;
+}
+
+button:hover,
+button:hover a {
+    color: #fff;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.box-shadow {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.box-shadow:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
 .wrapper {
     max-width: 1200px;
     height: 100%;
@@ -46,7 +75,7 @@ a:hover {
     width: 100vw;
     height: 7.5vh;
     background-color: #fff;
-    box-shadow: 0 0 1vh #eee;
+    box-shadow: 0 0 1vh #ccc;
     z-index: 100;
 }
 
@@ -205,8 +234,8 @@ small {
     width: 320px;
     height: 180px;
     background-color: #efefef;
+    background: #fff;
     position: relative;
-    box-shadow: 0 0 1vh #ccc;
     margin: 1vh 0;
     overflow: hidden;
 }
@@ -222,7 +251,7 @@ small {
 
 .website-holder:hover img,
 .website-holder:hover p {
-    transition: .3 transform ease-in;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .website-holder p {
@@ -268,13 +297,6 @@ small {
     min-width: 20rem;
     padding: 1rem 0 4rem 0;
     position: relative;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.sell-card:hover {
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .sell-card h2 {
@@ -336,18 +358,7 @@ small {
 }
 
 .sell-card button {
-    padding: .5vh 1.25vw;
     margin-bottom: -1vh;
-    background-color: #fff;
-    outline: none;
-    border: .2vh solid #5588bb;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.sell-card button:hover {
-    background-color: #5588bb;
-    color: #fff;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .regulations-section {
@@ -355,6 +366,7 @@ small {
 }
 
 .welcome-section {
+    /*min-height: calc(100vh - 7.5vh); <- To będzie pełny ekran, trzeba przesunąć wyżeh h1*/
     min-height: 50vh;
     background-image: url("./Background-No-1.jpg");
     background-position: center;
@@ -378,8 +390,6 @@ small {
     padding: .5rem 1rem;
     text-align: justify;
 }
-
-/*Próba ograniczenia css*/
 
 .flex {
     display: flex;
