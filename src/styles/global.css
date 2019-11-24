@@ -66,6 +66,7 @@ a:hover {
 
 .main-header ul {
     display: flex;
+    display: none;
     flex-flow: row;
     list-style-type: none;
     padding: 0;
@@ -317,4 +318,101 @@ small {
 
 .contact-link p {
     font-size: 1.25rem;
+}
+
+.sell-card {
+    margin: 1.5vh;
+    box-sizing: content-box;
+    min-width: 20rem;
+    padding: 1rem 0 4rem 0;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.sell-card:hover {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.sell-card h2 {
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: 2.5vh;
+}
+
+.sell-card h2 span {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: .5vh;
+    text-transform: uppercase;
+}
+
+.sell-card .price-holder {
+    background-color: #eee;
+    width: 100%;
+    padding: 3vh 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5588bb;
+    position: relative;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.sell-card:hover .price-holder {
+    box-shadow: inset 0 -3.25em 0 0 #5588bb;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    color: #fff;
+}
+
+.sell-card:hover .price-holder::after {
+    border-top: 1rem solid #5588bb;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+.sell-card .price-holder::after {
+    content: '';
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid #eee;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.sell-card button {
+    position: absolute;
+    bottom: 0;
+    padding: .5vh 1.25vw;
+    margin-bottom: -1vh;
+    background-color: #fff;
+    outline: none;
+    border: .2vh solid #5588bb;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.sell-card button:hover {
+    background-color: #5588bb;
+    color: #fff;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+/*Próba ograniczenia css*/
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.flex-column {
+    flex-flow: column;
 }
