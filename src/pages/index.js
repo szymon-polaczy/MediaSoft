@@ -14,7 +14,6 @@ export default () => (
             <section className="pad-it">
                 <div className="wrapper">
                     <h1>Nasza oferta</h1>
-                    <small>Zapraszamy do zapoznania się z naszą ofertą</small>
                     <div className="flex">
                         <SellCard title_type="" title_name="Strony WWW" price="Od 300zł"/>
                         <SellCard title_type="" title_name="Hosting" price="Od 109zł"/>
@@ -27,7 +26,6 @@ export default () => (
             <section className="pad-it">
                 <div className="wrapper">
                     <h1>MediaSoft</h1>
-                    <small>Kilka słów o naszym zespole</small>
                     <p className="higher-text">Od 2003 roku zajmujemy się kompleksową obsługą firm pragnących zaistnieć w Internecie 
                         oraz zwiększyć efektywność swoich stron internetowych. Przez ten czas wykonaliśmy 
                         blisko 300 stron internetowych, zarejestrowaliśmy w katalogach i wyszukiwarkach 
