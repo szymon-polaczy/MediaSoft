@@ -2,10 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 
 export default () => (
-    <footer className="main-footer">
-
+    <footer className="main-footer flex flex-column">
         <div className="main-footer-top">
-            <div className="wrapper">
+            <div className="wrapper flex justify-around align-start">
                 <div>
                     <h3>MediaSoft</h3>
                     <p>
@@ -32,12 +31,12 @@ export default () => (
             </div>
         </div>
         <div className="main-footer-bottom">
-            <div className="wrapper">
+            <div className="wrapper flex justify-around">
                 <div>
                     <p>Copytight &copy; MediaSoft</p>
                 </div>
                 <nav>
-                    <ul>
+                    <ul className="flex justify-around">
                         <li><Link to="/cookies-policy/">Polityka Cookies</Link></li>
                         <li><Link to="/privacy-policy/">Polityka Prywatności</Link></li>
                     </ul>

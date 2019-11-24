@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 
 export default () => (
     <header className="main-header">
-        <div className="wrapper">
+        <div className="flex justify-between wrapper">
             <img src="https://mediasoft.com.pl/jpg/media-logo.png" alt="MediaSoft Logo"/>
-            <ul>
+            <ul className="flex">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/websites/">Strony WWW</Link></li>
                 <li><Link to="/hosting/">Hosting</Link></li>

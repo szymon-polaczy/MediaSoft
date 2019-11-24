@@ -31,10 +31,7 @@ a:hover {
 .warning {
     color: #000;
     font-size: .75rem;
-    display: flex;
     padding: 1vh 0;
-    flex-flow: row;
-    align-items: center;
 }
 
 .warning i {
@@ -52,20 +49,11 @@ a:hover {
     z-index: 100;
 }
 
-.main-header .wrapper {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .main-header img {
     margin-left: 1vw;
 }
 
 .main-header ul {
-    display: flex;
-    flex-flow: row;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -97,10 +85,6 @@ a:hover {
 }
 
 .main-footer {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
     background-color: #fff;
     color: #999;
     font-size: 1rem;
@@ -123,13 +107,6 @@ a:hover {
     border-top: .2vh solid #5588bb;
     font-size: 1rem;
     letter-spacing: .01vw;
-}
-
-.main-footer .wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    flex-flow: wrap;
 }
 
 .main-footer-top .wrapper div {
@@ -171,30 +148,19 @@ a:hover {
     border-top: .2vh solid #5588bb;
 }
 
-.main-footer-bottom .wrapper {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .main-footer-bottom .wrapper div p {
     margin: 1vh 0;
 }
 
 .main-footer-bottom .wrapper nav ul {
     list-style-type: none;
-    display: flex;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: space-around;
     padding: 0;
     margin: 0;
     margin-bottom: 1vh;
 }
 
 .main-footer-bottom .wrapper nav ul li {
-    padding: 1vw;
+    padding: 1rem;
 }
 
 h1 {
@@ -222,16 +188,8 @@ small {
     margin-bottom: 1.5vh;
 }
 
-.contact-main .wrapper {
-    display: flex;
-    flex-flow: column;
-}
-
-.contact-main .wrapper .section-holder {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+.section-holder {
+    width: 100%;
 }
 
 .contact-main .wrapper .section-holder p {
@@ -239,10 +197,6 @@ small {
 }
 
 .websites-show-off {
-    display: flex;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: space-around;
     padding: 2.5vh 0 5vh 0;
 }
 
@@ -295,18 +249,7 @@ small {
 }
 
 .contain-contacts {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: wrap;
     padding-top: 1vh;
-}
-
-.contact-link{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: row;
 }
 
 .contact-link i {
@@ -431,6 +374,7 @@ small {
 }
 
 /*Próba ograniczenia css*/
+
 .flex {
     display: flex;
     align-items: center;
@@ -440,6 +384,18 @@ small {
 
 .flex-column {
     flex-flow: column;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-start {
+    align-items: flex-start;
 }
 
 .pad-it {

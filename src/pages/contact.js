@@ -4,10 +4,10 @@ import MainLayout from "../components/MainLayout"
 export default () => (
     <MainLayout>
         <main className="contact-main">
-            <div className="wrapper pad-it">
+            <div className="wrapper pad-it flex flex-column">
                 <h1>Skontaktuj się z nami</h1>
                 <small>Skontakuj się z nami i dołącz do grona zadowolonych klientów</small>
-                <div className="section-holder">
+                <div className="section-holder flex align-start justify-around">
                     <section>
                         <h3>Siedziba</h3>
                         <p>
@@ -17,7 +17,7 @@ export default () => (
                         <p>
                             Godziny pracy <br/>
                             Poniedziałek - Piątek <b>9:00-16:00</b>
-                            <div className="warning">
+                            <div className="warning flex">
                                 <i className="fas fa-exclamation"></i>
                                 <p>Spotkania w naszym biurze <b>wyłącznie</b><br/>
                                 po wcześniejszym umówieniu się telefonicznie.</p>

@@ -122,7 +122,7 @@ export default () => (
             <div className="wrapper">
                 <h1>Nasze najnowsze realizacje</h1>
                 <small>Zobacz co ostatnio wykonaliśmy</small>
-                <div className="websites-show-off">
+                <div className="websites-show-off flex justify-around">
                     <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Pierwsza"/>
                     <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Druga"/>
                     <WebsiteHolder img_src={image} img_alt="Alt do zdjęcia" title="Strona Nie Druga"/>
