@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-    color: #99ccff;
+    color: #5588bb;
     transition: all .1s ease-in-out;
 }
 
@@ -81,7 +81,7 @@ a:hover {
     display: block;
     width: 50%;
     height: .2vh;
-    background-color: #99ccff;
+    background-color: #5588bb;
     position: absolute;
     margin: auto;
     left: 0;
@@ -115,12 +115,12 @@ a:hover {
 }
 
 .main-footer a:hover {
-    color: #99ccff;
+    color: #5588bb;
 }
 
 .main-footer-top {
     width: 100vw;
-    border-top: .2vh solid #99ccff;
+    border-top: .2vh solid #5588bb;
     font-size: 1rem;
     letter-spacing: .01vw;
 }
@@ -168,7 +168,7 @@ a:hover {
 .main-footer-bottom {
     width: 100vw;
     text-align: center;
-    border-top: .2vh solid #99ccff;
+    border-top: .2vh solid #5588bb;
 }
 
 .main-footer-bottom .wrapper {
@@ -209,7 +209,7 @@ h1::after {
     width: 25vw;
     margin-top: 1vh;
     height: .2vh;
-    background-color: #99ccff;
+    background-color: #5588bb;
 }
 
 h1, small {
@@ -257,7 +257,7 @@ small {
 }
 
 .website-holder a {
-    color: #99ccff;
+    color: #5588bb;
 }
 
 .website-holder img,
@@ -337,6 +337,7 @@ small {
     font-size: .8rem;
     text-align: center;
     margin-bottom: 2.5vh;
+    padding: 0 1rem;
 }
 
 .sell-card h2 span {
@@ -386,9 +387,12 @@ small {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.sell-card button {
+.sell-card a {
     position: absolute;
     bottom: 0;
+}
+
+.sell-card button {
     padding: .5vh 1.25vw;
     margin-bottom: -1vh;
     background-color: #fff;
@@ -403,6 +407,12 @@ small {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
+.regulations-section {
+    margin-bottom: 7.5vh;
+}
+
+
+
 /*Próba ograniczenia css*/
 .flex {
     display: flex;
@@ -413,4 +423,12 @@ small {
 
 .flex-column {
     flex-flow: column;
+}
+
+.pad-it {
+    padding: 1.5rem 0 3.5rem 0;
+}
+
+.higher-text {
+    line-height: 150%;
 }

@@ -6,7 +6,7 @@ import image from "./320x180.png"
 
 export default () => (
     <MainLayout>
-        <section>
+        <section className="higher-text pad-it">
             <div className="wrapper">
                 <h1>Tworzenie Stron Internetowych</h1>
                 <p>Każda stworzona przez nas strona WWW jest przygotowywana indywidualnie pod 
@@ -24,7 +24,7 @@ export default () => (
                     programowania, tworzenia animacji i przygotowania pozostałych elementów graficznych.</p>
             </div>
         </section>
-        <section>
+        <section className="higher-text pad-it">
             <div className="wrapper">
                 <h1>Tworzenie Sklepów Internetowych</h1>
                 <p>Sklepy internetowe stworzone przy pomocy oprogramowania MediaSoft, 
@@ -40,7 +40,7 @@ export default () => (
                     nas sklepy internetowe uważane są za jedne z najlepszych dostępnych na rynku.</p>
             </div>
         </section>
-        <section>
+        <section className="higher-text pad-it">
             <div className="wrapper">
                 <h1>Panele MediaCMS</h1>
                 <p>Panele MediaCMS to nowoczesne rozwiązania dla osób, które posiadają stronę internetową i 
@@ -99,7 +99,7 @@ export default () => (
                     i przyjazne dla użytkownika oraz, żeby dawały dużą swobodę działań związanych z SEO.</p>
             </div>
         </section>
-        <section>
+        <section className="higher-text pad-it">
             <div className="wrapper">
                 <h1>Opieka Nad Stronami</h1>
                 <p>Jeśli posiadają Państwo swoją stronę internetową i nie mają czasu lub możliwości do 

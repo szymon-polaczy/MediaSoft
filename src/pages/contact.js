@@ -4,7 +4,7 @@ import MainLayout from "../components/MainLayout"
 export default () => (
     <MainLayout>
         <main className="contact-main">
-            <div className="wrapper">
+            <div className="wrapper pad-it">
                 <h1>Skontaktuj się z nami</h1>
                 <small>Skontakuj się z nami i dołącz do grona zadowolonych klientów</small>
                 <div className="section-holder">
