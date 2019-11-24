@@ -432,3 +432,7 @@ small {
 .higher-text {
     line-height: 150%;
 }
+
+.text-center {
+    text-align: center;
+}

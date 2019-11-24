@@ -117,6 +117,7 @@ export default () => (
                     obsługę. Zlecenia stałe są realizowane przez nas priorytetowo. Również dla takich zleceń stosujemy upusty cenowe.</p>
             </div>
         </section>
+        <ContactUs/>
         <section>
             <div className="wrapper">
                 <h1>Nasze najnowsze realizacje</h1>
@@ -133,6 +134,5 @@ export default () => (
                 </div>
             </div>
         </section>
-        <ContactUs/>
     </MainLayout>
 )
