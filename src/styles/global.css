@@ -411,7 +411,24 @@ small {
     margin-bottom: 7.5vh;
 }
 
+.welcome-section {
+    min-height: 50vh;
+    background-image: url("./Background-No-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.welcome-section h1 {
+    color: #fff;
+    text-shadow: 0 0 1rem #222;
+    text-transform: uppercase;
+    letter-spacing: .2vw;
+}
+
+.welcome-section h1::after {
+    display: none;
+}
 
 /*Próba ograniczenia css*/
 .flex {
@@ -431,8 +448,4 @@ small {
 
 .higher-text {
     line-height: 150%;
-}
-
-.text-center {
-    text-align: center;
 }
