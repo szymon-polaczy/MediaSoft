@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 export default () => (
     <MainLayout>
-        <h1>Hosting Stron Internetowych</h1>
+    <h1>Hosting Stron Internetowych</h1>
         <section>
             <div className="wrapper flex">
                 <SellCard title_type="Serwery Wirtualne" title_name="Basic 1GB" price="109zł"/>

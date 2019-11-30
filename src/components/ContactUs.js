@@ -7,13 +7,13 @@ export default() => (
             <div className="contain-contacts flex justify-around">
                 <div>
                     <a href="mailto:kontakt@mediasoft.pl" className="contact-link flex justify-around">
-                        <i class="fas fa-envelope"></i>
+                        <i className="fas fa-envelope"></i>
                         <p>kontakt@mediasoft.pl</p>
                     </a>
                 </div>
                 <div>
                     <a href="tel:501-442-493" className="contact-link flex justify-around">
-                        <i class="fas fa-phone-alt"></i>
+                        <i className="fas fa-phone-alt"></i>
                         <p>501 442 493</p>
                     </a>
                 </div>
