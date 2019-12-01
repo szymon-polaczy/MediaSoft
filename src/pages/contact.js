@@ -1,9 +1,13 @@
 import React from "react"
 import MainLayout from "../components/MainLayout"
+import WelcomeSection from "../components/WelcomeSection"
+
+import image from "../styles/Contact.jpg"
 
 export default () => (
     <MainLayout>
         <main className="contact-main">
+            <WelcomeSection img={image} alt="Background Computer Image" message="Kontakt"/>
             <div className="wrapper pad-it flex flex-column">
                 <h1>Skontaktuj się z nami</h1>
                 <small>Skontakuj się z nami i dołącz do grona zadowolonych klientów</small>

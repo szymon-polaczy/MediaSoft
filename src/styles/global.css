@@ -363,26 +363,6 @@ small {
     margin-bottom: 7.5vh;
 }
 
-.welcome-section {
-    /*min-height: calc(100vh - 7.5vh);/* <- To będzie pełny ekran, trzeba przesunąć wyżeh h1*/
-    min-height: 50vh;
-    background-image: url("./Background-No-1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.welcome-section h1 {
-    color: #fff;
-    text-shadow: 0 0 1rem #000;
-    text-transform: uppercase;
-    letter-spacing: .2vw;
-}
-
-.welcome-section h1::after {
-    display: none;
-}
-
 .p-blocking .wrapper div {
     max-width: 20rem;
     padding: .5rem 1rem;
@@ -514,3 +494,38 @@ small {
 
 /*--------------------------------------BURGER MENU--------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
+
+.welcome-section {
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.welcome-section img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    min-height: 100%;
+    z-index: 3;
+    object-fit: cover;
+}
+
+.welcome-section h1 {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: calc(50% - 32px);
+    margin: auto;
+
+    color: #fff;
+    text-shadow: 0 0 1rem #000;
+    text-transform: uppercase;
+    letter-spacing: .2vw;
+}
+
+.welcome-section h1::after {
+    display: none;
+}

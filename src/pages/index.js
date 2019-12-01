@@ -2,15 +2,21 @@ import React from "react"
 import MainLayout from "../components/MainLayout"
 import ContactUs from "../components/ContactUs"
 import SellCard from "../components/SellCard"
+import WelcomeSection from "../components/WelcomeSection"
+
+import image from "../styles/LandingPage.jpg"
 
 export default () => (
     <MainLayout>
         <main>
+            <WelcomeSection img={image} alt="Background Computer Image" message="Profesjonalna Obsułga Stron Internetowych"/>
+            {/*
             <section className="welcome-section flex">
                 <div className="wrapper">
                     <h1>Profesjonalna Obsługa Stron Internetowych</h1>
                 </div>
             </section>
+            */}
             <section className="pad-it">
                 <div className="wrapper">
                     <h1>Nasza oferta</h1>
