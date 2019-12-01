@@ -495,6 +495,12 @@ small {
 /*--------------------------------------BURGER MENU--------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
 
+
+
+.welcome-section h1::after {
+    display: none;
+}
+
 .welcome-section {
     height: 50vh;
     overflow: hidden;
@@ -526,6 +532,17 @@ small {
     letter-spacing: .2vw;
 }
 
-.welcome-section h1::after {
-    display: none;
+/*GOOGLE MAPS EMBED*/
+.mapouter {
+    position:relative;
+    text-align:right;
+    height: 50vh;
+    width: 100%;
+}
+
+#gmap_canvas {
+    overflow:hidden;
+    background: none!important;
+    height: 50vh;
+    width: 100%;
 }

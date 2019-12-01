@@ -3,11 +3,12 @@ import MainLayout from "../components/MainLayout"
 import WelcomeSection from "../components/WelcomeSection"
 
 import image from "../styles/Contact.jpg"
+import GoogleMapsEmbed from "../components/GoogleMapsEmbed"
 
 export default () => (
     <MainLayout>
         <main className="contact-main">
-            <WelcomeSection img={image} alt="Background Computer Image" message="Kontakt"/>
+            <WelcomeSection img={image} alt="Background Computer Image" message="Skontakuj się z nami"/>
             <div className="wrapper pad-it flex flex-column">
                 <h1>Skontaktuj się z nami</h1>
                 <small>Skontakuj się z nami i dołącz do grona zadowolonych klientów</small>
@@ -51,5 +52,6 @@ export default () => (
                 </div>
             </div>
         </main>
+        <GoogleMapsEmbed/>
     </MainLayout>
 )

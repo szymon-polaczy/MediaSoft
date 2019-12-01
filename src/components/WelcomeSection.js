@@ -1,5 +1,4 @@
 import React from "react"
-
 class WelcomeSection extends React.Component {
     render() {
         return (
