@@ -1,14 +1,26 @@
 import React from "react"
 import MainLayout from "../components/MainLayout"
+import GoogleMapsEmbed from "../components/GoogleMapsEmbed"
+import { useStaticQuery, graphql } from "gatsby"
 import WelcomeSection from "../components/WelcomeSection"
 
-import image from "../styles/Contact.jpg"
-import GoogleMapsEmbed from "../components/GoogleMapsEmbed"
+export default () => {
+    const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "Contact.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 5184) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
-export default () => (
+    return (
     <MainLayout>
         <main className="contact-main">
-            <WelcomeSection img={image} alt="Background Computer Image" message="Skontakuj się z nami"/>
+            <WelcomeSection img={data.file.childImageSharp.fluid} alt="Background Computer Image" message="Skontakuj się z nami"/>*
             <div className="wrapper pad-it flex flex-column">
                 <h1>Skontaktuj się z nami</h1>
                 <small>Skontakuj się z nami i dołącz do grona zadowolonych klientów</small>
@@ -54,4 +66,5 @@ export default () => (
         </main>
         <GoogleMapsEmbed/>
     </MainLayout>
-)
+    )
+}

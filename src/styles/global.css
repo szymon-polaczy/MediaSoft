@@ -1,63 +1,325 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
-html {
-    font-size: 16px;
+:root {
+  --theme-color: #5588bb;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-    color: #222;
+  font-family: "Lato", sans-serif;
+  color: #222;
 }
 
 a {
-    color: #444;
-    text-decoration: none;
-    transition: all .1s ease-in-out;
+  color: #444;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-    color: #5588bb;
-    transition: all .1s ease-in-out;
+  color: var(--theme-color);
 }
 
 button {
-    padding: .5vh 1.25vw;
-    background-color: #fff;
-    outline: none;
-    border: .2vh solid #5588bb;
-    color: #222;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 0.2vh solid var(--theme-color);
+  text-transform: uppercase;
+  border-radius: 1.5vw;
+  padding: 0.65vh 1.5vw;
+  background: #fff;
+  font-size: 0.75rem;
+  outline: none;
+  color: #222;
 }
 
 button:hover {
-    background-color: #5588bb;
+  background: var(--theme-color);
+  color: #fff;
 }
 
-button:hover,
-button:hover a {
-    color: #fff;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+button:focus {
+  transform: scale(1.05);
 }
 
-.box-shadow {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+h1 {
+  font-size: 2rem;
+  margin: 0.67em 0 0.5vh 0;
+  padding: 0 1rem;
+  font-weight: bold;
 }
 
-.box-shadow:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+h1::after {
+  content: "";
+  display: block;
+  width: 25vw;
+  margin: 1vh auto;
+  height: 0.2vh;
+  background: var(--theme-color);
+}
+
+small {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 1.5vh;
+}
+
+h1,
+small {
+  text-align: center;
+}
+
+/*--------------------------MY CLASSES--------------------------*/
+
+.welcome-section h1::after {
+  display: none;
+}
+
+.welcome-section {
+  height: 50vh;
+  position: relative;
+}
+
+/*This is gatsby css class - it needs this height for positioning image in center*/
+.welcome-section .gatsby-image-wrapper {
+  height: 100%;
+}
+
+.welcome-section h1 {
+  position: absolute;
+  z-index: 5;
+  top: calc(50% - 32px);
+  width: 100%;
+  color: #fff;
+  text-shadow: 0 0 1rem #000;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+}
+
+.sell-card {
+  margin: 1.5vh;
+  min-width: 20rem;
+  padding: 1rem 0 4rem 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+
+.sell-card h2 {
+  font-size: 0.8rem;
+  margin-bottom: 2.5vh;
+  padding: 0 1rem;
+}
+
+.sell-card h2 span {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 0.5vh;
+  text-transform: uppercase;
+}
+
+.sell-card .price-holder {
+  background: #eee;
+  width: 100%;
+  padding: 3vh 0;
+  font-size: 2rem;
+  color: var(--theme-color);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sell-card .price-holder::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid #eee;
+  position: absolute;
+  bottom: -0.99rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sell-card a {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -1vh;
+}
+
+.sell-card:hover .price-holder {
+  box-shadow: inset 0 -3.25em 0 0 var(--theme-color);
+  color: #fff;
+}
+
+.sell-card:hover .price-holder::after {
+  border-top: 1rem solid var(--theme-color);
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  height: 7.5vh;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0 0 1vh #ccc;
+}
+
+/*---------------------MY REUSABLE CLASSES---------------------*/
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.flex-column {
+  flex-flow: column;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-start {
+  align-items: flex-start;
 }
 
 .wrapper {
-    max-width: 1200px;
-    height: 100%;
-    margin: auto;
-    padding: 0 7.5vw;
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  padding: 0 7.5vw;
 }
+
+.pad-it {
+  padding: 1.5rem 0 3.5rem 0;
+}
+
+.higher-text {
+  line-height: 150%;
+}
+
+.box-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.box-shadow:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/*----------------------------GMAPS----------------------------*/
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 50vh;
+  width: 100%;
+}
+
+#gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 50vh;
+  width: 100%;
+}
+
+/*---------------------REACT-BURGER-MENU---------------------*/
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  right: calc(((100% - 1200px) / 2) + 3.25vw);
+  right: calc(((100% - 1200px) / 2));
+  top: calc((7.7vh / 2) - 15px);
+}
+
+@media screen and (max-width: 1200px) {
+  .bm-burger-button {
+    width: 24px;
+    height: 20px;
+    top: calc((7.7vh / 2) - 10px);
+    right: 7.5vw;
+  }
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #fff;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  overflow: hidden !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  outline: none;
+  padding: 1vh 0;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*niżej jest do optymalizacji*/
+
 
 .warning {
     color: #000;
@@ -68,47 +330,6 @@ button:hover a {
 .warning i {
     padding-right: 1vh;
     font-size: 1rem;
-}
-
-.main-header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 7.5vh;
-    background-color: #fff;
-    box-shadow: 0 0 1vh #ccc;
-    z-index: 100;
-}
-
-.main-header ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.main-header ul li {
-    padding: 0 1.5vw;
-    position: relative;
-}
-
-.main-header ul a::after {
-    content: '';
-    display: block;
-    width: 50%;
-    height: .2vh;
-    background-color: #5588bb;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    top: calc(100% + .25vh);
-    right: 0;
-    transition: all .1s ease-in-out;
-    opacity: 0;
-}
-
-.main-header ul a:hover::after {
-    opacity: 1;
-    transition: all .1s ease-in-out;
 }
 
 .main-footer {
@@ -190,32 +411,6 @@ button:hover a {
     padding: 1rem;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: .5vh;
-    padding: 0 1rem;
-}
-
-h1::after {
-    content: '';
-    display: block;
-    margin: auto;
-    width: 25vw;
-    margin-top: 1vh;
-    height: .2vh;
-    background-color: #5588bb;
-}
-
-h1, small {
-    text-align: center;
-}
-
-small {
-    display: block;
-    font-size: .8rem;
-    margin-bottom: 1.5vh;
-}
-
 .section-holder {
     width: 100%;
 }
@@ -289,76 +484,6 @@ small {
     font-size: 1.25rem;
 }
 
-.sell-card {
-    margin: 1.5vh;
-    box-sizing: content-box;
-    min-width: 20rem;
-    padding: 1rem 0 4rem 0;
-    position: relative;
-}
-
-.sell-card h2 {
-    font-size: .8rem;
-    text-align: center;
-    margin-bottom: 2.5vh;
-    padding: 0 1rem;
-}
-
-.sell-card h2 span {
-    display: block;
-    font-size: 1.2rem;
-    margin-top: .5vh;
-    text-transform: uppercase;
-}
-
-.sell-card .price-holder {
-    background-color: #eee;
-    width: 100%;
-    padding: 3vh 0;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #5588bb;
-    position: relative;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.sell-card:hover .price-holder {
-    box-shadow: inset 0 -3.25em 0 0 #5588bb;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    color: #fff;
-}
-
-.sell-card:hover .price-holder::after {
-    border-top: 1rem solid #5588bb;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.sell-card .price-holder::after {
-    content: '';
-    display: block;
-    width: 0; 
-    height: 0; 
-    border-left: 1rem solid transparent;
-    border-right: 1rem solid transparent;
-    border-top: 1rem solid #eee;
-    position: absolute;
-    bottom: -.99rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.sell-card a {
-    position: absolute;
-    bottom: 0;
-}
-
-.sell-card button {
-    margin-bottom: -1vh;
-}
-
 .regulations-section {
     margin-bottom: 7.5vh;
 }
@@ -367,182 +492,4 @@ small {
     max-width: 20rem;
     padding: .5rem 1rem;
     text-align: justify;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: wrap;
-}
-
-.flex-column {
-    flex-flow: column;
-}
-
-.justify-around {
-    justify-content: space-around;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.align-start {
-    align-items: flex-start;
-}
-
-.pad-it {
-    padding: 1.5rem 0 3.5rem 0;
-}
-
-.higher-text {
-    line-height: 150%;
-}
-
-
-
-
-
-
-/*--------------------------------------BURGER MENU--------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-    position: fixed;
-    width: 36px;
-    height: 30px;
-    right: 36px;
-    right: calc(((100% - 1200px) / 2) + 3.25vw);
-    right: calc(((100% - 1200px) / 2));
-    top: calc((7.7vh / 2) - 15px);
-  }
-
-@media screen and (max-width: 1200px) {
-    .bm-burger-button {
-        width: 24px;
-        height: 20px;
-        top: calc((7.7vh / 2) - 10px);
-        right: 7.5vw;
-    }
-}
-  
-  /* Color/shape of burger icon bars */
-  .bm-burger-bars {
-    background: #373a47;
-  }
-  
-  /* Color/shape of burger icon bars on hover*/
-  .bm-burger-bars-hover {
-    background: #a90000;
-  }
-  
-  /* Position and sizing of clickable cross button */
-  .bm-cross-button {
-    height: 24px;
-    width: 24px;
-  }
-  
-  /* Color/shape of close button cross */
-  .bm-cross {
-    background: #bdc3c7;
-  }
-  
-  /*
-  Sidebar wrapper styles
-  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-  */
-  .bm-menu-wrap {
-    position: fixed;
-    overflow: hidden;
-    transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
-    /*transition: all .45s ease-in-out !important;*/
-    /*height: 100%;*/
-  }
-  
-  /* General sidebar styles */
-  .bm-menu {
-    background: #fff;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
-    overflow: hidden !important;
-  }
-  
-  /* Morph shape necessary with bubble or elastic */
-  .bm-morph-shape {
-    fill: #373a47;
-  }
-  
-  /* Wrapper for item list */
-  .bm-item-list {
-    color: #b8b7ad;
-    padding: 0 0.8em;
-  }
-  
-  /* Individual item */
-  .bm-item {
-    display: inline-block;
-    outline: none;
-    padding: 1vh 0;
-  }
-  
-  /* Styling of overlay */
-  .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
-  }
-
-/*--------------------------------------BURGER MENU--------------------------------------*/
-/*---------------------------------------------------------------------------------------*/
-
-
-
-.welcome-section h1::after {
-    display: none;
-}
-
-.welcome-section {
-    height: 50vh;
-    overflow: hidden;
-    position: relative;
-}
-
-.welcome-section img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-    min-height: 100%;
-    z-index: 3;
-    object-fit: cover;
-}
-
-.welcome-section h1 {
-    position: absolute;
-    z-index: 5;
-    left: 0;
-    right: 0;
-    top: calc(50% - 32px);
-    margin: auto;
-
-    color: #fff;
-    text-shadow: 0 0 1rem #000;
-    text-transform: uppercase;
-    letter-spacing: .2vw;
-}
-
-/*GOOGLE MAPS EMBED*/
-.mapouter {
-    position:relative;
-    text-align:right;
-    height: 50vh;
-    width: 100%;
-}
-
-#gmap_canvas {
-    overflow:hidden;
-    background: none!important;
-    height: 50vh;
-    width: 100%;
 }
