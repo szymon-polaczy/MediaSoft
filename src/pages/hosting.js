@@ -20,28 +20,28 @@ export default () => (
         <ContactUs/>
         <h1>Możliwości Serwerów Wirutalnych</h1>
         <section className="pad-it p-blocking">
-            <div className="wrapper flex align-start">
+            <div className="wrapper flex flex-column align-start">
                 <div>
-                    <h4>Powierzchnia dyskowa</h4>
+                    <button>Powierzchnia dyskowa<i class="fas fa-plus"></i></button>
                     <p>Serwery wirtualne posiadają powierzchnię 1-5GB w zależności od rodzaju serwera Basic, 
                         Advanced, Advanced+, którą można samodzielnie zarządzać poprzez panel Net.admin.</p>
                 </div>                
 
                 <div>
-                	<h4>Transfer serwera wirtualnego</h4>
+                	<button>Transfer serwera wirtualnego<i class="fas fa-plus"></i></button>
                 	<p>Jest to całkowita ilość danych jaką można przesłać od użytkowników do serwera wirtualnego 
                 	    i z serwera wirtualnego do użytkowników. W ramach serwerów oferowany jest limit 2000 
                 	    GB danych w czasie trwania okresu abonamentowego.</p>
                 </div>
 
                 <div>
-                    <h4>Dowolny podział powierzchni serwera wirtualnego</h4>
+                    <button>Dowolny podział powierzchni serwera wirtualnego<i class="fas fa-plus"></i></button>
                     <p>Powierzchnię dyskową można dowolnie dzielić między stronę WWW, konta e-mail i bazy 
                         danych za pomocą panelu do zarządzania serwerem Net.admin.</p>
                 </div>
 
                 <div>
-                    <h4>Nielimitowana liczba domen wskazujących na katalogi</h4>
+                    <button>Nielimitowana liczba domen wskazujących na katalogi<i class="fas fa-plus"></i></button>
                     <p>Na serwerach wirtualnych można utrzymywać nielimitowaną liczbę domen wskazujących 
                         na katalogi zamieszczone na tym serwerze. Każdą z domen można przekierować na wybrany katalog, 
                         w którym będzie znajdować się osobna strona WWW. Natomiast konta poczty e-mail 
@@ -49,14 +49,14 @@ export default () => (
                 </div>
 
                 <div>
-                    <h4>Nielimitowana liczba kont e-mail</h4>
+                    <button>Nielimitowana liczba kont e-mail<i class="fas fa-plus"></i></button>
                     <p>Na serwerach wirtualnych można założyć nielimitowaną liczbę niezależnych kont e-mail. 
                         Dostęp do każdego konta odbywa się poprzez przeglądarkę internetową za pomocą 
                         programu do obsługi poczty Active.mail. Program ten umożliwia użytkownikowi na samodzielne zarządzanie swoim kontem pocztowym.</p>
                 </div>
 
                 <div>
-                    <h4>Nielimitowana liczba aliasów pocztowych</h4>
+                    <button>Nielimitowana liczba aliasów pocztowych<i class="fas fa-plus"></i></button>
                     <p>Alias pocztowy jest to alternatywny adres konta e-mail. Ilość aliasów, 
                         które można utworzyć na serwerach wirtualnych jest nieograniczona. Za 
                         pomocą aliasu pocztowego można posiadać kilka adresów kont e-mail wskazujących 
@@ -66,7 +66,7 @@ export default () => (
                 </div>
 
                 <div>
-                    <h4>Nielimitowana liczba baz danych</h4>
+                    <button>Nielimitowana liczba baz danych<i class="fas fa-plus"></i></button>
                     <p>Każdy serwer wirtualny pozwala na założenie nielimitowanej liczby baz danych MySQL 
                         i PostgreSQL w ramach samodzielnie przydzielonej przez użytkownika powierzchni 
                         w panelu do zarządzania serwerem Net.admin. Minimalna wielkość 
@@ -74,13 +74,13 @@ export default () => (
                 </div>
 
                 <div>
-                    <h4>Oprogramowanie antywirusowe</h4>
+                    <button>Oprogramowanie antywirusowe<i class="fas fa-plus"></i></button>
                     <p>Oprogramowanie antywirusowe stosowane na serwerach wirtualnych pozwala 
                         chronić skrzynki pocztowe przed wirusami mogącymi znajdować się w otrzymywanych wiadomościach e-mail.</p>
                 </div>
 
                 <div>
-                    <h4>Zabezpieczenie antyspamowe</h4>
+                    <button>Zabezpieczenie antyspamowe<i class="fas fa-plus"></i></button>
                     <p>Filtr antyspamowy umożliwia zapobieganie otrzymywaniu niechcianych wiadomości 
                         e-mail tzw. spamów. Filtr ten zapobiega dostarczaniu poczty z adresów i 
                         serwerów pocztowych, które figurują na globalnej liście adresów rozpoznanych 
@@ -90,7 +90,7 @@ export default () => (
                 </div>
 
                 <div>
-                    <h4>Panel Net.admin</h4>
+                    <button>Panel Net.admin<i class="fas fa-plus"></i></button>
                     <p>Panel do obsługi serwera wirtualnego Net.admin pozwala na w pełni samodzielną 
                         administrację serwerem. Został on zaprojektowany specjalnie z myślą o indywidualnych 
                         użytkownikach korzystających z hostingu, którzy chcieliby samodzielnie zarządzać swoim 
@@ -102,33 +102,33 @@ export default () => (
                 </div>
 
                 <div>
-                    <h4>Monitor zajętości</h4>
+                    <button>Monitor zajętości<i class="fas fa-plus"></i></button>
                     <p>Monitor zajętości w panelu Net.admin do zarządzania serwerem umożliwia automatyczne 
                         sprawdzanie poziomu wykorzystania powierzchni dyskowej serwera, przydzielonej na stronę WWW, pocztę oraz bazy danych.</p>
                 </div>
 
                 <div>
-                    <h4>Harmonogram zadań</h4>
+                    <button>Harmonogram zadań<i class="fas fa-plus"></i></button>
                     <p>Harmonogram zadań CRON to usługa pozwalająca na uruchamianie w określonych stałych odstępach czasu krótkich 
                         skryptów wykonujących zaprogramowane czynności na serwerze. Skrypty CRON uruchamiane sš 
                         indywidualnie na życzenie klienta, po przesłaniu komendy skryptu do adinistaratorów MediaSoft.</p>
                 </div>
 
                 <div>
-                    <h4>Bezpieczne SFTP</h4>
+                    <button>Bezpieczne SFTP<i class="fas fa-plus"></i></button>
                     <p>Serwery wirtualne posiadają wbudowany protokół transmisji plików SFTP (SSH File Transfer Protocol), 
                         który pozwala dużo bardziej bezpiecznie przesyłać dane do serwera i z serwera niż w przypadku zwykłego FTP.</p>
                 </div>
 
                 <div>
-                    <h4>Bezpieczne SSL na pocztę i WWW</h4>
+                    <button>Bezpieczne SSL na pocztę i WWW<i class="fas fa-plus"></i></button>
                     <p>SSL (Secure Socket Layer) to bezpieczna transmisja zaszyfrowanego strumienia danych, 
                         która umożliwia bezpiecznie wysyłać i odbierać pocztę e-mail oraz bezpiecznie 
                         komunikować się za pomocą przeglądarki internetowej ze stroną WWW.</p>
                 </div>
 
                 <div>
-                    <h4>Autoryzacja SMTP</h4>
+                    <button>Autoryzacja SMTP<i class="fas fa-plus"></i></button>
                     <p>Jest to autoryzacja użytkownika przez serwer poczty wychodzącej SMTP 
                         (Simple Mail Transfer Protocol) i polega na weryfikacji przez serwer 
                         loginu i hasła użytkownika w czasie próby wysłania wiadomości. 
@@ -138,36 +138,36 @@ export default () => (
                 </div>
 
                 <div>
-                    <h4>Statystyki WWW i FTP</h4>
+                    <button>Statystyki WWW i FTP<i class="fas fa-plus"></i></button>
                     <p>Serwer wirtualny posiada wbudowane statystyki WWW, prezentujące 
                         szczegółowo informacje o odwiedzalności strony WWW i serwera FTP.</p>
                 </div>
 
                 <div>
-                    <h4>Statystyki kont e-mail</h4>
+                    <button>Statystyki kont e-mail<i class="fas fa-plus"></i></button>
                     <p>Na serwerze wirtualnym wbudowane są statystyki serwera pocztowego SMTP i POP3.</p>
                 </div>
 
                 <div>
-                    <h4>Catch-all dla poczty</h4>
+                    <button>Catch-all dla poczty<i class="fas fa-plus"></i></button>
                     <p>Funkcja serwera catch-all pozwala dostarczyć wiadomość wysłaną na dowolny adres 
                         e-mail w domenie serwera wirtualnego(nawet na nie istniejący adres) na wskazany adres e-mail.</p>
                 </div>
 
                 <div>
-                    <h4>Autoresponder</h4>
+                    <button>Autoresponder<i class="fas fa-plus"></i></button>
                     <p>Jest to automatyczna wiadomość zwrotna, która wysyła się w odpowiedzi na każdą wiadomość e-mail przychodzącą na konto.</p>
                 </div>
 
                 <div>
-                    <h4>Powiadamianie SMS</h4>
+                    <button>Powiadamianie SMS<i class="fas fa-plus"></i></button>
                     <p>Umożliwia otrzymywanie na telefon komórkowy informacji tekstowej SMS o 
                         otrzymaniu na konto e-mail nowej wiadomości. SMS jest dostarczany za 
                         pośrednictwem usługi wybranego operatora telefonii komórkowej (bramki operatora).</p>
                 </div>
 
                 <div>
-                    <h4>Konto FTP</h4>
+                    <button>Konto FTP<i class="fas fa-plus"></i></button>
                     <p>Dostęp do plików zamieszczonych na serwerze wirtualnym odbywa się za 
                         pomocą klienta FTP (File Transfer Protocol - programu do przesyłania plików na 
                         serwer). Umożliwia to między innymi wgranie strony WWW na serwer lub 
@@ -175,34 +175,34 @@ export default () => (
                 </div>
 
                 <div>
-                    <h4>Dostęp przez FTP</h4>
+                    <button>Dostęp przez FTP<i class="fas fa-plus"></i></button>
                     <p>Poprzez dostęp 24h/dobę do konta FTP (File Transfer Protocol) można 
                         samodzielnie w stosownym dla siebie czasie zamieścić na serwerze wirtualnym 
                         strony WWW, dokonywać ich aktualizacji oraz zarządzać znajdującymi się tam plikami.</p>
                 </div>
 
                 <div>
-                    <h4>Dostęp do PHP</h4>
+                    <button>Dostęp do PHP<i class="fas fa-plus"></i></button>
                     <p>Na serwerach wirtualnych uruchomiony jest interpreter języka PHP 5, który 
                         jest aktualizowany wkrótce po pojawieniu się nowej wersji interpretera.</p>
                 </div>
 
                 <div>
-                    <h4>Mechanizm skryptowy SSI</h4>
+                    <button>Mechanizm skryptowy SSI<i class="fas fa-plus"></i></button>
                     <p>SSI (Server Side Includes) jest to mechanizm skryptowy służący do generowania stron 
                         WWW w sposób dynamiczny. Przede wszystkim używany jest do dołączania zdefiniowanych 
                         plików do dokumentu wynikowego. Domyślnie pliki generowane przez SSI posiadają rozszerzenie .shtml.</p>
                 </div>
 
                 <div>
-                    <h4>Primary i secondary DNS</h4>
+                    <button>Primary i secondary DNS<i class="fas fa-plus"></i></button>
                     <p>Dzięki serwerom DNS (Domain Name System, system nazw domenowych) każda strona WWW 
                         zamieszczona na serwerach MediaSoft jest widoczna na całym świecie. W celu 
                         zapewnienia bezawaryjnego działania, udostępnione są dwa niezależne serwery DNS.</p>
                 </div>
 
                 <div>
-                    <h4>Kopia bezpieczeństwa danych</h4>
+                    <button>Kopia bezpieczeństwa danych<i class="fas fa-plus"></i></button>
                     <p>Dane zamieszczone na serwerach wirtualnych MediaSoft posiadają zabezpieczenie na 
                         wypadek utraty ich w postaci dodatkowych kopii. Aktualizacja kopii danych (backup) 
                         odbywa się 1 raz na 24 godziny (przeważnie w nocy). Dlatego zawsze dostępna jest kopia danych z ostatnich 24h.</p>
