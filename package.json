@@ -14,7 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^2.17.11",
+    "gatsby": "^2.19.22",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-sharp": "^2.3.4",
     "gatsby-source-filesystem": "^2.1.39",
@@ -22,6 +22,7 @@
     "react": "^16.11.0",
     "react-burger-menu": "^2.6.13",
     "react-dom": "^16.11.0",
+    "styled-components": "^5.0.1",
     "typescript": "^3.7.2"
   },
   "devDependencies": {

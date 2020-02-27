@@ -20,7 +20,19 @@ export default () => {
     return (
     <MainLayout>
         <main className="contact-main">
-            <WelcomeSection img={data.file.childImageSharp.fluid} alt="Background Computer Image" message="Skontakuj się z nami"/>*
+            <WelcomeSection img={data.file.childImageSharp.fluid} alt="Background Computer Image" message="Skontakuj się z nami"/>
+            <section className="pad-it">
+                <div className="wrapper">
+                    <h1>MediaSoft</h1>
+                    <p className="higher-text">Od 2003 roku zajmujemy się kompleksową obsługą firm pragnących zaistnieć w Internecie 
+                        oraz zwiększyć efektywność swoich stron internetowych. Przez ten czas wykonaliśmy 
+                        blisko 300 stron internetowych, zarejestrowaliśmy w katalogach i wyszukiwarkach 
+                        oraz wypozycjonowaliśmy do TOP10 w Google.pl jeszcze więcej stron. Zwiększyliśmy 
+                        odwiedzalność stron i podnieśliśmy im PageRank. W naszej ofercie znajduje się także 
+                        stabilny hosting - serwery wirtualne oraz tanie domeny. Zapraszamy do zapoznania 
+                        się z naszą ofertą oraz odwiedzenia naszego portfolio stron WWW.</p>
+                </div>
+            </section>
             <div className="wrapper pad-it flex flex-column">
                 <h1>Skontaktuj się z nami</h1>
                 <small>Skontakuj się z nami i dołącz do grona zadowolonych klientów</small>
