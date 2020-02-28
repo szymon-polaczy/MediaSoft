@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const ContactBar = styled.section`
-    padding: 5vh 0;
+    padding: 2.5rem 0;
     background: var(--theme-color);
     color: #fff;
     box-shadow: 0 0 3vh #bbb;
