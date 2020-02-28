@@ -1,8 +1,74 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
+
+const MainFooter = styled.footer`
+    color: #e0e0e0;
+    box-shadow: 0 0 1.5vh #ccc;
+    background: var(--theme-color);
+
+    h4 {
+        color: #fff;
+    }
+
+    a {
+        color: #e0e0e0;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    .bottom-section {
+        background: var(--theme-color-darker);
+    }
+`
 
 export default () => (
-    <footer className="main-footer flex flex-column">
+    <MainFooter>
+        <section className="top-section">
+            <article>
+                <h4>Bądź w kontakcie</h4>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    MediaSoft Mariacka 37/7 Nysa 48-304
+                </p>
+                <p>
+                    <i className="fas fa-phone-alt"></i>
+                    <a href="tel:501-442-493">(+48) 501 442 493</a>
+                </p>
+                <p>
+                    <i class="far fa-envelope-open"></i>
+                    <a href="mailto:kontakt@mediasoft.com.pl">kontakt@mediasoft.com.pl</a>
+                </p>
+                <p>
+                    <i class="far fa-calendar-alt"></i>
+                    Pon - Pt, 9:00-16:00
+                </p>
+            </article>
+            <nav>
+                <h4>Szybkie linki</h4>
+                <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/websites/">Strony WWW</Link></li>
+                    <li><Link to="/hosting/">Hosting</Link></li>
+                    <li><Link to="/domains/">Domeny</Link></li>
+                    <li><Link to="/google/">Linki Sponsorowane</Link></li>
+                    <li><Link to="/contact/">Kontakt</Link></li>
+                </ul>
+            </nav>
+            <img src="https://mediasoft.com.pl/jpg/media-logo.png" alt="MediaSoft"/>
+        </section>
+        <section className="bottom-section">
+            <p>Copyright &copy; MediaSoft - Wszystkie prawa zastrzeżone</p>
+            <Link to="/privacy-policy/">Polityka Prywatności</Link>
+        </section>
+    </MainFooter>
+)
+
+/*
+<footer className="main-footer flex flex-column">
         <div className="main-footer-top">
             <div className="wrapper flex justify-around align-start">
                 <div>
@@ -44,4 +110,4 @@ export default () => (
             </div>
         </div>
     </footer>
-)
+    */
