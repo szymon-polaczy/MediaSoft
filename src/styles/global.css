@@ -248,6 +248,12 @@ small {
   text-align: right;
   height: 50vh;
   width: 100%;
+  padding: 1.5rem 0 3.5rem 0;
+  box-sizing: border-box;
+}
+
+.gmap_canvas {
+  height: 100%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -259,7 +265,7 @@ small {
 #gmap_canvas {
   overflow: hidden;
   background: none !important;
-  height: 50vh;
+  height: 100%;
   width: 100%;
 }
 

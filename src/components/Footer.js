@@ -8,13 +8,8 @@ const MainFooter = styled.footer`
     background: var(--theme-color);
     font-size: .9rem;
 
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-    }
-
     article,nav {
-        flex: 5;
+        flex: 2;
     }
 
     article p {
@@ -28,7 +23,7 @@ const MainFooter = styled.footer`
 
     img {
         object-fit: contain;
-        flex: 6;
+        flex: 3;
     }
 
     .top-section {
@@ -55,6 +50,7 @@ const MainFooter = styled.footer`
 
     .bottom-section {
         padding: 1rem 0;
+        text-align: center;
         background: var(--theme-color-darker);
     }
 
@@ -67,13 +63,37 @@ const MainFooter = styled.footer`
     nav ul li {
         margin: .45rem 0;
     }
+
+    @media (max-width: 800px) {
+        article, nav, img {
+            padding: 1rem;
+            flex: unset;
+        }
+    }
+
+    @media (max-width: 755px) {
+        img {
+            margin: 1rem;
+        }
+    }
+
+    @media (max-width: 560px) {
+        .bottom-section .wrapper {
+            jusitfy-content: center;
+            flex-flow: column;
+        }
+
+        .bottom-section p {
+            margin-bottom: .35rem;
+        }
+    }
 `
 
 export default () => (
     <MainFooter>
         
         <section className="top-section">
-            <div className="wrapper">
+            <div className="wrapper flex">
                 <article>
                     <h4>Bądź w kontakcie</h4>
                     <p className="flex align-start justify-start">
@@ -112,7 +132,7 @@ export default () => (
             </div>
         </section>
         <section className="bottom-section">
-            <div className="wrapper">
+            <div className="wrapper flex justify-between">
                 <p>Copyright &copy; MediaSoft - Wszystkie prawa zastrzeżone</p>
                 <Link to="/privacy-policy/">Polityka Prywatności</Link>
             </div>
