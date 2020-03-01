@@ -24,6 +24,7 @@ const MainFooter = styled.footer`
     img {
         object-fit: contain;
         flex: 3;
+        height: 5rem;
     }
 
     .top-section {
