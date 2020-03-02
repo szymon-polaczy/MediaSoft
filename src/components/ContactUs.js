@@ -91,21 +91,23 @@ const ContactBar = styled.section`
     }
 `
 
-export default() => (
-    <ContactBar className="contact-us-section">
-        <div className="wrapper flex">
-            <header className="flex flex-row">
-                <i className="fas fa-phone-alt"></i>
-                <div className="flex flex-column align-start">
-                    <p className="label">Masz pytania? Chcesz porozmawiać o ofercie?</p>
-                    <h3>Skontaktuj się z nami!</h3>
+export default () => {
+    return (
+        <ContactBar className="contact-us-section">
+            <div className="wrapper flex">
+                <header className="flex flex-row">
+                    <i className="fas fa-phone-alt"></i>
+                    <div className="flex flex-column align-start">
+                        <p className="label">Masz pytania? Chcesz porozmawiać o ofercie?</p>
+                        <h3>Skontaktuj się z nami!</h3>
+                    </div>
+                </header>
+                <p className="flex phone"><a href="tel:501-442-493">(+ 48) 501 442 493</a></p>
+                <div className="mail flex flex-column align-start">
+                    <p className="label">Adres e-mail:</p>
+                    <h3><a href="mailto:kontakt@mediasoft.com.pl">kontakt@mediasoft.com.pl</a></h3>
                 </div>
-            </header>
-            <p className="flex phone"><a href="tel:501-442-493">(+ 48) 501 442 493</a></p>
-            <div className="mail flex flex-column align-start">
-                <p className="label">Adres e-mail:</p>
-                <h3><a href="mailto:kontakt@mediasoft.com.pl">kontakt@mediasoft.com.pl</a></h3>
             </div>
-        </div>
-    </ContactBar>
-)
+        </ContactBar>
+    )
+}
