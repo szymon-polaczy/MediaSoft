@@ -13,6 +13,22 @@ const WelcomeText = styled.p`
     line-height: 150%;
     padding: 0 8.25rem;
     color: #4f4f4f;
+
+    @media screen and (max-width: 1350px) {
+        padding: 0 5rem;
+    }
+
+    @media screen and (max-width: 950px) {
+        padding: 0 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 0 1rem;
+    }
+
+    @media screen and (max-width: 350px) {
+        padding: 0 .4rem;
+    }
 `;
 
 const SellingPointsWrapper = styled.section`
@@ -41,6 +57,18 @@ const SellingPointsWrapper = styled.section`
         line-height: 125%;
         color: #5f5f5f;
         margin-top: .45rem;
+    }
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media screen and (max-width: 850px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
     }
 `;
 
