@@ -102,76 +102,6 @@ small {
   justify-content: center;
 }
 
-.sell-card {
-  margin: 1.5vh;
-  width: 20rem;
-  padding: 1rem 0 4rem 0;
-  box-sizing: border-box;
-  text-align: center;
-  font-weight: bold;
-  position: relative;
-}
-
-@media screen and (max-width: 330px) {
-  .sell-card {
-    width: calc(100% - 7.5vw);
-  }
-}
-
-.sell-card h2 {
-  font-size: 0.8rem;
-  margin-bottom: 2.5vh;
-  padding: 0 1rem;
-}
-
-.sell-card h2 span {
-  display: block;
-  font-size: 1.2rem;
-  margin-top: 0.5vh;
-  text-transform: uppercase;
-}
-
-.sell-card .price-holder {
-  background: #eee;
-  width: 100%;
-  padding: 3vh 0;
-  font-size: 2rem;
-  color: var(--theme-color);
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.sell-card .price-holder::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: 1rem solid transparent;
-  border-right: 1rem solid transparent;
-  border-top: 1rem solid #eee;
-  position: absolute;
-  bottom: -0.99rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.sell-card a {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: -1vh;
-}
-
-.sell-card:hover .price-holder {
-  box-shadow: inset 0 -5em 0 0 var(--theme-color);
-  color: #fff;
-}
-
-.sell-card:hover .price-holder::after {
-  border-top: 1rem solid var(--theme-color);
-}
-
 .main-header {
   position: sticky;
   top: 0;
@@ -182,7 +112,6 @@ small {
 }
 
 /*---------------------MY REUSABLE CLASSES---------------------*/
-
 
 .flex {
   display: flex;
