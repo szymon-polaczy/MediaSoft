@@ -27,10 +27,10 @@ export default () => {
 					<div className="wrapper">
 						<h1>Nasza oferta</h1>
 						<div className="flex">
-							<SellCard title_type="" title_name="Strony WWW" price="Od 300zł"/>
-							<SellCard title_type="" title_name="Hosting" price="Od 109zł"/>
-							<SellCard title_type="" title_name="Domeny" price="Od 52zł"/>
-							<SellCard title_type="" title_name="Linki Sponsorowane" price="Od ~300zł"/>
+							<SellCard title_type="" title_name="Strony WWW" price="Od 300zł" link="/websites"/>
+							<SellCard title_type="" title_name="Hosting" price="Od 109zł" link="/hosting"/>
+							<SellCard title_type="" title_name="Domeny" price="Od 52zł" link="domains"/>
+							<SellCard title_type="" title_name="Linki Sponsorowane" price="Od ~300zł" link="/google"/>
 						</div>
 					</div>
 				</section>

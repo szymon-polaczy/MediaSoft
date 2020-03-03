@@ -143,8 +143,10 @@ export default () => {
             <ContactUs/>
             <section>
                 <div className="wrapper higher-text pad-it">
-                    <h1>Opłaty</h1>
-                    <p>Opłata pobierana jest przez Google w momencie kliknięcia w link sponsorowany przez osobę korzystającą 
+                    <h1>Jak to działa?</h1>
+                    <small>Jak zostanie użyty twój kapitał?</small>
+                    <WelcomeText>
+                        Opłata pobierana jest przez Google w momencie kliknięcia w link sponsorowany przez osobę korzystającą 
                         z wyszukiwarki. Otwarcie reklamowanej strony WWW powoduje pobranie opłaty. Wysokość opłat uzależniona 
                         jest od rodzaju słowa kluczowego oraz pozycji linku 1-3 u góry lub dalsze pozycje z prawej strony. 
                         Przeznaczając np. 300 zł netto miesięcznie dzielimy ta kwotę na 30 dni. Wówczas dziennie przeznaczone 
@@ -153,7 +155,8 @@ export default () => {
                         zliczania kliknięć z 1 adresu IP gwarantuje, że środki nie zostaną wyklikane np. przez konkurencyjne 
                         firmy. Czas uruchomienia linku do 24 h po otrzymaniu wpłaty (dni robocze), którą przesyłamy do Google. 
                         Koszt obsługi przez MediaSoft uzalezniony jest od stopnia rozbudowania kampanii. <b>Korzystając z usług 
-                        MediaSoft, link do Państwa strony może być nawet na pierwszym miejscu w wynikach wyszukiwania w Google zaledwie po 24h.</b></p>
+                        MediaSoft, link do Państwa strony może być nawet na pierwszym miejscu w wynikach wyszukiwania w Google zaledwie po 24h.</b>
+                    </WelcomeText>
                 </div>
             </section>
         </MainLayout>

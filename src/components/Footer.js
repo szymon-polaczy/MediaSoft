@@ -98,7 +98,7 @@ export default () => {
                     <article>
                         <h4>Bądź w kontakcie</h4>
                         <p className="flex align-start justify-start">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i className="fas fa-map-marker-alt"></i>
                             <span className="container">
                                 <span>MediaSoft</span>
                                 <span>Mariacka 37/7</span> 
@@ -110,23 +110,23 @@ export default () => {
                             <a href="tel:501-442-493">(+48) 501 442 493</a>
                         </p>
                         <p>
-                            <i class="far fa-envelope-open"></i>
+                            <i className="far fa-envelope-open"></i>
                             <a href="mailto:kontakt@mediasoft.com.pl">kontakt@mediasoft.com.pl</a>
                         </p>
                         <p>
-                            <i class="far fa-calendar-alt"></i>
+                            <i className="far fa-calendar-alt"></i>
                             Pon - Pt, 9:00-16:00
                         </p>
                     </article>
                     <nav>
                         <h4>Szybkie linki</h4>
                         <ul>
-                            <li><Link to="/"><i class="fas fa-check"></i>Home</Link></li>
-                            <li><Link to="/websites/"><i class="fas fa-check"></i>Strony WWW</Link></li>
-                            <li><Link to="/hosting/"><i class="fas fa-check"></i>Hosting</Link></li>
-                            <li><Link to="/domains/"><i class="fas fa-check"></i>Domeny</Link></li>
-                            <li><Link to="/google/"><i class="fas fa-check"></i>Linki Sponsorowane</Link></li>
-                            <li><Link to="/contact/"><i class="fas fa-check"></i>Kontakt</Link></li>
+                            <li><Link to="/"><i className="fas fa-check"></i>Home</Link></li>
+                            <li><Link to="/websites/"><i className="fas fa-check"></i>Strony WWW</Link></li>
+                            <li><Link to="/hosting/"><i className="fas fa-check"></i>Hosting</Link></li>
+                            <li><Link to="/domains/"><i className="fas fa-check"></i>Domeny</Link></li>
+                            <li><Link to="/google/"><i className="fas fa-check"></i>Linki Sponsorowane</Link></li>
+                            <li><Link to="/contact/"><i className="fas fa-check"></i>Kontakt</Link></li>
                         </ul>
                     </nav>
                     <img src="https://mediasoft.com.pl/jpg/media-logo.png" alt="MediaSoft"/>
