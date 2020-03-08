@@ -1,6 +1,5 @@
 import React from "react"
-import ContactUs from "../components/ContactUs"
-import SellCard from "../components/SellCard"
+import SellCard from "./SellCard"
 
 export default () => {
     return (
@@ -15,7 +14,6 @@ export default () => {
                     <SellCard title_type="Domena" title_name=".eu" price="117zł"/>
                 </div>
             </section>
-            <ContactUs/>
             <h1>Korzyści z rejestracji</h1>
             <section>
                 <div className="wrapper pad-it">

@@ -1,5 +1,4 @@
 import React from "react"
-import ContactUs from "../components/ContactUs"
 import styled from "styled-components"
 
 const Important = styled.span`
@@ -139,7 +138,6 @@ export default () => {
                     </article>
                 </SellingPointsWrapper>
             </section>
-            <ContactUs/>
             <section>
                 <div className="wrapper higher-text pad-it">
                     <h1>Jak to działa?</h1>

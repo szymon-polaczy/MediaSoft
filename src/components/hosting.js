@@ -1,6 +1,5 @@
 import React from "react"
-import ContactUs from "../components/ContactUs"
-import SellCard from "../components/SellCard"
+import SellCard from "./SellCard"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 
@@ -32,7 +31,6 @@ export default () => {
                     <SellCard title_type="Serwery Dedykowane" title_name="Professional+ ~200GB" price="Zadzwoń"/>
                 </div>
             </section>
-            <ContactUs/>
             <h1>Możliwości Serwerów Wirutalnych</h1>
             <section className="pad-it p-blocking">
                 <UL className="wrapper">

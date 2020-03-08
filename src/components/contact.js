@@ -1,7 +1,7 @@
 import React from "react"
-import GoogleMapsEmbed from "../components/GoogleMapsEmbed"
+import GoogleMapsEmbed from "./GoogleMapsEmbed"
 import { useStaticQuery, graphql } from "gatsby"
-import WelcomeSection from "../components/WelcomeSection"
+import WelcomeSection from "./WelcomeSection"
 import styled from "styled-components"
 
 const WelcomeText = styled.p`

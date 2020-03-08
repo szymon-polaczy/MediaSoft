@@ -1,9 +1,8 @@
 import React from "react"
-import WebsiteHolder from "../components/WebsiteHolder"
-import ContactUs from "../components/ContactUs"
-import image from "./320x180.png"
-import image2 from "./320x180 - 2.png"
-import image3 from "./320x180 - 3.png"
+import WebsiteHolder from "./WebsiteHolder"
+import image from "../pages/320x180.png"
+import image2 from "../pages/320x180 - 2.png"
+import image3 from "../pages/320x180 - 3.png"
 
 export default () => {
     return (
@@ -119,7 +118,6 @@ export default () => {
                         obsługę. Zlecenia stałe są realizowane przez nas priorytetowo. Również dla takich zleceń stosujemy upusty cenowe.</p>
                 </div>
             </section>
-            <ContactUs/>
             <section>
                 <div className="wrapper">
                     <h1>Nasze najnowsze realizacje</h1>
