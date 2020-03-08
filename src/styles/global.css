@@ -149,6 +149,7 @@ small {
   right: calc(((100% - 1200px) / 2) + 3.25vw);
   right: calc(((100% - 1200px) / 2));
   top: calc((7.7vh / 2) - 15px);
+  /*display: none;*/
 }
 
 @media screen and (max-width: 1200px) {
@@ -197,6 +198,7 @@ small {
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   overflow: hidden !important;
+  display: flex;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -248,61 +250,6 @@ small {
     padding: 2.5vh 0 5vh 0;
 }
 
-.website-holder {
-    width: 320px;
-    height: 180px;
-    background-color: #efefef;
-    background: #fff;
-    position: relative;
-    margin: 1vh;
-    overflow: hidden;
-}
-
-.website-holder img {
-  width: 100%;
-  height: 100%;
-}
-
-@media screen and (max-width: 330px) {
-  .website-holder {
-    width: 225px;
-    height: 127px;
-  }
-}
-
-.website-holder a {
-    color: #5588bb;
-}
-
-.website-holder img,
-.website-holder p {
-    transition: .15s transform ease-out;
-}
-
-.website-holder:hover img,
-.website-holder:hover p {
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.website-holder p {
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-    padding: 1vh 0;
-    transform: translateY(100%);
-}
-
-.website-holder:hover p {
-    transform: translateY(0);
-}
-
-.website-holder:hover img {
-    transform: scale(1.1);
-}
 .contain-contacts {
     padding-top: 1vh;
 }
