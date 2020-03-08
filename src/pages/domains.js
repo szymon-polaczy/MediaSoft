@@ -1,11 +1,10 @@
 import React from "react"
-import MainLayout from "../components/MainLayout"
 import ContactUs from "../components/ContactUs"
 import SellCard from "../components/SellCard"
 
 export default () => {
     return (
-        <MainLayout>
+        <>
             <h1>Oferowane Domeny</h1>
             <section>
                 <div className="wrapper flex">
@@ -30,6 +29,6 @@ export default () => {
                     </ul>
                 </div>
             </section>
-        </MainLayout>
+        </>
     )
 }

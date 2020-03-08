@@ -1,5 +1,4 @@
 import React from "react"
-import MainLayout from "../components/MainLayout"
 import WebsiteHolder from "../components/WebsiteHolder"
 import ContactUs from "../components/ContactUs"
 import image from "./320x180.png"
@@ -8,7 +7,7 @@ import image3 from "./320x180 - 3.png"
 
 export default () => {
     return (
-        <MainLayout>
+        <>
             <section className="higher-text pad-it">
                 <div className="wrapper">
                     <h1>Tworzenie Stron Internetowych</h1>
@@ -137,6 +136,6 @@ export default () => {
                     </div>
                 </div>
             </section>
-        </MainLayout>
+        </>
     )
 }

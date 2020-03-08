@@ -5,6 +5,11 @@ import ContactUs from "../components/ContactUs"
 import SellCard from "../components/SellCard"
 import WelcomeSection from "../components/WelcomeSection"
 import GoogleMapsEmbed from "../components/GoogleMapsEmbed"
+import Contact from "./contact"
+import Domains from "./domains"
+import Google from "./google"
+import Hosting from "./hosting"
+import Websites from "./websites"
 
 export default () => {
 		const data = useStaticQuery(graphql`
@@ -35,8 +40,13 @@ export default () => {
 					</div>
 				</section>
 				<ContactUs/>
+				<Domains/>
+				<Google/>
+				<Hosting/>
+				<Websites/>
 			</main>
 			<GoogleMapsEmbed/>
+			<Contact/>
 		</MainLayout>
 	)
 }

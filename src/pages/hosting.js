@@ -1,5 +1,4 @@
 import React from "react"
-import MainLayout from "../components/MainLayout"
 import ContactUs from "../components/ContactUs"
 import SellCard from "../components/SellCard"
 import { Link } from "gatsby"
@@ -21,7 +20,7 @@ const UL = styled.ul`
 
 export default () => {
     return (
-        <MainLayout>
+        <>
             <h1>Hosting Stron Internetowych</h1>
             <section>
                 <div className="wrapper flex">
@@ -70,6 +69,6 @@ export default () => {
                     <p><Link to="hosting-regulations"><b>Regulamin</b></Link> śwadczenia usług hostingu z dnia 04.07.2018</p>
                 </div>            
             </section>
-        </MainLayout>   
+        </>   
     )
 }

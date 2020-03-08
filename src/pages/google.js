@@ -1,5 +1,4 @@
 import React from "react"
-import MainLayout from "../components/MainLayout"
 import ContactUs from "../components/ContactUs"
 import styled from "styled-components"
 
@@ -74,7 +73,7 @@ const SellingPointsWrapper = styled.section`
 
 export default () => {
     return (
-        <MainLayout>
+        <>
             <section>
                 <h1>Reklama w <Important>Google Ads</Important></h1>
                 <small>Poznaj Linki Sponsorowane z MediaSoft</small>
@@ -159,6 +158,6 @@ export default () => {
                     </WelcomeText>
                 </div>
             </section>
-        </MainLayout>
+        </>
     )
 }

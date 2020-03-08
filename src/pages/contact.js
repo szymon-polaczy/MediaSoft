@@ -1,5 +1,4 @@
 import React from "react"
-import MainLayout from "../components/MainLayout"
 import GoogleMapsEmbed from "../components/GoogleMapsEmbed"
 import { useStaticQuery, graphql } from "gatsby"
 import WelcomeSection from "../components/WelcomeSection"
@@ -43,7 +42,7 @@ export default () => {
   `)
 
     return (
-        <MainLayout>
+        <>
             <main className="contact-main">
                 <WelcomeSection img={data.file.childImageSharp.fluid} alt="Background Computer Image" message="Skontakuj się z nami"/>
                 <section className="pad-it">
@@ -105,6 +104,6 @@ export default () => {
                 </div>
             </main>
             <GoogleMapsEmbed/>
-        </MainLayout>
+        </>
     )
 }
