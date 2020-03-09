@@ -8,7 +8,9 @@ export default ({children}) => {
 		<>
 			<Example/>
 			<Header/>
+			<main>
 			{children}
+			</main>
 			<Footer/>
 		</>
 	)

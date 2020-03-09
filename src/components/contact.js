@@ -53,8 +53,7 @@ export default () => {
                             Od 2003 roku zajmujemy się kompleksową obsługą firm pragnących zaistnieć w Internecie 
                             oraz zwiększyć efektywność swoich stron internetowych. Przez ten czas wykonaliśmy 
                             blisko 300 stron internetowych, zarejestrowaliśmy w katalogach i wyszukiwarkach 
-                            oraz wypozycjonowaliśmy do TOP10 w Google.pl jeszcze więcej stron. Zwiększyliśmy 
-                            odwiedzalność stron i podnieśliśmy im PageRank. W naszej ofercie znajduje się także 
+                            oraz wypozycjonowaliśmy do TOP10 w Google.pl jeszcze więcej stron. W naszej ofercie znajduje się także 
                             stabilny hosting - serwery wirtualne oraz tanie domeny. Zapraszamy do zapoznania 
                             się z naszą ofertą oraz odwiedzenia naszego portfolio stron WWW.
                         </WelcomeText>
@@ -65,11 +64,6 @@ export default () => {
                     <small>Skontakuj się z nami i dołącz do grona zadowolonych klientów</small>
                     <div className="section-holder flex align-start justify-around">
                         <section>
-                            <h3>Siedziba</h3>
-                            <p>
-                                MediaSoft <br/>
-                                ul.Mariacka 37/7, 48-304 Nysa <br/>
-                            </p>
                             <p>
                                 Godziny pracy <br/>
                                 Poniedziałek - Piątek <b>9:00-16:00</b>

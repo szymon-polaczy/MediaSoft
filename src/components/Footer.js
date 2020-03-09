@@ -7,6 +7,11 @@ const MainFooter = styled.footer`
     box-shadow: 0 0 1.5vh #ccc;
     background: var(--theme-color);
     font-size: .9rem;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 20rem;
 
     article,nav {
         flex: 2;
@@ -92,6 +97,8 @@ const MainFooter = styled.footer`
 
 export default () => {
     return (
+        <>
+        <div className="fake-footer"></div>
         <MainFooter>
             <section className="top-section">
                 <div className="wrapper flex">
@@ -139,5 +146,6 @@ export default () => {
                 </div>
             </section>
         </MainFooter>
+        </>
     )
 }

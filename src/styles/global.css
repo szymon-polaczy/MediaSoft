@@ -6,6 +6,17 @@
   --theme-color-darker: #336699;
 }
 
+main {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+
+.fake-footer {
+  height: 20rem;
+  width: 100%;
+}
+
 body {
   font-family: "Lato", sans-serif;
   color: #222;

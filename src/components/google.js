@@ -132,6 +132,11 @@ export default () => {
                         <p>Start kampani do 24h od omówienia w dni robocze.</p>
                     </article>
                     <article>
+                        <i class="fas fa-umbrella"></i>
+                        <h3><b>Ochrona </b> przed atakami</h3>
+                        <p>Blokada zliczania kliknięć gwarantuje, że środki nie zostaną wyklikane np. przez konkurencyjne firmy.</p>
+                    </article>
+                    <article>
                         <i class="fas fa-gem"></i>
                         <h3><b>Bonus </b> dla nowych klientów</h3>
                         <p>Otrzymaj dodatkowe 250zł na start swojej kampanii.</p>
@@ -143,14 +148,11 @@ export default () => {
                     <h1>Jak to działa?</h1>
                     <small>Jak zostanie użyty twój kapitał?</small>
                     <WelcomeText>
-                        Opłata pobierana jest przez Google w momencie kliknięcia w link sponsorowany przez osobę korzystającą 
-                        z wyszukiwarki. Otwarcie reklamowanej strony WWW powoduje pobranie opłaty. Wysokość opłat uzależniona 
+                        Otwarcie reklamowanej strony WWW powoduje pobranie opłaty. Wysokość opłat uzależniona 
                         jest od rodzaju słowa kluczowego oraz pozycji linku 1-3 u góry lub dalsze pozycje z prawej strony. 
                         Przeznaczając np. 300 zł netto miesięcznie dzielimy ta kwotę na 30 dni. Wówczas dziennie przeznaczone 
                         jest 10 zł netto. Link będzie wyświetlać się do momentu wyczerpania w danym dniu tej kwoty po czym 
-                        wyłączy się, aby ponownie zacząć działać na następny dzień znów z limitem 10 zł netto itd. Blokada 
-                        zliczania kliknięć z 1 adresu IP gwarantuje, że środki nie zostaną wyklikane np. przez konkurencyjne 
-                        firmy. Czas uruchomienia linku do 24 h po otrzymaniu wpłaty (dni robocze), którą przesyłamy do Google. 
+                        wyłączy się, aby ponownie zacząć działać na następny dzień znów z limitem 10 zł netto itd.
                         Koszt obsługi przez MediaSoft uzalezniony jest od stopnia rozbudowania kampanii. <b>Korzystając z usług 
                         MediaSoft, link do Państwa strony może być nawet na pierwszym miejscu w wynikach wyszukiwania w Google zaledwie po 24h.</b>
                     </WelcomeText>
