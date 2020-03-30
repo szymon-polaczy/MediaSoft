@@ -95,6 +95,16 @@ const WebsitesContainer = styled.div`
         margin: .25rem .1rem;
         position: relative;
         z-index: -1;
+        overflow: hidden;
+    }
+
+    img {
+        transition: .15s all ease-out !important;
+    }
+
+    article:hover img {
+        transform: scale(1.1);
+        transition: .2s all ease-out !important;
     }
 `;
 

@@ -47,20 +47,16 @@ export default () => {
             <h2>Co chcesz u nas sprawdzić?</h2>
             <div class="container">
                 <article>
-                    <a href="#">Strony WWW</a>
-                    <i class="fas fa-code"></i>
+                    <a href="#">Strony WWW<i class="fas fa-code"></i></a>
                 </article>
                 <article>
-                    <a href="#">Hosting</a>
-                    <i class="fas fa-cogs"></i>
+                    <a href="#">Hosting<i class="fas fa-cogs"></i></a>
                 </article>
                 <article>
-                    <a href="#">Domeny</a>
-                    <i class="fas fa-search"></i>
+                    <a href="#">Domeny<i class="fas fa-search"></i></a>
                 </article>
                 <article>
-                    <a href="#">Google Adwords</a>
-                    <i class="fas fa-chart-line"></i>
+                    <a href="#">Google Adwords<i class="fas fa-chart-line"></i></a>
                 </article>
             </div>
         </Test>
