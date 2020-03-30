@@ -4,6 +4,7 @@
 :root {
   --theme-color: #5588bb;
   --theme-color-darker: #336699;
+  --theme-color-lighter: #a7c5f2;
 }
 
 body {
@@ -55,6 +56,33 @@ a:hover {
 
 .align-start {
   align-items: flex-start;
+}
+
+.margin-top-medium {
+  margin-top: 5rem;
+}
+
+
+
+
+html {
+  --scrollbarBG: #CFD8DC;
+  --thumbBG: #90A4AE;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
 /*
 

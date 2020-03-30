@@ -11,7 +11,7 @@ const Menu = styled.nav`
 	top: 0;
 	z-index: 100;
 	opacity: .99;
-
+	
 	.wrapper {
 		display: flex;
 		justify-content: space-between;

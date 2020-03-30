@@ -1,5 +1,7 @@
 import React from 'react'
+import Img from "gatsby-image"
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from "gatsby"
 import AssetsLogoSVG from '../../images/undraw_mobile_wireframe_euf4.svg'
 
 const BigInfo = styled.h2`
@@ -17,6 +19,15 @@ const BigInfo = styled.h2`
         background-color: #666;
         margin: .3rem auto 0 auto;
     }
+`;
+
+const SmallInfo = styled.small`
+    line-height: 165%;
+    text-align: center;
+    color: #555;
+    letter-spacing: .04rem;
+    display: block;
+    font-size: 1.2rem;
 `;
 
 const AssetsContainer = styled.div`
@@ -44,6 +55,8 @@ const AssetsContainer = styled.div`
         align-items: center;
         justify-content: center;
         margin-bottom: .75rem;
+        color: var(--theme-color);
+        color: #ff677d;
     }
 
     article h3 {
@@ -68,10 +81,69 @@ const AssetsContainer = styled.div`
     }
 `;
 
+const WebsitesContainer = styled.div`
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 1.3rem;
+
+    box-shadow: inset 0px -46px 25px -17px rgba(255,255,255,1);
+
+    .gatsby-image-wrapper {
+        width: 320px;
+        margin: .25rem .1rem;
+        position: relative;
+        z-index: -1;
+    }
+`;
+
+const WebsitesContainerBtn = styled.button`
+    margin: 1rem auto;
+    display: block;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    color: #333;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+`;
+
 export default () => {
+    const data = useStaticQuery(graphql`
+        query imageQuery {
+            allFile(
+                filter: {
+                    extension: { regex: "/(png)/" }
+                    relativeDirectory: { eq: "Websites" }
+                }
+            ) {
+                edges {
+                    node {
+                        base
+                        childImageSharp {
+                            fluid {
+                                aspectRatio
+                                base64
+                                sizes
+                                src
+                                srcSet
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <>
-            <section>
+            <section className="margin-top-medium">
                 <BigInfo>Co dostaniesz tworząc z nami stronę?</BigInfo>
                 <div className="wrapper">
                     <AssetsContainer>
@@ -120,6 +192,49 @@ export default () => {
                         </article>
                     </AssetsContainer>
                 </div>
+            </section>
+            <section className="margin-top-medium">
+                <BigInfo>Oto Nasze Wybrane Realizacje</BigInfo>
+                <SmallInfo className="wrapper">Strony internetowe wykonujemy od lat. W ich budowaniu doszliśmy do perfekcji. Możesz mieć pewność, 
+                    że Twoja strona będzie unikatowa i wyróżniająca się na tle konkurencji. Poniżej prezentujemy nasze przykładowe realizacje.</SmallInfo>
+                <WebsitesContainer>
+                    {
+                        data.allFile.edges.map(({node}) => (
+                            <article>
+                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
+                            </article>
+                        ))
+                    }
+                    {
+                        data.allFile.edges.map(({node}) => (
+                            <article>
+                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
+                            </article>
+                        ))
+                    }
+                    {
+                        data.allFile.edges.map(({node}) => (
+                            <article>
+                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
+                            </article>
+                        ))
+                    }
+                    {
+                        data.allFile.edges.map(({node}) => (
+                            <article>
+                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
+                            </article>
+                        ))
+                    }
+                    {
+                        data.allFile.edges.map(({node}) => (
+                            <article>
+                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
+                            </article>
+                        ))
+                    }
+                </WebsitesContainer>
+                <WebsitesContainerBtn>Zobacz Więcej</WebsitesContainerBtn>
             </section>
         </>
     )
