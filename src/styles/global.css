@@ -6,91 +6,25 @@
   --theme-color-darker: #336699;
 }
 
-main {
-  position: relative;
-  z-index: 2;
-  background: #fff;
-}
-
-.fake-footer {
-  height: 20rem;
-  width: 100%;
-}
-
 body {
   font-family: "Lato", sans-serif;
   color: #222;
 }
 
+.wrapper {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  padding: 0 7.5vw;
+}
+
 a {
-  color: #444;
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-  color: var(--theme-color);
+  text-decoration: underline;
 }
-
-button {
-  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 0.2vh solid var(--theme-color);
-  text-transform: uppercase;
-  border-radius: 1.5vw;
-  padding: 0.65vh 1.5vw;
-  background: #fff;
-  font-size: 0.75rem;
-  outline: none;
-  color: #222;
-}
-
-button:hover {
-  background: var(--theme-color);
-  color: #fff;
-}
-
-button:focus {
-  transform: scale(1.05);
-}
-
-h1 {
-  font-size: 2rem;
-  margin: 0.67em 0 0.5vh 0;
-  padding: 0 1rem;
-  font-weight: bold;
-  box-sizing: border-box;
-}
-
-h1::after {
-  content: "";
-  display: block;
-  width: 25vw;
-  margin: 1vh auto;
-  height: 0.2vh;
-  background: var(--theme-color);
-}
-
-small {
-  display: block;
-  font-size: 0.8rem;
-  margin-top: 1.5vh;
-}
-
-h1,
-small {
-  text-align: center;
-}
-
-.main-header {
-  position: sticky;
-  top: 0;
-  height: 7.5vh;
-  z-index: 100;
-  background: #fff;
-  box-shadow: 0 0 1vh #ccc;
-}
-
-/*---------------------MY REUSABLE CLASSES---------------------*/
 
 .flex {
   display: flex;
@@ -122,12 +56,36 @@ small {
 .align-start {
   align-items: flex-start;
 }
+/*
 
-.wrapper {
-  max-width: 1200px;
-  height: 100%;
-  margin: auto;
-  padding: 0 7.5vw;
+a {
+  color: #444;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--theme-color);
+}
+
+button {
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 0.2vh solid var(--theme-color);
+  text-transform: uppercase;
+  border-radius: 1.5vw;
+  padding: 0.65vh 1.5vw;
+  background: #fff;
+  font-size: 0.75rem;
+  outline: none;
+  color: #222;
+}
+
+button:hover {
+  background: var(--theme-color);
+  color: #fff;
+}
+
+button:focus {
+  transform: scale(1.05);
 }
 
 .pad-it {
@@ -148,95 +106,6 @@ small {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-
-/*---------------------REACT-BURGER-MENU---------------------*/
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 36px;
-  right: calc(((100% - 1200px) / 2) + 3.25vw);
-  right: calc(((100% - 1200px) / 2));
-  top: calc((7.7vh / 2) - 15px);
-  /*display: none;*/
-}
-
-@media screen and (max-width: 1200px) {
-  .bm-burger-button {
-    width: 24px;
-    height: 20px;
-    top: calc((7.7vh / 2) - 10px);
-    right: 7.5vw;
-  }
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #a90000;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
-
-/*
-  Sidebar wrapper styles
-  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-  */
-.bm-menu-wrap {
-  position: fixed;
-  overflow: hidden;
-  transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #fff;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-  overflow: hidden !important;
-  display: flex;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0 0.8em;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-  outline: none;
-  padding: 1vh 0;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-/*niżej jest do optymalizacji*/
-
 
 .warning {
     color: #000;
@@ -277,3 +146,4 @@ small {
 .regulations-section {
     margin-bottom: 7.5vh;
 }
+*/

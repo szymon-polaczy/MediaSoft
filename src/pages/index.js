@@ -1,6 +1,15 @@
 import React from "react"
+import AppLayout from '../components/AppLayout/AppLayout'
+import WelcomeSection from '../components/WelcomeSection/WelcomeSection'
+import OfferSection from '../components/OfferSection/OfferSection'
+import WebsitesSection from '../components/WebsitesSection/WebsitesSection'
+import ContactUsSection from '../components/ContactUsSection/ContactUsSection'
+import HostingSection from '../components/HostingSection/HostingSection'
+import DomainsSection from '../components/DomainsSection/DomainsSection'
+import GoogleSection from '../components/GoogleSection/GoogleSection'
+import ContactSection from '../components/ContactSection/ContactSection'
+/*
 import { useStaticQuery, graphql } from "gatsby"
-import MainLayout from "../components/MainLayout"
 import ContactUs from "../components/ContactUs"
 import SellCard from "../components/SellCard"
 import WelcomeSection from "../components/WelcomeSection"
@@ -9,7 +18,10 @@ import Domains from "../components/domains"
 import Google from "../components/google"
 import Hosting from "../components/hosting"
 import Websites from "../components/websites"
-
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import Example from "../components/Menu"
+/*
 export default () => {
 		const data = useStaticQuery(graphql`
 		query {
@@ -23,8 +35,10 @@ export default () => {
 		}
 	`)
 		
-	return (
-		<MainLayout>
+	return (	
+		<>		
+			<Example/>
+			<Header/>
 			<main>
 				<WelcomeSection img={data.file.childImageSharp.fluid} alt="Background Computer Image" message="Profesjonalna Obsułga Stron Internetowych"/>
 				<section className="pad-it">
@@ -47,9 +61,24 @@ export default () => {
 				<ContactUs/>
 				<Websites/>
 				<ContactUs/>
+				<Contact/>
 			</main>
-			<Contact/>
-		</MainLayout>
+			<Footer/>
+		</>
 	)
 }
-
+*/
+export default () => {
+	return (
+		<AppLayout>
+			<WelcomeSection/>
+			<OfferSection/>
+			<WebsitesSection/>
+			<ContactUsSection/>
+			<HostingSection/>
+			<DomainsSection/>
+			<GoogleSection/>
+			<ContactSection/>
+		</AppLayout>
+	)
+}

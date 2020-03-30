@@ -7,11 +7,6 @@ const MainFooter = styled.footer`
     box-shadow: 0 0 1.5vh #ccc;
     background: var(--theme-color);
     font-size: .9rem;
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    width: 100%;
-    height: 20rem;
 
     article,nav {
         flex: 2;
@@ -50,7 +45,6 @@ const MainFooter = styled.footer`
     }
 
     a:hover {
-        text-decoration: underline;
         color: #fff;
     }
 
@@ -58,6 +52,10 @@ const MainFooter = styled.footer`
         padding: 1rem 0;
         text-align: center;
         background: var(--theme-color-darker);
+    }
+
+    .bottom-section .wrapper * {
+        padding: .35rem;
     }
 
     i {
@@ -98,8 +96,7 @@ const MainFooter = styled.footer`
 export default () => {
     return (
         <>
-        <div className="fake-footer"></div>
-        <MainFooter>
+        <MainFooter id="footer">
             <section className="top-section">
                 <div className="wrapper flex">
                     <article>
@@ -140,7 +137,7 @@ export default () => {
                 </div>
             </section>
             <section className="bottom-section">
-                <div className="wrapper flex justify-between">
+                <div className="wrapper flex justify-around">
                     <p>Copyright &copy; MediaSoft - Wszystkie prawa zastrzeżone</p>
                     <Link to="/privacy-policy/">Polityka Prywatności</Link>
                 </div>
