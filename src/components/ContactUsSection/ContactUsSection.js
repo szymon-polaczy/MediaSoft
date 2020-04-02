@@ -5,7 +5,7 @@ const ContactBar = styled.section`
     background-color: #fd830d;
     color: #fff;
     padding: 2.25rem 0;
-    margin: 3rem 0;
+    margin: 5rem 0;
 
     .wrapper {
         display: grid;

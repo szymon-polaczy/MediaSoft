@@ -36,6 +36,30 @@ const AssetsContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
 
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        transform: translateY(5rem);
+        border-top: 90px solid transparent;
+        border-left: 90px solid #FFAFBD;
+        border-bottom: 90px solid transparent;
+        border-right: 90px solid transparent;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 10rem;
+        height: 10rem;
+        background: #ffc3a0;
+        border-radius: 50%;
+        transform: translateX(3rem) translateY(32rem);
+    }
+
     article {
         display: flex;
         align-items: center;
@@ -109,7 +133,7 @@ const WebsitesContainer = styled.div`
 `;
 
 const WebsitesContainerBtn = styled.button`
-    margin: 1rem auto;
+    margin: 1.5rem auto 1rem auto;
     display: block;
     border: none;
     outline: none;
