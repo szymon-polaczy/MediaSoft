@@ -88,6 +88,25 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }
+
+
+
+
+/*MAPY GOOGLE*/
+.mapouter {
+  position:relative;
+  text-align:right;
+  height:300px;
+  width: 100%;
+  filter: grayscale(1000%);
+} 
+
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:100%;
+  width: 100%;
+}
 /*
 
 a {
