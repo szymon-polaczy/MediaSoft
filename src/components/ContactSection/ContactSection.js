@@ -40,9 +40,10 @@ const Container = styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 3.35rem;
-            height: 3.35rem;
+            width: 3.75rem;
+            height: 3.75rem;
             margin-bottom: .65rem;
+            background: #fff;
         }
 
         h3 {
@@ -77,6 +78,7 @@ const Container = styled.div`
         box-shadow: 0 0 .3rem #e5e5e5;
         border-top: 5px solid var(--theme-color-lighter);
         padding: 1rem;
+        background: #fff;
 
         h2 {
             font-size: 2rem;
@@ -84,6 +86,24 @@ const Container = styled.div`
 
         small {
             display: block;
+        }
+
+        .checkbox-box {
+            margin: 1.5rem 0 .8rem 0;
+        }
+
+        input[type=submit] {
+            border: none;
+            outline: none;
+            padding: .45rem 2.5rem;
+            font-size: 1.05rem;
+            letter-spacing: 0.02rem;
+            border-radius: .25rem;
+            background: #36D1DC;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color: #fff;
+            margin: .8rem 0 .4rem 0;
         }
 
         section {
@@ -166,9 +186,12 @@ export default () => {
                             <label for="message-input">Wiadomość:</label>
                             <input type="text" placeholder="Twoja wiadomość" id="message-input" required />
                         </div>  
-                    </section>  
-                    Dodaj zgadzanie się na przetwarzanie danych osobowych<br/>
-                    Przycisk Wyślij         
+                    </section>
+                    <div className="checkbox-box">
+                        <input type="checkbox" id="policy-requirement" required />
+                        <label for="policy-requirement">Wyrażam zgodę na przetwarzanie moich danych osobowych</label>
+                    </div>
+                    <input type="submit" value="Wyślij"/>
                 </form>
             </Container>
             <div class="mapouter">

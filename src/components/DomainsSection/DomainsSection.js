@@ -61,6 +61,7 @@ const Try = styled.section`
         flex-flow: column;
         justify-content: center;
         border-radius: .65rem;
+        background: #fff;
     }
 
     article h4 {
