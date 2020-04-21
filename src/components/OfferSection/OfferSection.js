@@ -21,23 +21,19 @@ const Test = styled.section`
     article {
         padding: 1rem 0;
         border-right: 3px solid #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: row;
-    }
 
-    article:last-child {
-        border: none;
-    }
+        &:last-child {
+            border: none;
+        }
 
-    a {
-        color: #fff;
-    }
+        a {
+            color: inherit;
 
-    i {
-        margin-left: 1.2rem;
-        font-size: 2rem;
+            i {
+                margin-left: 1.2rem;
+                font-size: 2rem;
+            }
+        }
     }
 `;
 
@@ -47,16 +43,16 @@ export default () => {
             <h2>Co chcesz u nas sprawdzić?</h2>
             <div class="container">
                 <article>
-                    <a href="#">Strony WWW<i class="fas fa-code"></i></a>
+                    <a href="#websites">Strony WWW<i class="fas fa-code"></i></a>
                 </article>
                 <article>
-                    <a href="#">Hosting<i class="fas fa-cogs"></i></a>
+                    <a href="#hosting">Hosting<i class="fas fa-cogs"></i></a>
                 </article>
                 <article>
-                    <a href="#">Domeny<i class="fas fa-search"></i></a>
+                    <a href="#domains">Domeny<i class="fas fa-search"></i></a>
                 </article>
                 <article>
-                    <a href="#">Google Adwords<i class="fas fa-chart-line"></i></a>
+                    <a href="#googleads">Google Adwords<i class="fas fa-chart-line"></i></a>
                 </article>
             </div>
         </Test>

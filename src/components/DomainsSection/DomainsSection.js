@@ -21,30 +21,29 @@ const BigInfo = styled.h2`
     }
 `;
 
-const Try = styled.section`
+const DomainsContainer = styled.section`
     margin-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     section {
         padding: 0 5rem;
-    }
 
-    section:last-child {
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    section img {
-        width: 100%;
-        transform: translateX(-50px);
+        &:last-child {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        img {
+            width: 100%;
+            transform: translateX(-50px);
+        }
     }
 
     .domains-wrapper {
         display: flex;
-        align-items: center;
         justify-content: flex-end;
         flex-flow: wrap;
     }
@@ -57,40 +56,39 @@ const Try = styled.section`
         text-align: center;
         font-size: 1.3rem;
         display: flex;
-        align-items: center;
         flex-flow: column;
         justify-content: center;
         border-radius: .65rem;
         background: #fff;
-    }
 
-    article h4 {
-        color: #fd746c;
-        font-size: 1.8rem;
-        letter-spacing: .03rem;
-        padding-bottom: .65rem;
-        font-weight: bold;
-    }
-
-    article span {
-        display: block;
-        color: #3a7bd5;
-        font-size: 1.45rem;
-        letter-spacing: .02rem;
-        padding: .75rem 0 .45rem 0;
-        font-weight: bold;
-    }
-
-    article p:last-child {
-        font-size: 1rem;
-        font-style: italic;
-        margin-top: .4rem;
+        h4 {
+            color: #fd746c;
+            font-size: 1.8rem;
+            letter-spacing: .03rem;
+            padding-bottom: .65rem;
+            font-weight: bold;
+        }
+    
+        span {
+            display: block;
+            color: #3a7bd5;
+            font-size: 1.45rem;
+            letter-spacing: .02rem;
+            padding: .75rem 0 .45rem 0;
+            font-weight: bold;
+        }
+    
+        p:last-child {
+            font-size: 1rem;
+            font-style: italic;
+            margin-top: .4rem;
+        }
     }
 `;
 
 export default () => {
     return (
-        <Try>
+        <DomainsContainer>
             <section>
                 <BigInfo>Wybierz domenę dla swojej strony</BigInfo>
                 <div className="domains-wrapper">
@@ -134,6 +132,6 @@ export default () => {
             <section>
                 <img src={Hostings} alt="Hosting Logo" />
             </section>
-        </Try>
+        </DomainsContainer>
     )
 }

@@ -10,7 +10,7 @@ const ContactBar = styled.section`
     .wrapper {
         display: grid;
         gap: 20px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
         grid-area: "header header phone mail";
     }
 
@@ -26,18 +26,17 @@ const ContactBar = styled.section`
         display: flex;
         flex-flow: row;
         align-items: center;
-        jusitfy-content: center;
         margin: .65rem;
-    }
 
-    article i {
-        margin-right: .65rem;
-        font-size: 1.75rem;
-    }
-
-    a {
-        color: #fff;
-        font-size: 1.55rem
+        i {
+            margin-right: .65rem;
+            font-size: 1.75rem;
+        }
+    
+        a {
+            color: #fff;
+            font-size: 1.55rem
+        }
     }
 `;
 

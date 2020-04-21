@@ -10,25 +10,24 @@ const Menu = styled.nav`
 	background: #fff;
 	top: 0;
 	z-index: 100;
-	opacity: .99;
 	
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
 
-	.wrapper ul {
-		display: flex;
-		flex-flow: row;
-	}
+		ul {
+			display: flex;
+			flex-flow: row;
 
-	.wrapper ul li {
-		padding: 0 1rem;
-	}
+			li {
+			   padding: 0 1rem;
 
-	.wrapper ul li a {
-		color: #222;
+			   a {
+				   color: #222;
+			   }
+		   }
+		}
 	}
 `;
 

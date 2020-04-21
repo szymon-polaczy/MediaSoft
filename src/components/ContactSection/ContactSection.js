@@ -74,6 +74,11 @@ const Container = styled.div`
     }
 
     .form {
+        input {
+            border: none;
+            outline: none;
+        }
+
         grid-area: form;
         box-shadow: 0 0 .3rem #e5e5e5;
         border-top: 5px solid var(--theme-color-lighter);
@@ -93,15 +98,11 @@ const Container = styled.div`
         }
 
         input[type=submit] {
-            border: none;
-            outline: none;
             padding: .45rem 2.5rem;
             font-size: 1.05rem;
             letter-spacing: 0.02rem;
             border-radius: .25rem;
-            background: #36D1DC;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, #5B86E5, #36D1DC);
             color: #fff;
             margin: .8rem 0 .4rem 0;
         }
@@ -112,8 +113,6 @@ const Container = styled.div`
 
             input {
                 box-sizing: border-box;
-                border: none;
-                outline: none;
                 border-bottom: 2px solid #444;
                 padding: .35rem;
                 width: 90%;
@@ -157,7 +156,7 @@ export default () => {
                 </article>
                 <article className="phone">
                     <i class="fas fa-phone"></i>
-                    <h3>+48 666 666 666</h3>
+                    <h3>+48 501 442 493</h3>
                     <p>Telefon Kontaktowy</p>
                 </article>
                 <article className="place">
@@ -175,28 +174,28 @@ export default () => {
                     <small>Odpowiadamy naprawdę szybko!</small>
                     <section>
                         <div>
-                            <label for="name-input">Imię i Nazwisko:</label>
+                            <label htmlFor="name-input">Imię i Nazwisko:</label>
                             <input type="text" placeholder="Jan Kowalski" id="name-input" required/>
                         </div>
                         <div>
-                            <label for="phone-input">Telefon:</label>
+                            <label htmlFor="phone-input">Telefon:</label>
                             <input type="tel" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" id="phone-input" required />
                         </div>
                         <div className="message-box">
-                            <label for="message-input">Wiadomość:</label>
+                            <label htmlFor="message-input">Wiadomość:</label>
                             <input type="text" placeholder="Twoja wiadomość" id="message-input" required />
                         </div>  
                     </section>
                     <div className="checkbox-box">
                         <input type="checkbox" id="policy-requirement" required />
-                        <label for="policy-requirement">Wyrażam zgodę na przetwarzanie moich danych osobowych</label>
+                        <label htmlFor="policy-requirement">Wyrażam zgodę na przetwarzanie moich danych osobowych</label>
                     </div>
                     <input type="submit" value="Wyślij"/>
                 </form>
             </Container>
             <div class="mapouter">
                 <div class="gmap_canvas">
-                    <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=nysa%20ul.%20Mariacka%2037%2F7&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <iframe title="we-are-here-on-google-maps" width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=nysa%20ul.%20Mariacka%2037%2F7&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
             </div>
         </section>        

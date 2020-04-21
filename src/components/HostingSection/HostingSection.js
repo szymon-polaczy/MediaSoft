@@ -19,25 +19,18 @@ const BigInfo = styled.h2`
     }
 `;
 
-const Try = styled.section`
+const HostingContainer = styled.section`
     margin-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     section {
         padding: 0 5rem;
-    }
-
-    section:first-child {
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    section img {
-        width: 100%;
-        transform: translateX(50px);
+    
+        img {
+            width: 100%;
+            transform: translateX(50px);
+        }
     }
 
     h4 {
@@ -45,16 +38,16 @@ const Try = styled.section`
         font-size: 1.5rem;
         letter-spacing: 0.05rem;
         padding-bottom: .65rem;
-    }
 
-    h4::after {
-        content: '';
-        display: block;
-        width: 20rem;
-        height: 2px;
-        margin-top: .3rem; 
-        background: #444;
-        background: #DCE35B;
+        &::after {
+            content: '';
+            display: block;
+            width: 20rem;
+            height: 2px;
+            margin-top: .3rem; 
+            background: #444;
+            background: #DCE35B;
+        }
     }
 
     .info {
@@ -66,23 +59,23 @@ const Try = styled.section`
 
     article {
         margin-bottom: 1.3rem;
-    }
 
-    article h3 {
-        font-size: 1.35rem;
-        letter-spacing: .02rem;
-    }
-
-    article p {
-        margin-top: .35rem;
-        letter-spacing: .01rem;
+        h3 {
+            font-size: 1.35rem;
+            letter-spacing: .02rem;
+        }
+    
+        p {
+            margin-top: .35rem;
+            letter-spacing: .01rem;
+        }
     }
 `;
 
 export default () => {
     return (
-        <Try>
-            <section>
+        <HostingContainer>
+            <section className="image-section">
                 <img src={Hostings} alt="Hosting Logo" />
             </section>
             <section>
@@ -110,6 +103,6 @@ export default () => {
                     partnered with a reliable and secure website hosting platform.
                     We are one of the easiest website hosting platforms to use, and remain committed to providing our customers with one of the best hosting solutions on the market.</p>
             </section>
-        </Try>
+        </HostingContainer>
     )
 }

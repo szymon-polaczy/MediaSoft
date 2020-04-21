@@ -7,7 +7,7 @@ const WelcomeSection = styled.header`
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
     position: relative;
-    overflow    : hidden;
+    overflow: hidden;
 
     section {
         display: flex;
@@ -16,37 +16,32 @@ const WelcomeSection = styled.header`
         align-items: flex-start;
     }
 
-    section:nth-child(1) {
+    .message-section {
         padding-left: 3vw;
         box-sizing: border-box;
-    }
 
-    h1 {
-        font-size: 4.5rem;
-        text-align: left;
-        width: 100%;
-        padding-right: 5vw;
-        box-sizing: border-box;
-    }
+        h1 {
+            font-size: 4.5rem;
+            padding-right: 5vw;
 
-    h2 {
-        font-size: 1.5rem;
-        font-style: italic;
-    }
+            span {
+                color: var(--theme-color);
+            }
+        }
 
-    h1 span {
-        color: var(--theme-color);
-    }
+        h2 {
+            font-size: 1.5rem;
+            font-style: italic;
+        }
 
-    p {
-        text-align: justify;
-        padding-right: 5vw;
-        width: 100%;
-        box-sizing: border-box;
-        line-height: 150%;
-        margin-top: 2rem;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
+        p {
+            text-align: justify;
+            padding-right: 5vw;
+            line-height: 150%;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
     }
 
     button {
@@ -59,17 +54,15 @@ const WelcomeSection = styled.header`
         margin-top: 2rem;
         box-shadow: -.65rem .65rem 0 var(--theme-color);
         transition: .15s all ease-out;
-    }
 
-    button:hover {
-        box-shadow: -.3rem .3rem 0 var(--theme-color);
-        transition: .15s all ease-out;
-    }
+        &:hover {
+            box-shadow: -.3rem .3rem 0 var(--theme-color);
+        }
 
-    button:active {
-        box-shadow: none;
-        transform: skewX(-3deg);
-        transition: .15s all ease-out;
+        &:active {
+            box-shadow: none;
+            transform: skewX(-3deg);
+        }
     }
 
     .interesting-bg {
@@ -87,7 +80,7 @@ const WelcomeSection = styled.header`
 export default () => {
     return (
         <WelcomeSection>
-            <section>
+            <section className="message-section">
                 <h1>Witamy w <span>Media</span>Soft</h1>
                 <h2>Profesjonalna Obsułga Stron Internetowych</h2>
                 <p>Od 2003 roku zajmujemy się kompleksową obsługą firm pragnących zaistnieć w Internecie 

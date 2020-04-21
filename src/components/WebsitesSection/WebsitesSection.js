@@ -41,7 +41,6 @@ const AssetsContainer = styled.div`
         display: block;
         position: absolute;
         left: 0;
-        transform: translateY(5rem);
         border-top: 90px solid transparent;
         border-left: 90px solid #FFAFBD;
         border-bottom: 90px solid transparent;
@@ -63,63 +62,54 @@ const AssetsContainer = styled.div`
     article {
         display: flex;
         align-items: center;
-        jusitfy-content: center;
         flex-flow: column;
         padding: 1rem;
-    }
 
-    article i {
-        font-size: 2.2rem;
-        border: 2px solid #444;
-        border-radius: 50%;
-        padding: .45rem;
-        width: 3rem;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: .75rem;
-        color: var(--theme-color);
-        color: #ff677d;
-    }
-
-    article h3 {
-        font-weight: bolder;
-        font-size: 1.45rem;
-        letter-spacing: .05rem;
-        margin-bottom: .5rem;
-    }
-
-    article p {
-        line-height: 140%;
-        font-size: 1.2rem;
-        color: #666;
-        letter-spacing: .04rem;
+        i {
+            font-size: 2.2rem;
+            border: 2px solid #444;
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff677d;
+        }
+    
+        h3 {
+            font-weight: bolder;
+            font-size: 1.45rem;
+            letter-spacing: .05rem;
+            margin: .75rem 0 .5rem 0;
+        }
+    
+        p {
+            line-height: 140%;
+            font-size: 1.2rem;
+            color: #666;
+            letter-spacing: .04rem;
+        }
     }
 
     .assets-logo img {
         max-width: 100%;
         max-width: 100%;
         object-fit: contain;
-        margin: 0 auto;
     }
 `;
 
 const WebsitesContainer = styled.div`
     display: flex;
     flex-flow: wrap;
-    align-items: flex-start;
     justify-content: center;
     margin-top: 1.3rem;
-
     box-shadow: inset 0px -46px 25px -17px rgba(255,255,255,1);
 
     .gatsby-image-wrapper {
         width: 320px;
         margin: .25rem .1rem;
-        position: relative;
         z-index: -1;
-        overflow: hidden;
     }
 
     img {

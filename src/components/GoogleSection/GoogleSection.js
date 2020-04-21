@@ -21,68 +21,66 @@ const BigInfo = styled.h2`
 
 const WelcomeText = styled.p`
     font-size: 1.15rem;
-    letter-spacing: 0.02rem;
     color: #333;
     line-height: 150%;
-    text-align: left;
     margin-bottom: 2.5rem;
 `;
 
 const SellingPointsWrapper = styled.section`
-    box-sizing: border-box;
     padding: 0 5rem 0 3rem;
-    text-align: center;
     color: #222;
 
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 1.5rem;
-    }
+    
+        article {
+            text-align: center;
 
-    b {
-        font-weight: bold;
-    }
-
-    article i {
-        color: var(--theme-color);
-        font-size: 1.9rem;
-        margin-bottom: .65rem;
-        color: #1c92d2;
-        color: #ACB6E5;
-    }
-
-    article h3 {
-        font-size: 1.2rem;
-    }
-
-    article p {
-        font-size: .9rem;
-        line-height: 135%;
-        color: #5f5f5f;
-        margin-top: .45rem;
+            i {
+                color: var(--theme-color);
+                font-size: 1.9rem;
+                margin-bottom: .65rem;
+                color: #ACB6E5;
+            }
+        
+            h3 {
+                font-size: 1.2rem;
+    
+                b {
+                    font-weight: bold;
+                }
+            }
+        
+            p {
+                font-size: .9rem;
+                line-height: 135%;
+                color: #5f5f5f;
+                margin-top: .45rem;
+            }
+        }
     }
 `;
 
-const Try = styled.section`
+const GoogleContainer = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     .imageHolder {
         display: flex;
-        align-self: center;
         justify-content: center;
-    }
 
-    img {
-        width: 85%;
+        img {
+            width: 85%;
+        }
     }
 `;
 
 export default () => {
     return (
         <>
-            <Try className="margin-top-medium">
+            <GoogleContainer className="margin-top-medium">
                 <div className="imageHolder">   
                     <img src={WebsitePosition} alt="Pozycjonowanie Strony" />
                 </div>
@@ -157,7 +155,7 @@ export default () => {
                         </article>
                     </div>
                 </SellingPointsWrapper>
-            </Try>
+            </GoogleContainer>
             {/*}
             <section>
                 <div className="wrapper higher-text pad-it">

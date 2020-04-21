@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 const MainFooter = styled.footer`
     color: #e0e0e0;
-    box-shadow: 0 0 1.5vh #ccc;
     background: var(--theme-color);
     font-size: .9rem;
 
@@ -34,14 +33,13 @@ const MainFooter = styled.footer`
     h4 {
         color: #fff;
         text-transform: uppercase;
-        font-size: .85rem;
         font-weight: 600;
         letter-spacing: .05vw;
         margin-bottom: .85rem;
     }
 
     a {
-        color: #e0e0e0;
+        color: inherit;
     }
 
     a:hover {
@@ -52,15 +50,14 @@ const MainFooter = styled.footer`
         padding: 1rem 0;
         text-align: center;
         background: var(--theme-color-darker);
-    }
 
-    .bottom-section .wrapper * {
-        padding: .35rem;
+        .wrapper * {
+            padding: .35rem;
+        }
     }
 
     i {
         color: lightblue;
-        font-size: 1rem;
         padding: 0 .65rem .65rem 0;
     }
 
@@ -82,13 +79,15 @@ const MainFooter = styled.footer`
     }
 
     @media (max-width: 560px) {
-        .bottom-section .wrapper {
-            jusitfy-content: center;
-            flex-flow: column;
-        }
+        .bottom-section {
+            .wrapper {
+                jusitfy-content: center;
+                flex-flow: column;
+            }
 
-        .bottom-section p {
-            margin-bottom: .35rem;
+            p {
+                margin-bottom: .35rem;
+            }
         }
     }
 `
