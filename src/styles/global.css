@@ -7,12 +7,6 @@
   --theme-color-lighter: #a7c5f2;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  color: #222;
-  background: url("../images/so-white.png");
-}
-
 .wrapper {
   max-width: 1200px;
   height: 100%;
@@ -63,13 +57,6 @@ a:hover {
   margin-top: 5rem;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-
-
-
 html {
   --scrollbarBG: #CFD8DC;
   --thumbBG: #90A4AE;
@@ -80,6 +67,11 @@ body::-webkit-scrollbar {
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  
+  color: #222;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  background: url("../images/so-white.png");
 }
 body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
@@ -90,10 +82,6 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid var(--scrollbarBG);
 }
 
-
-
-
-/*MAPY GOOGLE*/
 .mapouter {
   position:relative;
   text-align:right;
@@ -108,94 +96,3 @@ body::-webkit-scrollbar-thumb {
   height:100%;
   width: 100%;
 }
-/*
-
-a {
-  color: #444;
-  transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-  color: var(--theme-color);
-}
-
-button {
-  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 0.2vh solid var(--theme-color);
-  text-transform: uppercase;
-  border-radius: 1.5vw;
-  padding: 0.65vh 1.5vw;
-  background: #fff;
-  font-size: 0.75rem;
-  outline: none;
-  color: #222;
-}
-
-button:hover {
-  background: var(--theme-color);
-  color: #fff;
-}
-
-button:focus {
-  transform: scale(1.05);
-}
-
-.pad-it {
-  padding-top: 1.5rem;
-  padding-bottom: 3.5rem;
-}
-
-.higher-text {
-  line-height: 150%;
-}
-
-.box-shadow {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.box-shadow:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.warning {
-    color: #000;
-    font-size: .75rem;
-    padding: 1vh 0;
-}
-
-.warning i {
-    padding-right: 1vh;
-    font-size: 1rem;
-}
-
-.section-holder {
-    width: 100%;
-}
-
-.contact-main .wrapper .section-holder p {
-    line-height: 150%;
-}
-
-.websites-show-off {
-    padding: 2.5vh 0 5vh 0;
-}
-
-.contain-contacts {
-    padding-top: 1vh;
-}
-
-.contact-link i {
-    font-size: 2rem;
-    padding-right: 1rem;
-}
-
-.contact-link p {
-    font-size: 1.25rem;
-}
-
-.regulations-section {
-    margin-bottom: 7.5vh;
-}
-*/
