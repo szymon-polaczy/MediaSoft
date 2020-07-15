@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from "gatsby"
 import Hostings from '../../images/undraw_ask_me_anything_k8o0.svg'
 
 const BigInfo = styled.h2`
@@ -87,46 +88,33 @@ const DomainsContainer = styled.section`
 `;
 
 export default () => {
+    const data = useStaticQuery(graphql`
+    {
+      allDatoCmsOuravailabledomain {
+        nodes {
+          normalprice
+          firstyearprice
+          domain
+          id
+        }
+      }
+    }
+  `)
+
     return (
         <DomainsContainer>
             <section>
                 <BigInfo>Wybierz domenę dla swojej strony</BigInfo>
                 <div className="domains-wrapper">
-                    <article>
-                        <h4>.pl</h4>
-                        <p>Pierwszy rok <span>10.90zł</span></p>
-                        <p>Odnowienie 109zł</p>
-                    </article>
-                    <article>
-                        <h4>.com</h4>
-                        <p>Pierwszy rok <span>49.90zł</span></p>
-                        <p>Odnowienie 89zł</p>
-                    </article>
-                    <article>
-                        <h4>.org</h4>
-                        <p>Pierwszy rok <span>49.90zł</span></p>
-                        <p>Odnowienie 89zł</p>
-                    </article>
-                    <article>
-                        <h4>.net</h4>
-                        <p>Pierwszy rok <span>49.90zł</span></p>
-                        <p>Odnowienie 89zł</p>
-                    </article>
-                    <article>
-                        <h4>.biz</h4>
-                        <p>Pierwszy rok <span>49.90zł</span></p>
-                        <p>Odnowienie 89zł</p>
-                    </article>
-                    <article>
-                        <h4>.info</h4>
-                        <p>Pierwszy rok <span>49.90zł</span></p>
-                        <p>Odnowienie 89zł</p>
-                    </article>
-                    <article>
-                        <h4>.eu</h4>
-                        <p>Pierwszy rok <span>119zł</span></p>
-                        <p>Odnowienie 129zł</p>
-                    </article>
+                    {
+                        data.allDatoCmsOuravailabledomain.nodes.map(element => (
+                            <article key={element.id}>
+                                <h4>{element.domain}</h4>
+                                <p>Pierwszy rok <span>{element.firstyearprice}zł</span></p>
+                                <p>Odnowienie {element.normalprice}zł</p>
+                            </article>
+                        ))
+                    }
                 </div>
             </section>
             <section>

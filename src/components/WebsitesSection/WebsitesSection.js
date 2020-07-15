@@ -138,8 +138,14 @@ const WebsitesContainerBtn = styled.button`
     }
 `;
 
+const GetSeeMoreBtnIfNeeded = (img_array) => {
+    let minNumberOfPhotosToActivateTheBtn = 30;
+    if (img_array.length > minNumberOfPhotosToActivateTheBtn)
+        return <WebsitesContainerBtn>Zobacz Więcej</WebsitesContainerBtn>
+};
+
 const WebsiteSection = () => {
-    const data = useStaticQuery(graphql`
+    const CMS_data = useStaticQuery(graphql`
     {
       allDatoCmsOurdoneproject {
         nodes {
@@ -215,7 +221,7 @@ const WebsiteSection = () => {
                     że Twoja strona będzie unikatowa i wyróżniająca się na tle konkurencji. Poniżej prezentujemy nasze przykładowe realizacje.</SmallInfo>
                 <WebsitesContainer>
                     {
-                        data.allDatoCmsOurdoneproject.nodes.map(project => (
+                        CMS_data.allDatoCmsOurdoneproject.nodes.map(project => (
                             <article key={project.id}>
                                 <Img fixed={project.websitelandingpageimg.fixed} alt={project.websitelandingpageimg.alt} title={project.websitelandingpageimg.title}/>
                                 <p>{project.title}</p>
@@ -223,7 +229,7 @@ const WebsiteSection = () => {
                         ))
                     }
                 </WebsitesContainer>
-                <WebsitesContainerBtn>Zobacz Więcej</WebsitesContainerBtn>
+                { GetSeeMoreBtnIfNeeded(CMS_data.allDatoCmsOurdoneproject.nodes) }
             </section>
         </>
   )
