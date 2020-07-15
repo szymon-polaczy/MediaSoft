@@ -16,6 +16,12 @@ module.exports = {
         disableLiveReload: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true
+      },
+    },
   ],
 
   siteMetadata: {
