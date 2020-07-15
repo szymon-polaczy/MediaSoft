@@ -172,22 +172,22 @@ export default () => {
                 <div className="wrapper">
                     <AssetsContainer>
                         <article>
-                            <i class="fas fa-mobile-alt"></i>
+                            <i className="fas fa-mobile-alt"></i>
                             <h3>Strona responsywna  RWD</h3>
                             <p>Responsywna (dopasowująca się do urządzeń mobilnych) strona internetowa z indywidualną szatą graficzną.</p>
                         </article>
                         <article>
-                            <i class="fas fa-cogs"></i>
+                            <i className="fas fa-cogs"></i>
                             <h3>panel administratora CMS</h3>
                             <p>Panel zarządzania stroną, dzięki któremu możesz m.in. samodzielnie dodawać treści do strony.</p>
                         </article>
                         <article>
-                            <i class="fas fa-chart-line"></i>
+                            <i className="fas fa-chart-line"></i>
                             <h3>optymalizacja strony</h3>
                             <p>Gwarantujemy wysoki wynik w audytach SEO. Twoja strona będzie się poprawnie wyświetlać na wszystkich popularnych przeglądarkach.</p>
                         </article>
                         <article>
-                            <i class="fas fa-search"></i>
+                            <i className="fas fa-search"></i>
                             <h3>indeksacja strony</h3>
                             <p>Zaindeksujemy Twoją stronę internetową w wyszukiwarce google.</p>
                         </article>
@@ -195,22 +195,22 @@ export default () => {
                             <img src={AssetsLogoSVG} alt="Wybierz co potrzebujesz na swojej stronie" />
                         </article>
                         <article>
-                            <i class="fas fa-paint-brush"></i>
+                            <i className="fas fa-paint-brush"></i>
                             <h3>projekt graficzny</h3>
                             <p>Jeśli nie posiadasz swojego projektu graficznego to przygotujemy go specjalnie dla Ciebie</p>
                         </article>
                         <article>
-                            <i class="fas fa-envelope"></i>
+                            <i className="fas fa-envelope"></i>
                             <h3>skrzynki pocztowe</h3>
                             <p>Będziesz miał możliwość tworzenia skrzynek w domenie strony, np. kontakt@twojafirma.pl</p>
                         </article>
                         <article>
-                            <i class="fas fa-shopping-cart"></i>
+                            <i className="fas fa-shopping-cart"></i>
                             <h3>Sklepy E-commerce</h3>
                             <p>Oferujemy wiodące w branży, bezpieczne i niezawodne systemy e-commerce, w tworzonych przez nas stronach www.</p>
                         </article>
                         <article>
-                            <i class="fas fa-code"></i>
+                            <i className="fas fa-code"></i>
                             <h3>Szybkość Interakcji</h3>
                             <p>Wszystkie nasze strony internetowe są niestandardowo kodowane w lekkiej ramie, która jest zgodna z aktualnymi standardami projektowania stron internetowych i SEO.</p>
                         </article>
@@ -223,36 +223,36 @@ export default () => {
                     że Twoja strona będzie unikatowa i wyróżniająca się na tle konkurencji. Poniżej prezentujemy nasze przykładowe realizacje.</SmallInfo>
                 <WebsitesContainer>
                     {
-                        data.allFile.edges.map(({node}) => (
-                            <article>
+                        data.allFile.edges.map(({node},i) => (
+                            <article key={i}>
                                 <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
                             </article>
                         ))
                     }
                     {
-                        data.allFile.edges.map(({node}) => (
-                            <article>
+                        data.allFile.edges.map(({node},i) => (
+                            <article key={i}>
                                 <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
                             </article>
                         ))
                     }
                     {
-                        data.allFile.edges.map(({node}) => (
-                            <article>
+                        data.allFile.edges.map(({node},i) => (
+                            <article key={i}>
                                 <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
                             </article>
                         ))
                     }
                     {
-                        data.allFile.edges.map(({node}) => (
-                            <article>
+                        data.allFile.edges.map(({node},i) => (
+                            <article key={i}>
                                 <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
                             </article>
                         ))
                     }
                     {
-                        data.allFile.edges.map(({node}) => (
-                            <article>
+                        data.allFile.edges.map(({node},i) => (
+                            <article key={i}>
                                 <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
                             </article>
                         ))

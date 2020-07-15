@@ -52,7 +52,7 @@ export default () => {
                     <a href="tel:501-442-493">(+48) 501 442 493</a>
                 </article>
                 <article>
-                    <i class="fas fa-envelope"></i>
+                    <i className="fas fa-envelope"></i>
                     <a href="mailto:kontakt@mediasoft.com.pl">kontakt@mediasoft.com.pl</a>
                 </article>
             </div>

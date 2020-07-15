@@ -144,28 +144,43 @@ const Container = styled.div`
     }
 `;
 
+const Mapouter = styled.div`
+    position:relative;
+    text-align:right;
+    height:300px;
+    width: 100%;
+    filter: grayscale(1000%);
+`;
+
+const Gmap = styled.div`
+    overflow:hidden;
+    background:none!important;
+    height:100%;
+    width: 100%;
+`;
+
 export default () => {
     return (
         <section className="margin-top-medium">
             <BigInfo>Skontaktuj się z nami</BigInfo>
             <Container className="wrapper">
                 <article className="hours">
-                    <i class="fas fa-clock"></i>
+                    <i className="fas fa-clock"></i>
                     <h3>Pn. - Pt. 9:00 - 16:00</h3>
                     <p>Godziny Otwarcia</p>
                 </article>
                 <article className="phone">
-                    <i class="fas fa-phone"></i>
+                    <i className="fas fa-phone"></i>
                     <h3>+48 501 442 493</h3>
                     <p>Telefon Kontaktowy</p>
                 </article>
                 <article className="place">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i className="fas fa-map-marker-alt"></i>
                     <h3>ul. Mariacka 37/7</h3>
                     <p>48-304 Nysa</p>
                 </article>
                 <article className="mail">
-                    <i class="fas fa-envelope"></i>
+                    <i className="fas fa-envelope"></i>
                     <h3>kontakt@mediasoft.com.pl</h3>
                     <p>Adres e-mail</p>
                 </article>
@@ -193,11 +208,20 @@ export default () => {
                     <input type="submit" value="Wyślij"/>
                 </form>
             </Container>
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe title="we-are-here-on-google-maps" width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=nysa%20ul.%20Mariacka%2037%2F7&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>
-            </div>
+            <Mapouter>
+                <Gmap>
+                    <iframe 
+                        title="our-position-on-gmaps" 
+                        width="100%" 
+                        height="100%" 
+                        id="gmap_canvas" 
+                        frameBorder="0"
+                        scrolling="no"
+                        marginHeight="0"
+                        marginWidth="0"
+                        src="https://maps.google.com/maps?q=nysa%20ul.%20Mariacka%2037%2F7&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe>
+                </Gmap>
+            </Mapouter>
         </section>        
     )
 }

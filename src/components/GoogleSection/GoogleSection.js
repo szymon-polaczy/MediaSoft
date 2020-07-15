@@ -94,62 +94,62 @@ export default () => {
                     </div>
                     <div className="container">
                         <article>
-                            <i class="fas fa-database"></i>
+                            <i className="fas fa-database"></i>
                             <h3><b>Płacisz</b> tylko za wynik</h3>
                             <p>Płatność pobierana jest tylko za kliknięcie w reklamę. (Pay per Click)</p>
                         </article>
                         <article>
-                            <i class="fas fa-desktop"></i>
+                            <i className="fas fa-desktop"></i>
                             <h3><b>Błyskawiczny </b> efekt</h3>
                             <p>Natychmiastowe wyświetlenie na pierwszej stronie Google.</p>
                         </article>
                         <article>
-                            <i class="fas fa-universal-access"></i>
+                            <i className="fas fa-universal-access"></i>
                             <h3><b>Dowolny </b> zasięg</h3>
                             <p>Reklama w promieniu Twojego miasta, regionu, kraju a nawet całego globu.</p>
                         </article>
                         <article>
-                            <i class="fas fa-comments-dollar"></i>
+                            <i className="fas fa-comments-dollar"></i>
                             <h3><b>Gwarantowany </b> wzrost</h3>
                             <p>Czytelne statystyki na temat ilości kliknięc w reklamy i ich kosztów.</p>
                         </article>
                         <article>
-                            <i class="fas fa-user-shield"></i>
+                            <i className="fas fa-user-shield"></i>
                             <h3><b>Wsparcie </b> profesjonalistów</h3>
                             <p>Wsparcie profejsonalistów dla jak największego zadowolenia klienta.</p>
                         </article>
                         <article>
-                            <i class="fas fa-history"></i>
+                            <i className="fas fa-history"></i>
                             <h3><b>Brak zobowiązań</b></h3>
                             <p>Zawieś swoją kampanię kiedy chcesz.</p>
                         </article>
                         <article>
-                            <i class="fas fa-sort-amount-up"></i>
+                            <i className="fas fa-sort-amount-up"></i>
                             <h3><b>Raportowanie</b> cotygodniowe</h3>
                             <p>Co tygodniowy pełny raport z działania kampanii przesłane do klienta.</p>
                         </article>
                         <article>
-                            <i class="fas fa-user-friends"></i>
+                            <i className="fas fa-user-friends"></i>
                             <h3><b>Kontroluj </b> swoje kampanie</h3>
                             <p>Wybieraj czas, słowa kluczowe i kapitał przeznaczony na kampanię.</p>
                         </article>
                         <article>
-                            <i class="fas fa-user-tie"></i>
+                            <i className="fas fa-user-tie"></i>
                             <h3><b>Niezawodna obsługa</b></h3>
                             <p>Szczegółowa obsługa kampanii 7 dni w tygodniu.</p>
                         </article>
                         <article>
-                            <i class="fas fa-stopwatch"></i>
+                            <i className="fas fa-stopwatch"></i>
                             <h3><b>Rozpocznij</b> kampanię już teraz</h3>
                             <p>Start kampani do 24h od omówienia w dni robocze.</p>
                         </article>
                         <article>
-                            <i class="fas fa-umbrella"></i>
+                            <i className="fas fa-umbrella"></i>
                             <h3><b>Ochrona </b> przed atakami</h3>
                             <p>Blokada zliczania kliknięć gwarantuje, że środki nie zostaną wyklikane np. przez konkurencyjne firmy.</p>
                         </article>
                         <article>
-                            <i class="fas fa-gem"></i>
+                            <i className="fas fa-gem"></i>
                             <h3><b>Bonus </b> dla nowych klientów</h3>
                             <p>Otrzymaj dodatkowe 250zł na start swojej kampanii.</p>
                         </article>

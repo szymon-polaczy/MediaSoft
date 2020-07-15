@@ -41,18 +41,18 @@ export default () => {
     return (
         <Test>
             <h2>Co chcesz u nas sprawdzić?</h2>
-            <div class="container">
+            <div className="container">
                 <article>
-                    <a href="#websites">Strony WWW<i class="fas fa-code"></i></a>
+                    <a href="#websites">Strony WWW<i className="fas fa-code"></i></a>
                 </article>
                 <article>
-                    <a href="#hosting">Hosting<i class="fas fa-cogs"></i></a>
+                    <a href="#hosting">Hosting<i className="fas fa-cogs"></i></a>
                 </article>
                 <article>
-                    <a href="#domains">Domeny<i class="fas fa-search"></i></a>
+                    <a href="#domains">Domeny<i className="fas fa-search"></i></a>
                 </article>
                 <article>
-                    <a href="#googleads">Google Adwords<i class="fas fa-chart-line"></i></a>
+                    <a href="#googleads">Google Adwords<i className="fas fa-chart-line"></i></a>
                 </article>
             </div>
         </Test>
