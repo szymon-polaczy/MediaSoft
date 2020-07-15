@@ -138,35 +138,27 @@ const WebsitesContainerBtn = styled.button`
     }
 `;
 
-export default () => {
+const WebsiteSection = () => {
     const data = useStaticQuery(graphql`
-        query imageQuery {
-            allFile(
-                filter: {
-                    extension: { regex: "/(png)/" }
-                    relativeDirectory: { eq: "Websites" }
-                }
-            ) {
-                edges {
-                    node {
-                        base
-                        childImageSharp {
-                            fluid {
-                                aspectRatio
-                                base64
-                                sizes
-                                src
-                                srcSet
-                            }
-                        }
-                    }
-                }
+    {
+      allDatoCmsOurdoneproject {
+        nodes {
+          title
+          id
+          websitelandingpageimg {
+            title
+            alt
+            fixed(width: 320) {
+                ...GatsbyDatoCmsFixed
             }
+          }
         }
-    `)
+      }
+    }
+  `)
 
-    return (
-        <>
+  return (
+    <>
             <section className="margin-top-medium">
                 <BigInfo>Co dostaniesz tworząc z nami stronę?</BigInfo>
                 <div className="wrapper">
@@ -223,37 +215,10 @@ export default () => {
                     że Twoja strona będzie unikatowa i wyróżniająca się na tle konkurencji. Poniżej prezentujemy nasze przykładowe realizacje.</SmallInfo>
                 <WebsitesContainer>
                     {
-                        data.allFile.edges.map(({node},i) => (
-                            <article key={i}>
-                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
-                            </article>
-                        ))
-                    }
-                    {
-                        data.allFile.edges.map(({node},i) => (
-                            <article key={i}>
-                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
-                            </article>
-                        ))
-                    }
-                    {
-                        data.allFile.edges.map(({node},i) => (
-                            <article key={i}>
-                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
-                            </article>
-                        ))
-                    }
-                    {
-                        data.allFile.edges.map(({node},i) => (
-                            <article key={i}>
-                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
-                            </article>
-                        ))
-                    }
-                    {
-                        data.allFile.edges.map(({node},i) => (
-                            <article key={i}>
-                                <Img fluid={node.childImageSharp.fluid} alt={node.base.split(".")[0]} />
+                        data.allDatoCmsOurdoneproject.nodes.map(project => (
+                            <article key={project.id}>
+                                <Img fixed={project.websitelandingpageimg.fixed} alt={project.websitelandingpageimg.alt} title={project.websitelandingpageimg.title}/>
+                                <p>{project.title}</p>
                             </article>
                         ))
                     }
@@ -261,5 +226,7 @@ export default () => {
                 <WebsitesContainerBtn>Zobacz Więcej</WebsitesContainerBtn>
             </section>
         </>
-    )
+  )
 }
+
+export default WebsiteSection;
