@@ -79,7 +79,7 @@ const PerksHolder = styled.section`
 const setProperPerk = (project) => {
 	return (
 		<article>
-			<div className="ring"><img src={project.icon.uploadId.url} alt={project.icon.alt} /></div>
+			<div className="ring"><img src={project.icon.url} alt={project.icon.alt} /></div>
 			<h3>{project.title}</h3>
 			<p>{project.description}</p>
 		</article>
@@ -109,9 +109,7 @@ const PerksOfWorkingWithUsHolder = () => {
 				description
 				id
 				icon {
-					uploadId {
-						url
-					}
+					url
 					alt
 				}
 			}
