@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 
-const Menu = styled.nav`
+const MenuContainer = styled.nav`
 	height: 5rem;
 	box-shadow: 0 0 .5rem #d0d0d0;
 	position: fixed;
@@ -33,7 +33,7 @@ const Menu = styled.nav`
 
 export default () => {
 	return (
-		<Menu>
+		<MenuContainer>
 			<div className="wrapper">
 				<img src="https://mediasoft.com.pl/jpg/media-logo.png" alt="MediaSoft Logo"/>
 				<ul>
@@ -45,6 +45,6 @@ export default () => {
 					<li className="menu-item"><Link to="/contact/">Kontakt</Link></li>
 				</ul>
 			</div>
-		</Menu>
+		</MenuContainer>
 	)
 }

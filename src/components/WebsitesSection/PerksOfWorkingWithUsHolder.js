@@ -9,7 +9,7 @@ const PerksHolder = styled.section`
 	grid-template-columns: 1fr 1fr 1fr;
 	text-align: center;
 
-	&::after {
+	&::after { /*ADDITIONAl TRIANGLE*/
 		content: '';
 		display: block;
 		position: absolute;
@@ -20,7 +20,7 @@ const PerksHolder = styled.section`
 		border-right: 90px solid transparent;
 	}
 
-	&::before {
+	&::before { /*ADDITIONAl BALL*/
 		content: '';
 		display: block;
 		position: absolute;
@@ -32,7 +32,7 @@ const PerksHolder = styled.section`
 		transform: translateX(3rem) translateY(32rem);
 	}
 
-	article:not(.assets-logo) {
+	article {
 		display: flex;
 		align-items: center;
 		flex-flow: column;

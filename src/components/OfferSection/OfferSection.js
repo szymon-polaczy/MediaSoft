@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Test = styled.section`
+const TrafficSignsHolder = styled.section`
     background: #ff677d;
     padding: 3.25rem 0;
     font-size: 2.5rem;
@@ -39,7 +39,7 @@ const Test = styled.section`
 
 export default () => {
     return (
-        <Test>
+        <TrafficSignsHolder>
             <h2>Co chcesz u nas sprawdzić?</h2>
             <div className="container">
                 <article>
@@ -55,6 +55,6 @@ export default () => {
                     <a href="#googleads">Google Adwords<i className="fas fa-chart-line"></i></a>
                 </article>
             </div>
-        </Test>
+        </TrafficSignsHolder>
     )
 }

@@ -87,6 +87,16 @@ const DomainsContainer = styled.section`
     }
 `;
 
+const OurAvailableDomain = (available_domain) => {
+    return (
+        <article key={available_domain.id}>
+            <h4>{available_domain.domain}</h4>
+            <p>Pierwszy rok <span>{available_domain.firstyearprice}zł</span></p>
+            <p>Odnowienie {available_domain.normalprice}zł</p>
+        </article>
+    )
+}
+
 export default () => {
     const data = useStaticQuery(graphql`
     {
@@ -106,15 +116,7 @@ export default () => {
             <section>
                 <BigInfo>Wybierz domenę dla swojej strony</BigInfo>
                 <div className="domains-wrapper">
-                    {
-                        data.allDatoCmsOuravailabledomain.nodes.map(element => (
-                            <article key={element.id}>
-                                <h4>{element.domain}</h4>
-                                <p>Pierwszy rok <span>{element.firstyearprice}zł</span></p>
-                                <p>Odnowienie {element.normalprice}zł</p>
-                            </article>
-                        ))
-                    }
+                    { data.allDatoCmsOuravailabledomain.nodes.map(element => ( OurAvailableDomain(element) )) }
                 </div>
             </section>
             <section>
