@@ -8,6 +8,8 @@ I'm doing this project on my free time.
 * React
 * GatsbyJS
 * Styled Components
+* GraphQL
+* DatoCMS
 
 #### Disclaimer
 
