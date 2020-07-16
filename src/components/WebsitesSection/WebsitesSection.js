@@ -1,7 +1,7 @@
 import React from 'react'
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby'
 import AssetsLogoSVG from '../../images/undraw_mobile_wireframe_euf4.svg'
 
 const BigInfo = styled.h2`
@@ -139,13 +139,12 @@ const WebsitesContainerBtn = styled.button`
 `;
 
 const GetSeeMoreBtnIfNeeded = (img_array) => {
-    let minNumberOfPhotosToActivateTheBtn = 30;
-    if (img_array.length > minNumberOfPhotosToActivateTheBtn)
-        return <WebsitesContainerBtn>Zobacz Więcej</WebsitesContainerBtn>
+  const minNumberOfPhotosToActivateTheBtn = 30;
+  if (img_array.length > minNumberOfPhotosToActivateTheBtn) { return <WebsitesContainerBtn>Zobacz Więcej</WebsitesContainerBtn>; }
 };
 
 const WebsiteSection = () => {
-    const CMS_data = useStaticQuery(graphql`
+  const CMS_data = useStaticQuery(graphql`
     {
       allDatoCmsOurdoneproject {
         nodes {
@@ -161,78 +160,80 @@ const WebsiteSection = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
-            <section className="margin-top-medium">
-                <BigInfo>Co dostaniesz tworząc z nami stronę?</BigInfo>
-                <div className="wrapper">
-                    <AssetsContainer>
-                        <article>
-                            <i className="fas fa-mobile-alt"></i>
-                            <h3>Strona responsywna  RWD</h3>
-                            <p>Responsywna (dopasowująca się do urządzeń mobilnych) strona internetowa z indywidualną szatą graficzną.</p>
-                        </article>
-                        <article>
-                            <i className="fas fa-cogs"></i>
-                            <h3>panel administratora CMS</h3>
-                            <p>Panel zarządzania stroną, dzięki któremu możesz m.in. samodzielnie dodawać treści do strony.</p>
-                        </article>
-                        <article>
-                            <i className="fas fa-chart-line"></i>
-                            <h3>optymalizacja strony</h3>
-                            <p>Gwarantujemy wysoki wynik w audytach SEO. Twoja strona będzie się poprawnie wyświetlać na wszystkich popularnych przeglądarkach.</p>
-                        </article>
-                        <article>
-                            <i className="fas fa-search"></i>
-                            <h3>indeksacja strony</h3>
-                            <p>Zaindeksujemy Twoją stronę internetową w wyszukiwarce google.</p>
-                        </article>
-                        <article className="assets-logo">
-                            <img src={AssetsLogoSVG} alt="Wybierz co potrzebujesz na swojej stronie" />
-                        </article>
-                        <article>
-                            <i className="fas fa-paint-brush"></i>
-                            <h3>projekt graficzny</h3>
-                            <p>Jeśli nie posiadasz swojego projektu graficznego to przygotujemy go specjalnie dla Ciebie</p>
-                        </article>
-                        <article>
-                            <i className="fas fa-envelope"></i>
-                            <h3>skrzynki pocztowe</h3>
-                            <p>Będziesz miał możliwość tworzenia skrzynek w domenie strony, np. kontakt@twojafirma.pl</p>
-                        </article>
-                        <article>
-                            <i className="fas fa-shopping-cart"></i>
-                            <h3>Sklepy E-commerce</h3>
-                            <p>Oferujemy wiodące w branży, bezpieczne i niezawodne systemy e-commerce, w tworzonych przez nas stronach www.</p>
-                        </article>
-                        <article>
-                            <i className="fas fa-code"></i>
-                            <h3>Szybkość Interakcji</h3>
-                            <p>Wszystkie nasze strony internetowe są niestandardowo kodowane w lekkiej ramie, która jest zgodna z aktualnymi standardami projektowania stron internetowych i SEO.</p>
-                        </article>
-                    </AssetsContainer>
-                </div>
-            </section>
-            <section className="margin-top-medium">
-                <BigInfo>Oto Nasze Wybrane Realizacje</BigInfo>
-                <SmallInfo className="wrapper">Strony internetowe wykonujemy od lat. W ich budowaniu doszliśmy do perfekcji. Możesz mieć pewność, 
-                    że Twoja strona będzie unikatowa i wyróżniająca się na tle konkurencji. Poniżej prezentujemy nasze przykładowe realizacje.</SmallInfo>
-                <WebsitesContainer>
-                    {
-                        CMS_data.allDatoCmsOurdoneproject.nodes.map(project => (
-                            <article key={project.id}>
-                                <Img fixed={project.websitelandingpageimg.fixed} alt={project.websitelandingpageimg.alt} title={project.websitelandingpageimg.title}/>
-                                <p>{project.title}</p>
-                            </article>
+      <section className="margin-top-medium">
+        <BigInfo>Co dostaniesz tworząc z nami stronę?</BigInfo>
+        <div className="wrapper">
+          <AssetsContainer>
+            <article>
+              <i className="fas fa-mobile-alt" />
+              <h3>Strona responsywna  RWD</h3>
+              <p>Responsywna (dopasowująca się do urządzeń mobilnych) strona internetowa z indywidualną szatą graficzną.</p>
+            </article>
+            <article>
+              <i className="fas fa-cogs" />
+              <h3>panel administratora CMS</h3>
+              <p>Panel zarządzania stroną, dzięki któremu możesz m.in. samodzielnie dodawać treści do strony.</p>
+            </article>
+            <article>
+              <i className="fas fa-chart-line" />
+              <h3>optymalizacja strony</h3>
+              <p>Gwarantujemy wysoki wynik w audytach SEO. Twoja strona będzie się poprawnie wyświetlać na wszystkich popularnych przeglądarkach.</p>
+            </article>
+            <article>
+              <i className="fas fa-search" />
+              <h3>indeksacja strony</h3>
+              <p>Zaindeksujemy Twoją stronę internetową w wyszukiwarce google.</p>
+            </article>
+            <article className="assets-logo">
+              <img src={AssetsLogoSVG} alt="Wybierz co potrzebujesz na swojej stronie" />
+            </article>
+            <article>
+              <i className="fas fa-paint-brush" />
+              <h3>projekt graficzny</h3>
+              <p>Jeśli nie posiadasz swojego projektu graficznego to przygotujemy go specjalnie dla Ciebie</p>
+            </article>
+            <article>
+              <i className="fas fa-envelope" />
+              <h3>skrzynki pocztowe</h3>
+              <p>Będziesz miał możliwość tworzenia skrzynek w domenie strony, np. kontakt@twojafirma.pl</p>
+            </article>
+            <article>
+              <i className="fas fa-shopping-cart" />
+              <h3>Sklepy E-commerce</h3>
+              <p>Oferujemy wiodące w branży, bezpieczne i niezawodne systemy e-commerce, w tworzonych przez nas stronach www.</p>
+            </article>
+            <article>
+              <i className="fas fa-code" />
+              <h3>Szybkość Interakcji</h3>
+              <p>Wszystkie nasze strony internetowe są niestandardowo kodowane w lekkiej ramie, która jest zgodna z aktualnymi standardami projektowania stron internetowych i SEO.</p>
+            </article>
+          </AssetsContainer>
+        </div>
+      </section>
+      <section className="margin-top-medium">
+        <BigInfo>Oto Nasze Wybrane Realizacje</BigInfo>
+        <SmallInfo className="wrapper">
+          Strony internetowe wykonujemy od lat. W ich budowaniu doszliśmy do perfekcji. Możesz mieć pewność,
+          że Twoja strona będzie unikatowa i wyróżniająca się na tle konkurencji. Poniżej prezentujemy nasze przykładowe realizacje.
+        </SmallInfo>
+        <WebsitesContainer>
+          {
+                        CMS_data.allDatoCmsOurdoneproject.nodes.map((project) => (
+                          <article key={project.id}>
+                            <Img fixed={project.websitelandingpageimg.fixed} alt={project.websitelandingpageimg.alt} title={project.websitelandingpageimg.title} />
+                            <p>{project.title}</p>
+                          </article>
                         ))
                     }
-                </WebsitesContainer>
-                { GetSeeMoreBtnIfNeeded(CMS_data.allDatoCmsOurdoneproject.nodes) }
-            </section>
-        </>
-  )
-}
+        </WebsitesContainer>
+        { GetSeeMoreBtnIfNeeded(CMS_data.allDatoCmsOurdoneproject.nodes) }
+      </section>
+    </>
+  );
+};
 
 export default WebsiteSection;
