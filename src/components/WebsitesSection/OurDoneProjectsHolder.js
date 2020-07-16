@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const WebsitesContainerBtn = styled.button`
+const ProjectsHolderSeeMoreBtn = styled.button`
 	margin: 1.5rem auto 1rem auto;
 	display: block;
 	border: none;
@@ -19,7 +19,7 @@ const WebsitesContainerBtn = styled.button`
 	}
 `;
 
-const WebsitesContainer = styled.section`
+const ProjectsHolder = styled.section`
 	display: flex;
 	flex-flow: wrap;
 	justify-content: center;
@@ -96,21 +96,23 @@ const OurDoneProjectsHolder = () => {
 
     const GetSeeMoreBtnIfNeeded = (img_array) => {
         const minNumberOfPhotosToActivateTheBtn = 30;
-        if (img_array.length > minNumberOfPhotosToActivateTheBtn) { return <WebsitesContainerBtn>Zobacz Więcej</WebsitesContainerBtn>; }
+        if (img_array.length > minNumberOfPhotosToActivateTheBtn) { return <ProjectsHolderSeeMoreBtn>Zobacz Więcej</ProjectsHolderSeeMoreBtn>; }
+    };
+
+    const OneDoneProject = (project) => {
+        return (
+            <article key={project.id}>
+                <Img fixed={project.websitelandingpageimg.fixed} alt={project.websitelandingpageimg.alt} title={project.websitelandingpageimg.title} />
+                <a href={"http://" + project.title} target="_blank" rel="noreferrer"><p>{project.title}</p></a>
+            </article>
+        )
     };
 
     return (
         <>
-            <WebsitesContainer>
-                {
-                    CMS_DoneProjectsData.allDatoCmsOurdoneproject.nodes.map((project) => (
-                        <article key={project.id}>
-                            <Img fixed={project.websitelandingpageimg.fixed} alt={project.websitelandingpageimg.alt} title={project.websitelandingpageimg.title} />
-                            <a href={"http://" + project.title} target="_blank" rel="noreferrer"><p>{project.title}</p></a>
-                        </article>
-                    ))
-                }
-            </WebsitesContainer>
+            <ProjectsHolder>
+                { CMS_DoneProjectsData.allDatoCmsOurdoneproject.nodes.map((project) => ( OneDoneProject(project) )) }
+            </ProjectsHolder>
             { GetSeeMoreBtnIfNeeded(CMS_DoneProjectsData.allDatoCmsOurdoneproject.nodes) }
         </>
     )
