@@ -9,7 +9,7 @@ const PerksHolder = styled.section`
 	grid-template-columns: 1fr 1fr 1fr;
 	text-align: center;
 
-	&::after { /*ADDITIONAl TRIANGLE*/
+	&::after {
 		content: '';
 		display: block;
 		position: absolute;
@@ -20,7 +20,7 @@ const PerksHolder = styled.section`
 		border-right: 90px solid transparent;
 	}
 
-	&::before { /*ADDITIONAl BALL*/
+	&::before {
 		content: '';
 		display: block;
 		position: absolute;

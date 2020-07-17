@@ -24,7 +24,6 @@ const ProjectsHolder = styled.section`
 	flex-flow: wrap;
 	justify-content: center;
 	margin-top: 1.3rem;
-	/*box-shadow: inset 0px -46px 25px -17px rgba(255,255,255,1);*/ - THIS IS COMMENTED BECAUSE IT'S GONNA BE USED WHEN THERE'LL BE A BTN TO "SEE MORE"
 
 	.gatsby-image-wrapper {
 		width: 320px;
