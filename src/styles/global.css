@@ -5,6 +5,9 @@
   --theme-color: #5588bb;
   --theme-color-darker: #336699;
   --theme-color-lighter: #a7c5f2;
+
+  --thumbBG: #90A4AE;
+  --scrollbarBG: #CFD8DC;
 }
 
 .wrapper {
@@ -16,7 +19,7 @@
 
 a {
   text-decoration: none;
-	color: inherit;
+  color: inherit;
 }
 
 a:hover {
@@ -27,48 +30,14 @@ b {
   font-weight: bold;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: wrap;
-}
-
-.flex-column {
-  flex-flow: column;
-}
-
-.flex-row {
-  flex-flow: row;
-}
-
-.justify-start {
-  justify-content: start;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.align-start {
-  align-items: flex-start;
-}
-
 .margin-top-medium {
   margin-top: 5rem;
 }
 
-html {
-  --scrollbarBG: #CFD8DC;
-  --thumbBG: #90A4AE;
-}
 body::-webkit-scrollbar {
   width: 11px;
 }
+
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
@@ -78,9 +47,11 @@ body {
   font-family: 'Lato', sans-serif;
   background: url("../images/so-white.png");
 }
+
 body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
+
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG) ;
   border-radius: 6px;

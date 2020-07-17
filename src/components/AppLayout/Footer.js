@@ -15,6 +15,12 @@ const MainFooter = styled.footer`
         margin-top: .5rem;
     }
 
+    article .wrap-it {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: flex-start;
+    }
+
     article span:not(.container) {
         display: block;
         line-height: 120%;
@@ -28,6 +34,11 @@ const MainFooter = styled.footer`
 
     .top-section {
         padding: 3.25rem 0;
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+        }
     }
 
     h4 {
@@ -51,8 +62,13 @@ const MainFooter = styled.footer`
         text-align: center;
         background: var(--theme-color-darker);
 
-        .wrapper * {
-            padding: .35rem;
+        .wrapper {
+            display: flex;
+            justify-content: space-around;
+
+            * {
+                padding: .35rem;
+            }
         }
     }
 
@@ -97,10 +113,10 @@ export default () => {
         <>
         <MainFooter id="footer">
             <section className="top-section">
-                <div className="wrapper flex">
+                <div className="wrapper">
                     <article>
                         <h4>Bądź w kontakcie</h4>
-                        <p className="flex align-start justify-start">
+                        <p className="wrap-it">
                             <i className="fas fa-map-marker-alt"></i>
                             <span className="container">
                                 <span>MediaSoft</span>
@@ -136,7 +152,7 @@ export default () => {
                 </div>
             </section>
             <section className="bottom-section">
-                <div className="wrapper flex justify-around">
+                <div className="wrapper">
                     <p>Copyright &copy; MediaSoft - Wszystkie prawa zastrzeżone</p>
                     <Link to="/privacy-policy/">Polityka Prywatności</Link>
                 </div>
