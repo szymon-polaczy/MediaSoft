@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
-import Menu from './HeaderMenu'
+import Menu from './MainMenu'
 
 const MenuContainer = styled.header`
 	height: 5rem;
