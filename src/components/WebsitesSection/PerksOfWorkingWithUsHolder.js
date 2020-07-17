@@ -32,43 +32,6 @@ const PerksHolder = styled.section`
 		transform: translateX(3rem) translateY(32rem);
 	}
 
-	article {
-		display: flex;
-		align-items: center;
-		flex-flow: column;
-		padding: 1rem;
-
-		.ring {
-			width: 4rem;
-			height: 4rem;
-			border: 2px solid #444;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			img {
-				width: 2.2rem;
-				height: 2.2rem;
-				color: #ff677d;
-			}
-		}
-	
-		h3 {
-			font-weight: bolder;
-			font-size: 1.45rem;
-			letter-spacing: .05rem;
-			margin: .75rem 0 .5rem 0;
-		}
-	
-		p {
-			line-height: 140%;
-			font-size: 1.2rem;
-			color: #666;
-			letter-spacing: .04rem;
-		}
-	}
-
 	.assets-logo img {
 		max-width: 100%;
 		max-width: 100%;
@@ -76,13 +39,50 @@ const PerksHolder = styled.section`
 	}
 `;
 
+const Project = styled.article`
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+	padding: 1rem;
+
+	.ring {
+		width: 4rem;
+		height: 4rem;
+		border: 2px solid #444;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			width: 2.2rem;
+			height: 2.2rem;
+			color: #ff677d;
+		}
+	}
+
+	h3 {
+		font-weight: bolder;
+		font-size: 1.45rem;
+		letter-spacing: .05rem;
+		margin: .75rem 0 .5rem 0;
+	}
+
+	p {
+		line-height: 140%;
+		font-size: 1.2rem;
+		color: #666;
+		letter-spacing: .04rem;
+	}
+`;
+
 const setProperPerk = (project) => {
 	return (
-		<article>
+		<Project>
 			<div className="ring"><img src={project.icon.url} alt={project.icon.alt} /></div>
 			<h3>{project.title}</h3>
 			<p>{project.description}</p>
-		</article>
+		</Project>
 	)
 }
 
@@ -92,9 +92,9 @@ const chooseOnlyPerkOrPerkAndImage = (project, index) => {
 
 	return (
 		<>
-			<article className="assets-logo">
+			<Project className="assets-logo">
 				<img src={AssetsLogoSVG} alt="Wybierz co potrzebujesz na swojej stronie" />
-			</article>
+			</Project>
 			{ setProperPerk(project) }
 		</>
 	)

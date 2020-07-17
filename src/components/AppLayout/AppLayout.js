@@ -1,5 +1,5 @@
 import React from 'react'
-import MainMenu from './Menu'
+import MainMenu from './Header'
 import MainFooter from './Footer'
 
 export default ({children}) => {

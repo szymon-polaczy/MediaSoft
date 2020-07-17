@@ -113,7 +113,7 @@ export default () => {
         <>
         <MainFooter id="footer">
             <section className="top-section">
-                <div className="wrapper">
+                <div className="wrapper flex">
                     <article>
                         <h4>Bądź w kontakcie</h4>
                         <p className="wrap-it">
