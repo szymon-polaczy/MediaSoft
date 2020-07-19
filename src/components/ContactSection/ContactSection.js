@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import GoogleMap from './GoogleMap'
 import Form from './Form'
+import { SectionContainer } from '../../styles/sections'
 
 const BigInfo = styled.h2`
     text-align: center;
@@ -78,7 +79,7 @@ const Container = styled.div`
 
 export default () => {
     return (
-        <section className="margin-top-medium">
+        <SectionContainer>
             <BigInfo>Skontaktuj się z nami</BigInfo>
             <Container className="wrapper">
                 <article className="hours">
@@ -104,6 +105,6 @@ export default () => {
                 <Form/>
             </Container>
             <GoogleMap/>
-        </section>        
+        </SectionContainer>        
     )
 }

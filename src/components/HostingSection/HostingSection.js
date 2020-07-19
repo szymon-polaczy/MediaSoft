@@ -1,70 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
 import Hostings from '../../images/undraw_success_factors_fay0.svg'
-import OurHostingTiers from './OurHostingTiers'
-import { useStaticQuery, graphql } from 'gatsby'
-import { BigInfoLeft } from '../../styles/info'
-
-const HostingContainer = styled.section`
-    margin-top: 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    section {
-        padding: 0 5rem;
-    
-        img {
-            width: 100%;
-            transform: translateX(50px);
-        }
-    }
-
-    h4 {
-        margin-top: 3.5rem;
-        font-size: 1.5rem;
-        letter-spacing: 0.05rem;
-        padding-bottom: .65rem;
-
-        &::after {
-            content: '';
-            display: block;
-            width: 20rem;
-            height: 2px;
-            margin-top: .3rem; 
-            background: #444;
-            background: #DCE35B;
-        }
-    }
-`;
-
-const Info = styled.p`
-    line-height: 150%;
-    font-size: 1.2rem;
-    color: #333;
-    letter-spacing: 0.03rem;
-`;
+import { SectionDoubleContainer } from '../../styles/sections'
+import OurHostingSection from './OurHostingSection'
 
 const HostingSection = () => {
-    const CMS_HostingInfo = useStaticQuery(graphql`
-    {
-        datoCmsHostinginfo {
-            info
-        }
-    }
-    `)
-
     return (
-        <HostingContainer>
-            <section className="image-section">
+        <SectionDoubleContainer>
+            <section className="image-container">
                 <img src={Hostings} alt="Hosting Logo" />
             </section>
-            <section>
-                <BigInfoLeft>Oto Hostingi Jakie Oferujemy</BigInfoLeft>
-                <OurHostingTiers/>
-                <h4>Co dostaniesz na naszym hostingu</h4>
-                <Info>{CMS_HostingInfo.datoCmsHostinginfo.info}</Info>
-            </section>
-        </HostingContainer>
+            <OurHostingSection/>
+        </SectionDoubleContainer>
     )
 }
 
