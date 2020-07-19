@@ -3,23 +3,7 @@ import styled from 'styled-components'
 import Hostings from '../../images/undraw_success_factors_fay0.svg'
 import OurHostingTiers from './OurHostingTiers'
 import { useStaticQuery, graphql } from 'gatsby'
-
-const BigInfo = styled.h2`
-    font-size: 2.5rem;
-    letter-spacing: .05rem;
-    line-height: 120%;
-    margin: 1rem 0 1.5rem 0;
-
-    &::after {
-        content: '';
-        display: block;
-        width: 20rem;
-        height: 2px;
-        background-color: #666;
-        margin-top: .3rem;
-        background: #45B649;
-    }
-`;
+import { BigInfoLeft } from '../../styles/info'
 
 const HostingContainer = styled.section`
     margin-top: 5rem;
@@ -75,7 +59,7 @@ const HostingSection = () => {
                 <img src={Hostings} alt="Hosting Logo" />
             </section>
             <section>
-                <BigInfo>Oto Hostingi Jakie Oferujemy</BigInfo>
+                <BigInfoLeft>Oto Hostingi Jakie Oferujemy</BigInfoLeft>
                 <OurHostingTiers/>
                 <h4>Co dostaniesz na naszym hostingu</h4>
                 <Info>{CMS_HostingInfo.datoCmsHostinginfo.info}</Info>

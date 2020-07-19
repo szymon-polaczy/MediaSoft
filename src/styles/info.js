@@ -12,8 +12,34 @@ export const BigInfo = styled.h2`
 		display: block;
 		width: 4rem;
 		height: 2px;
-		background-color: #666;
+		background: #666;
 		margin: .3rem auto 0 auto;
+	}
+`;
+
+const BigInfoSide = styled(BigInfo)`
+	&::after {
+		width: 20rem;
+		margin: unset;
+		margin-top: .3rem;
+	}
+`
+
+export const BigInfoRight = styled(BigInfoSide)`
+	text-align: right;
+
+	&::after {
+		margin-left: auto;
+        background: #45B649;
+	}
+`;
+
+export const BigInfoLeft = styled(BigInfoSide)`
+	text-align: left;
+
+	&::after {
+		margin-right: auto;
+        background: #B06AB3;
 	}
 `;
 
