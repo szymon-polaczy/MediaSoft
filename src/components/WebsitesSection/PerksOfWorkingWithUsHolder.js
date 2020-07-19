@@ -78,7 +78,7 @@ const Project = styled.article`
 
 const setProperPerk = (project) => {
 	return (
-		<Project>
+		<Project key={project.id}>
 			<div className="ring"><img src={project.icon.url} alt={project.icon.alt} /></div>
 			<h3>{project.title}</h3>
 			<p>{project.description}</p>
@@ -92,7 +92,7 @@ const chooseOnlyPerkOrPerkAndImage = (project, index) => {
 
 	return (
 		<>
-			<Project className="assets-logo">
+			<Project className="assets-logo" key="center-image-svg">
 				<img src={AssetsLogoSVG} alt="Wybierz co potrzebujesz na swojej stronie" />
 			</Project>
 			{ setProperPerk(project) }
