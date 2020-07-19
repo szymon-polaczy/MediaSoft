@@ -60,6 +60,10 @@ const ProjectsHolder = styled.section`
             transition: .2s all ease-out !important;
         }
 
+        .gatsby-image-wrapper {
+            margin: 0 !important;
+        }
+
         &:hover {
             box-shadow: 0 0 .45rem #444;
 
