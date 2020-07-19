@@ -26,7 +26,7 @@ export const query = graphql`
 
 export default ({data}) => {
 	return (
-		<HeadProvider>
+		<HeadProvider headTags={[]}>
 			<Title>{data.site.siteMetadata.title}</Title>
 			<Meta name="description" content={data.site.siteMetadata.description} />
 			<Meta name="keywords" content={data.site.siteMetadata.keywords} />
