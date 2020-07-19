@@ -8,18 +8,40 @@ import HostingSection from '../components/HostingSection/HostingSection'
 import DomainsSection from '../components/DomainsSection/DomainsSection'
 import GoogleSection from '../components/GoogleSection/GoogleSection'
 import ContactSection from '../components/ContactSection/ContactSection'
+import { HeadProvider, Title, Meta } from 'react-head'
+import { graphql } from "gatsby"
 
-export default () => {
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+		title,
+		description,
+		keywords,
+		author
+      }
+    }
+  }
+`
+
+export default ({data}) => {
 	return (
-		<AppLayout>
-			<WelcomeSection/>
-			<OfferSection/>
-			<WebsitesSection/>
-			<ContactUsSection/>
-			<HostingSection/>
-			<DomainsSection/>
-			<GoogleSection/>
-			<ContactSection/>
-		</AppLayout>
+		<HeadProvider>
+			<Title>{data.site.siteMetadata.title}</Title>
+			<Meta name="description" content={data.site.siteMetadata.description} />
+			<Meta name="keywords" content={data.site.siteMetadata.keywords} />
+			<Meta name="author" content={data.site.siteMetadata.author} />
+   
+			<AppLayout>
+				<WelcomeSection/>
+				<OfferSection/>
+				<WebsitesSection/>
+				<ContactUsSection/>
+				<HostingSection/>
+				<DomainsSection/>
+				<GoogleSection/>
+				<ContactSection/>
+			</AppLayout>
+		</HeadProvider>
 	)
 }
