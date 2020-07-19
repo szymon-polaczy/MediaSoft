@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import WelcomeSVG from '../../images/undraw_stand_out_1oag.svg'
+import { useStaticQuery, graphql } from 'gatsby'
 
-const WelcomeSection = styled.header`
+const WelcomeSectionStyled = styled.header`
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
@@ -77,24 +78,29 @@ const WelcomeSection = styled.header`
     }
 `;
 
-export default () => {
+const WelcomeSection = () => {
+    const CMS_MediasoftInfo = useStaticQuery(graphql`
+    {
+        datoCmsMediasoftinfo {
+            info
+        }
+    }
+    `)
+
     return (
-        <WelcomeSection>
+        <WelcomeSectionStyled>
             <section className="message-section">
                 <h1>Witamy w <span>Media</span>Soft</h1>
                 <h2>Profesjonalna Obsułga Stron Internetowych</h2>
-                <p>Od 2003 roku zajmujemy się kompleksową obsługą firm pragnących zaistnieć w Internecie 
-                    oraz zwiększyć efektywność swoich stron internetowych. Przez ten czas wykonaliśmy 
-                    blisko 300 stron internetowych, zarejestrowaliśmy w katalogach i wyszukiwarkach 
-                    oraz wypozycjonowaliśmy do TOP10 w Google.pl jeszcze więcej stron. W naszej ofercie znajduje się także 
-                    stabilny hosting - serwery wirtualne oraz tanie domeny. Zapraszamy do zapoznania 
-                    się z naszą ofertą oraz odwiedzenia naszego portfolio stron WWW.</p>
+                <p>{CMS_MediasoftInfo.datoCmsMediasoftinfo.info}</p>
                 <button>Dowiedz się więcej</button>
             </section>
             <section>
                 <img src={WelcomeSVG} alt="Witamy w MediaSoft!" />
             </section>
             <div className="interesting-bg"></div>
-        </WelcomeSection>
+        </WelcomeSectionStyled>
     )
 }
+
+export default WelcomeSection

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Hostings from '../../images/undraw_success_factors_fay0.svg'
 import OurHostingTiers from './OurHostingTiers'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const BigInfo = styled.h2`
     font-size: 2.5rem;
@@ -59,7 +60,15 @@ const Info = styled.p`
     letter-spacing: 0.03rem;
 `;
 
-export default () => {
+const HostingSection = () => {
+    const CMS_HostingInfo = useStaticQuery(graphql`
+    {
+        datoCmsHostinginfo {
+            info
+        }
+    }
+    `)
+
     return (
         <HostingContainer>
             <section className="image-section">
@@ -69,11 +78,10 @@ export default () => {
                 <BigInfo>Oto Hostingi Jakie Oferujemy</BigInfo>
                 <OurHostingTiers/>
                 <h4>Co dostaniesz na naszym hostingu</h4>
-                <Info>Whether you are looking for a personal website hosting plan or a business website hosting plan, HostGator is the perfect solution for you. Our powerful website 
-                    hosting services will not only help you achieve your overall website goals, but will also provide you with the confidence you need in knowing that you are 
-                    partnered with a reliable and secure website hosting platform.
-                    We are one of the easiest website hosting platforms to use, and remain committed to providing our customers with one of the best hosting solutions on the market.</Info>
+                <Info>{CMS_HostingInfo.datoCmsHostinginfo.info}</Info>
             </section>
         </HostingContainer>
     )
 }
+
+export default HostingSection

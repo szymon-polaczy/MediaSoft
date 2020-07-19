@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import OurDoneProjectsHolder from './OurDoneProjectsHolder'
 import PerksOfWorkingWithUsHolder from './PerksOfWorkingWithUsHolder'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const BigInfo = styled.h2`
 	text-align: center;
@@ -30,24 +31,29 @@ const SmallInfo = styled.small`
 `;
 
 const WebsiteSection = () => {
-  return (
-	<>
-		<section className="margin-top-medium">
-			<BigInfo>Co dostaniesz tworząc z nami stronę?</BigInfo>
-			<div className="wrapper">
-				<PerksOfWorkingWithUsHolder/>
-			</div>
-		</section>
-		<section className="margin-top-medium">
-			<BigInfo>Oto Nasze Wybrane Realizacje</BigInfo>
-			<SmallInfo className="wrapper">
-				Strony internetowe wykonujemy od lat. W ich budowaniu doszliśmy do perfekcji. Możesz mieć pewność,
-				że Twoja strona będzie unikatowa i wyróżniająca się na tle konkurencji. Poniżej prezentujemy nasze przykładowe realizacje.
-			</SmallInfo>
-			<OurDoneProjectsHolder/>
-		</section>
-	</>
-  );
+    const CMS_DoneProjectsInfo = useStaticQuery(graphql`
+    {
+        datoCmsDoneprojectsinfo {
+            info
+        }
+    }
+	`)
+	
+	return (
+		<>
+			<section className="margin-top-medium">
+				<BigInfo>Co dostaniesz tworząc z nami stronę?</BigInfo>
+				<div className="wrapper">
+					<PerksOfWorkingWithUsHolder/>
+				</div>
+			</section>
+			<section className="margin-top-medium">
+				<BigInfo>Oto Nasze Wybrane Realizacje</BigInfo>
+				<SmallInfo className="wrapper">{CMS_DoneProjectsInfo.datoCmsDoneprojectsinfo.info}</SmallInfo>
+				<OurDoneProjectsHolder/>
+			</section>
+		</>
+	);
 };
 
 export default WebsiteSection;
