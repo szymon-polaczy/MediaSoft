@@ -35,7 +35,7 @@ const Perk = styled.article`
 const OnePerkOfGoogleAds = (perk) => {
     return (
         <Perk key={perk.id}>
-            <img src={perk.icon.uploadId.url} alt={perk.icon.uploadId.basename}/>
+            <img src={perk.icon.url} alt={perk.icon.alt}/>
             <h3><b>{perk.title}</b></h3>
             <p>{perk.description}</p>
         </Perk>
@@ -47,19 +47,17 @@ const PerksOfGoogleAds = () => {
     {
         allDatoCmsPerksofgooglead {
             nodes {
-              icon {
-                uploadId {
-                  url
-                  basename
+                icon {
+                    alt
+                    url
                 }
-              }
-              description
-              title
-              id
+                description
+                title
+                id
             }
-          }
+        }
     }
-    `);
+  `)
     
     return (
         <PerksHolder>
