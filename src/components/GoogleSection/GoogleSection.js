@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import WebsitePosition from "../../images/undraw_updates_et2k.svg"
 import PerksOfGoogleAds from './PerksOfGoogleAds'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const BigInfo = styled.h2`
     text-align: left;
@@ -47,6 +48,14 @@ const GoogleContainer = styled.section`
 `;
 
 const GoogleSection = () => {
+    const CMS_GoogleAdsInfo = useStaticQuery(graphql`
+    {
+        datoCmsGoogleadsifno {
+            info
+        }
+    }
+    `)
+
     return (
         <>
             <GoogleContainer className="margin-top-medium">
@@ -56,11 +65,7 @@ const GoogleSection = () => {
 
                 <SellingPointsWrapper>
                     <BigInfo>Google Adwords</BigInfo>
-                    <div>
-                        <WelcomeText>Google Ads to obecnie najefektywniejszy system reklamowy w internecie. Google Ads umożliwia reklamowanie się zarówno w najpopularniejszej wyszukiwarce Google, jak i na 
-                            innych stronach internetowych należących do Google. Poprzez to medium, możemy tworzyć reklamy w formie krótkiego klipu wideo, 
-                            reklamy tekstowe wyświetlane podczas wyszukiwania, reklamy produktowe oraz reklamy displayowe w formie banerów.</WelcomeText>
-                    </div>
+                    <WelcomeText>{CMS_GoogleAdsInfo.datoCmsGoogleadsifno.info}</WelcomeText>
                     <PerksOfGoogleAds/>
                 </SellingPointsWrapper>
             </GoogleContainer>
