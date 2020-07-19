@@ -65,17 +65,17 @@ const WelcomeSectionStyled = styled.header`
             transform: skewX(-3deg);
         }
     }
+`;
 
-    .interesting-bg {
-        position: absolute;
-        top: 0;
-        right: 150px;
-        width: 500px;
-        height: 150vh;
-        background: #a7c5f2;
-        transform: skewX(30deg);
-        z-index: -1;
-    }
+const InterestingBackground = styled.aside`
+    position: absolute;
+    top: 0;
+    right: 150px;
+    width: 500px;
+    height: 150vh;
+    background: #a7c5f2;
+    transform: skewX(30deg);
+    z-index: -1;
 `;
 
 const WelcomeSection = () => {
@@ -98,7 +98,7 @@ const WelcomeSection = () => {
             <section>
                 <img src={WelcomeSVG} alt="Witamy w MediaSoft!" />
             </section>
-            <div className="interesting-bg"></div>
+            <InterestingBackground></InterestingBackground>
         </WelcomeSectionStyled>
     )
 }

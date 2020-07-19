@@ -119,7 +119,7 @@ const PerksOfWorkingWithUsHolder = () => {
 
     return (
         <>
-            <PerksHolder>
+            <PerksHolder className="wrapper">
                 { CMS_PerksOfOurWork.allDatoCmsPerkofourwork.nodes.map((project, index) => ( chooseOnlyPerkOrPerkAndImage(project, index) )) }
 		    </PerksHolder>
         </>

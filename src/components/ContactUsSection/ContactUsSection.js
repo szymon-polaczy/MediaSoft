@@ -45,7 +45,7 @@ export default () => {
         <ContactBar>
             <div className="wrapper">
                 <header>
-                    <p>Masz pytani? Chcesz porozmawiać o ofercie <br/>Skontaktuj się z nami!</p>
+                    <p>Masz pytanie? Chcesz porozmawiać o ofercie <br/>Skontaktuj się z nami!</p>
                 </header>
                 <article>
                     <i className="fas fa-phone-alt"></i>
