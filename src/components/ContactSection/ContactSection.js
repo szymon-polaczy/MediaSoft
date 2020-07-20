@@ -75,6 +75,22 @@ const Container = styled.div`
     .mail {
         grid-area: mail;
     }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "form form"
+                            "phone mail"
+                            "hours place";
+
+        article {
+            margin-top: 1.5rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        display: flex;
+        flex-flow: column-reverse;
+    }
 `;
 
 export default () => {

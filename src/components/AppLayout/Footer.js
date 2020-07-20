@@ -30,6 +30,7 @@ const MainFooter = styled.footer`
         object-fit: contain;
         flex: 3;
         height: 5rem;
+        width: 100%;
     }
 
     .top-section {
@@ -103,6 +104,46 @@ const MainFooter = styled.footer`
 
             p {
                 margin-bottom: .35rem;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .top-section {
+            .wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                img {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        .top-section {
+            .wrapper {
+                grid-template-columns: repeat(2, 1fr);
+
+                img {
+                    grid-row: 2;
+                    grid-column: 1 / span 2;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .top-section{
+            .wrapper {
+                grid-template-columns: 1fr;
+
+                img {
+                    grid-row: 3;
+                    grid-column: unset;
+                }
             }
         }
     }
