@@ -16,9 +16,18 @@ export const SectionDoubleContainer = styled(SectionContainer)`
         display: flex;
         align-items: center;
         justify-content: center;
+        ${props => props.textOnTheRight ? "grid-row: 1;": ""}
 
         img {
             width: 80%;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+
+        .image-container{
+            grid-row: 1;
         }
     }
 `

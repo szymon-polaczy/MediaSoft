@@ -84,6 +84,7 @@ const WelcomeSectionStyled = styled.header`
 
             h1 {
                 padding: unset;
+                text-align: center;
             }
 
             h2 {

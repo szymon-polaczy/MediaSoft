@@ -35,6 +35,22 @@ const TrafficSignsHolder = styled.section`
             }
         }
     }
+
+    @media (max-width: 1400px) {
+        .container {
+            grid-template-columns: 1fr 1fr;
+
+            article {
+                border: none;
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
 `;
 
 export default () => {

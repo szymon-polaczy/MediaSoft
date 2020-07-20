@@ -5,11 +5,11 @@ import { SectionDoubleContainer } from '../../styles/sections'
 
 const GoogleSection = () => {
     return (
-        <SectionDoubleContainer>
+        <SectionDoubleContainer textOnTheRight>
+            <SellingPointsSection/>
             <div className="image-container">   
                 <img src={WebsitePosition} alt="Pozycjonowanie Strony" />
             </div>
-            <SellingPointsSection/>
         </SectionDoubleContainer>
     )
 }

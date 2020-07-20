@@ -5,11 +5,11 @@ import OurHostingSection from './OurHostingSection'
 
 const HostingSection = () => {
     return (
-        <SectionDoubleContainer>
+        <SectionDoubleContainer textOnTheRight>
+            <OurHostingSection/>
             <section className="image-container">
                 <img src={Hostings} alt="Hosting Logo" />
             </section>
-            <OurHostingSection/>
         </SectionDoubleContainer>
     )
 }

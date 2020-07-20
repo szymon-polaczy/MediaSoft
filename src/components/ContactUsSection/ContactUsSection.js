@@ -38,6 +38,23 @@ const ContactBar = styled.section`
             font-size: 1.55rem
         }
     }
+
+    @media (max-width: 1400px) {
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: wrap;
+
+            header {
+                width: 100%;
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
 `;
 
 export default () => {
