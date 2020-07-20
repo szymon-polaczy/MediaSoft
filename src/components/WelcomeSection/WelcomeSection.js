@@ -36,9 +36,9 @@ const WelcomeSectionStyled = styled.header`
         }
 
         p {
+            line-height: 165%;
             text-align: justify;
             padding-right: 5vw;
-            line-height: 150%;
             margin-top: 2rem;
             font-size: 1.1rem;
             letter-spacing: 1px;
@@ -65,6 +65,51 @@ const WelcomeSectionStyled = styled.header`
             transform: skewX(-3deg);
         }
     }
+
+    @media (max-width: 1750px) {
+        section img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        display: flex;
+        flex-flow: column;
+        padding: 0 2rem;
+        min-height: calc(100vh - 5rem);
+        justify-content: center;
+
+        .message-section {
+            padding: 0;
+
+            h1 {
+                padding: unset;
+            }
+
+            h2 {
+                margin-top: .35rem;
+            }
+
+            p {
+                text-align: center;
+                padding: 0 2rem;
+                font-size: unset;
+                line-height: 150%;
+            }
+        }
+
+        section {
+            align-items: center;
+            
+            img {
+                opacity: .15;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: -1;
+            }
+        }
+    }
 `;
 
 const InterestingBackground = styled.aside`
@@ -76,6 +121,15 @@ const InterestingBackground = styled.aside`
     background: #a7c5f2;
     transform: skewX(30deg);
     z-index: -1;
+
+    @media (max-width: 1350px) {
+        right: 7.5vw;
+        transform: skewX(-10deg);
+    }
+
+    @media (max-width: 1100px) {
+        display: none;
+    }
 `;
 
 const WelcomeSection = () => {

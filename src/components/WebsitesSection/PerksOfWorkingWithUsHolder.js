@@ -37,6 +37,12 @@ const PerksHolder = styled.section`
 		max-width: 100%;
 		object-fit: contain;
 	}
+
+	@media (max-width: 1100px) {
+		&::after, &::before  {
+			display: none;
+		}
+	}
 `;
 
 const Project = styled.article`

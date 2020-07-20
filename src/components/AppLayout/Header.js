@@ -5,7 +5,7 @@ import Menu from './MainMenu'
 const MenuContainer = styled.header`
 	height: 5rem;
 	box-shadow: 0 0 .5rem #d0d0d0;
-	position: fixed;
+	position: sticky;
 	width: 100%;
 	background: #fff;
 	top: 0;
