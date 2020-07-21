@@ -5,12 +5,30 @@ import { BigInfoRight } from '../../styles/info'
 
 const Section = styled.section`
     padding: 0 5rem;
+    display: block;
+
+    @media (max-width: 600px) {
+        padding: 0;
+    }
 `
 
 const AllDomains = styled.section`
     display: flex;
     justify-content: flex-end;
     flex-flow: wrap;
+
+    @media (max-width: 1200px) {
+        justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: scroll;
+        max-width: 100vw;
+        scroll-snap-type: x mandatory;
+    }
 `
 
 const Domain = styled.article`
@@ -25,6 +43,12 @@ const Domain = styled.article`
     justify-content: center;
     border-radius: .65rem;
     background: #fff;
+
+    @media (max-width: 600px) {
+        scroll-snap-align: center;
+
+        min-width: 11rem;
+    }
 
     h4 {
         color: #fd746c;

@@ -30,4 +30,10 @@ export const SectionDoubleContainer = styled(SectionContainer)`
             grid-row: 1;
         }
     }
+
+    @media (max-width: 600px) {
+        section:not(.image-container) {
+            padding: 0;
+        }
+    }
 `

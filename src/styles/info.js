@@ -23,6 +23,14 @@ const BigInfoSide = styled(BigInfo)`
 		margin: unset;
 		margin-top: .3rem;
 	}
+
+	@media (max-width: 1200px) {
+		text-align: center;
+		
+		&::after {
+			margin: 0 auto;
+		}
+	}
 `
 
 export const BigInfoRight = styled(BigInfoSide)`

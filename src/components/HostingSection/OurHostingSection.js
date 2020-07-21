@@ -19,6 +19,14 @@ const Heading = styled.h4`
         background: #444;
         background: #DCE35B;
     }
+
+    @media (max-width: 1200px) {
+        text-align: center;
+
+        &::after {
+            margin: .3rem auto 0 auto;
+        }
+    }
 `
 
 const Info = styled.p`
@@ -26,6 +34,10 @@ const Info = styled.p`
     font-size: 1.2rem;
     color: #333;
     letter-spacing: 0.03rem;
+
+    @media (max-width: 1200px) {
+        text-align: center;
+    }
 `;
 
 const OurHostingSection = () => {

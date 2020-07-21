@@ -15,6 +15,12 @@ const Tier = styled.article`
         margin-top: .35rem;
         letter-spacing: .01rem;
     }
+
+    @media (max-width: 1200px) {
+        h3, p {
+            text-align: center;
+        }
+    }
 `
 
 const OneHostingTier = (tier) => {

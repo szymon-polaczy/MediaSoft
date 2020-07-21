@@ -6,6 +6,24 @@ const PerksHolder = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.5rem;
+
+    @media (max-width: 850px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 600px) {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 100vw;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+    }
 `;
 
 const Perk = styled.article`
@@ -29,6 +47,11 @@ const Perk = styled.article`
         line-height: 135%;
         color: #5f5f5f;
         margin-top: .45rem;
+    }
+
+    @media (max-width: 600px) {
+        scroll-snap-align: center;
+        min-width: 10em;
     }
 `;
 

@@ -7,9 +7,9 @@ export default () => {
     return (
         <SectionDoubleContainer>
             <OurAvailableDomainsSection/>
-            <section className="image-container">
+            <div className="image-container">
                 <img src={Hostings} alt="Hosting Logo" />
-            </section>
+            </div>
         </SectionDoubleContainer>
     )
 }

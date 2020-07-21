@@ -13,6 +13,10 @@ const WelcomeText = styled.p`
     color: #333;
     line-height: 150%;
     margin-bottom: 2.5rem;
+
+    @media (max-width: 1200px) {
+        text-align: center;
+    }
 `;
 
 const SellingPointsSection = () => {
