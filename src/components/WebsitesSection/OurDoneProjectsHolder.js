@@ -24,58 +24,72 @@ const ProjectsHolder = styled.section`
 	flex-flow: wrap;
 	justify-content: center;
 	margin-top: 1.3rem;
+    
+    @media (max-width: 700px) {
+        flex-flow: row;
+        max-width: 100%;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+`
+
+const Project = styled.article`
+    overflow: hidden;
+    position: relative;
+    margin: .65rem;
+    box-shadow: 0 0 .35rem #ccc;
+    transition: .2s all ease-out !important;
+    min-width: 320px;
+
+    @media (max-width: 700px) {
+        scroll-snap-align: center;
+    }
 
 	.gatsby-image-wrapper {
 		width: 320px;
 		margin: .25rem .1rem;
 		z-index: -1;
-	}
-    
-    article {
-        overflow: hidden;
-        position: relative;
-        margin: .65rem;
-        box-shadow: 0 0 .35rem #ccc;
+    }    
+
+    a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(100%);
+        text-align: center;
+        clip-path: polygon(50% 15%, 100% 55%, 100% 100%, 0 100%, 0 55%);
+        background: var(--theme-color-darker);
+        color: #fff;
+        padding-top: .65rem;
+        
+        p {
+            padding: .65rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    img, a {
         transition: .2s all ease-out !important;
+    }
+
+    .gatsby-image-wrapper {
+        margin: 0 !important;
+    }
+
+    &:hover {
+        box-shadow: 0 0 .45rem #444;
 
         a {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            transform: translateY(100%);
-            text-align: center;
-            clip-path: polygon(50% 15%, 100% 55%, 100% 100%, 0 100%, 0 55%);
-            background: var(--theme-color-darker);
-            color: #fff;
-            padding-top: .65rem;
-            
-            p {
-                padding: .65rem;
-                font-size: 1.2rem;
-            }
+            transform: translateY(0);
         }
 
-        img, a {
-            transition: .2s all ease-out !important;
+        img {
+            transform: scale(1.1);
         }
-
-        .gatsby-image-wrapper {
-            margin: 0 !important;
-        }
-
-        &:hover {
-            box-shadow: 0 0 .45rem #444;
-
-            a {
-                transform: translateY(0);
-            }
-
-            img {
-                transform: scale(1.1);
-            }
-        } 
-    }
+    } 
 `
 
 const OurDoneProjectsHolder = () => {
@@ -104,10 +118,10 @@ const OurDoneProjectsHolder = () => {
 
     const OneDoneProject = (project) => {
         return (
-            <article key={project.id}>
+            <Project key={project.id}>
                 <Img fixed={project.websitelandingpageimg.fixed} alt={project.websitelandingpageimg.alt} title={project.websitelandingpageimg.title} />
                 <a href={"http://" + project.title} target="_blank" rel="noreferrer"><p>{project.title}</p></a>
-            </article>
+            </Project>
         )
     };
 

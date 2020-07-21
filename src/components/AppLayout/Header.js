@@ -1,6 +1,7 @@
 import React from "react"
 import styled from 'styled-components'
 import Menu from './MainMenu'
+import Mediasoft from '../../images/mediasoft.png'
 
 const MenuContainer = styled.header`
 	height: 5rem;
@@ -10,6 +11,10 @@ const MenuContainer = styled.header`
 	background: #fff;
 	top: 0;
 	z-index: 100;
+	
+	img {
+		max-height: 2em;
+	}
 	
 	.wrapper {
 		display: flex;
@@ -22,7 +27,7 @@ export default () => {
 	return (
 		<MenuContainer>
 			<div className="wrapper">
-				<img src="https://mediasoft.com.pl/jpg/media-logo.png" alt="MediaSoft Logo"/>
+				<img src={Mediasoft} alt="MediaSoft Logo"/>
 				<Menu/>
 			</div>
 		</MenuContainer>

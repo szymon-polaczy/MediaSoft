@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 const WelcomeSectionStyled = styled.header`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
+    min-height: calc(100vh - 5rem);
     position: relative;
     overflow: hidden;
 

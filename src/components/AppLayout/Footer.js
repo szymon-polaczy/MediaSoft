@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import Mediasoft from '../../images/mediasoft.png'
 
 const MainFooter = styled.footer`
     color: #e0e0e0;
@@ -30,7 +31,7 @@ const MainFooter = styled.footer`
         object-fit: contain;
         flex: 3;
         height: 5rem;
-        width: 100%;
+        /*width: 100%;*/
     }
 
     .top-section {
@@ -128,6 +129,7 @@ const MainFooter = styled.footer`
                 grid-template-columns: repeat(2, 1fr);
 
                 img {
+                    width: 100%;
                     grid-row: 2;
                     grid-column: 1 / span 2;
                 }
@@ -189,7 +191,7 @@ export default () => {
                             <li><Link to="/contact/"><i className="fas fa-check"></i>Kontakt</Link></li>
                         </ul>
                     </nav>
-                    <img src="https://mediasoft.com.pl/jpg/media-logo.png" alt="MediaSoft"/>
+                    <img src={Mediasoft} alt="MediaSoft"/>
                 </div>
             </section>
             <section className="bottom-section">
