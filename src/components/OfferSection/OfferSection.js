@@ -57,7 +57,7 @@ export default () => {
     return (
         <TrafficSignsHolder>
             <h2>Co chcesz u nas sprawdzić?</h2>
-            <div className="container">
+            <section className="container">
                 <article>
                     <a href="#websites">Strony WWW<i className="fas fa-code"></i></a>
                 </article>
@@ -70,7 +70,7 @@ export default () => {
                 <article>
                     <a href="#googleads">Google Adwords<i className="fas fa-chart-line"></i></a>
                 </article>
-            </div>
+            </section>
         </TrafficSignsHolder>
     )
 }

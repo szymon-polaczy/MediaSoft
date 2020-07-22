@@ -7,9 +7,9 @@ const HostingSection = () => {
     return (
         <SectionDoubleContainer textOnTheRight>
             <OurHostingSection/>
-            <section className="image-container">
+            <div className="image-container">
                 <img src={Hostings} alt="Hosting Logo" />
-            </section>
+            </div>
         </SectionDoubleContainer>
     )
 }

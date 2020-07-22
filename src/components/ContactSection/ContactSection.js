@@ -21,7 +21,7 @@ const BigInfo = styled.h2`
     }
 `;
 
-const Container = styled.div`
+const Container = styled.section`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "hours form form place"

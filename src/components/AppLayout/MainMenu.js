@@ -58,14 +58,15 @@ const HeaderMenu = () => {
     return (
         <>
             <MenuBtn onClick={() => setOpen(!open)}><i class="fas fa-bars"></i></MenuBtn>
-            <Navigation open={open}>
+            <Navigation open={open} role="navigation">
                 <li className="menu-item"><Link to="/">Home</Link></li>
                 <li className="menu-item"><Link to="/websites/">Strony WWW</Link></li>
                 <li className="menu-item"><Link to="/hosting/">Hosting</Link></li>
                 <li className="menu-item"><Link to="/domains/">Domeny</Link></li>
                 <li className="menu-item"><Link to="/google/">Linki Sponsorowane</Link></li>
                 <li className="menu-item"><Link to="/contact/">Kontakt</Link></li>
-            </Navigation>
+             </Navigation>
+            
         </>
     )
 }
