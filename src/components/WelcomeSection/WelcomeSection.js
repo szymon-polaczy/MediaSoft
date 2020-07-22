@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import WelcomeSVG from '../../images/undraw_stand_out_1oag.svg'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'react-scroll'
 
 const WelcomeSectionStyled = styled.header`
     display: grid;
@@ -45,7 +46,7 @@ const WelcomeSectionStyled = styled.header`
         }
     }
 
-    button {
+    a {
         border: 2px solid var(--theme-color-darker);
         outline: none;
         padding: 1rem 2rem;
@@ -53,11 +54,13 @@ const WelcomeSectionStyled = styled.header`
         background: #fff;
         margin-left: .65rem;
         margin-top: 2rem;
+        cursor: pointer;
         box-shadow: -.65rem .65rem 0 var(--theme-color);
         transition: .15s all ease-out;
 
         &:hover {
             box-shadow: -.3rem .3rem 0 var(--theme-color);
+            text-decoration: none;
         }
 
         &:active {
@@ -145,12 +148,20 @@ const WelcomeSection = () => {
     `)
 
     return (
-        <WelcomeSectionStyled>
+        <WelcomeSectionStyled id="WelcomeSection">
             <section className="message-section">
                 <h1>Witamy w <span>Media</span>Soft</h1>
                 <h2>Profesjonalna Obsułga Stron Internetowych</h2>
                 <p>{CMS_MediasoftInfo.datoCmsMediasoftinfo.info}</p>
-                <button>Dowiedz się więcej</button>
+                <Link 
+                    to="OfferSection" 
+                    activeClass="active" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-100} 
+                    duration={500}>
+                        Dowiedz się więcej
+                </Link>
             </section>
             <section>
                 <img src={WelcomeSVG} alt="Witamy w MediaSoft!" />

@@ -5,7 +5,7 @@ import { SectionDoubleContainer } from '../../styles/sections'
 
 const GoogleSection = () => {
     return (
-        <SectionDoubleContainer textOnTheRight>
+        <SectionDoubleContainer textOnTheRight id="GoogleSection">
             <SellingPointsSection/>
             <div className="image-container">   
                 <img src={WebsitePosition} alt="Pozycjonowanie Strony" />

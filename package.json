@@ -25,6 +25,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-head": "^3.3.0",
+    "react-scroll": "^1.8.0",
     "styled-components": "^5.1.1",
     "typescript": "^3.7.2"
   },

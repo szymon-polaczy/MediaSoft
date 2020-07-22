@@ -59,7 +59,7 @@ const ContactBar = styled.section`
 
 export default () => {
     return (
-        <ContactBar>
+        <ContactBar id="ContactUsSection">
             <div className="wrapper">
                 <header>
                     <p>Masz pytanie? Chcesz porozmawiać o ofercie <br/>Skontaktuj się z nami!</p>

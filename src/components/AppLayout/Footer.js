@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link } from 'react-scroll'
 import styled from "styled-components"
 import Mediasoft from '../../images/mediasoft.png'
 
@@ -183,12 +183,72 @@ export default () => {
                     <nav>
                         <h4>Szybkie linki</h4>
                         <ul>
-                            <li><Link to="/"><i className="fas fa-check"></i>Home</Link></li>
-                            <li><Link to="/websites/"><i className="fas fa-check"></i>Strony WWW</Link></li>
-                            <li><Link to="/hosting/"><i className="fas fa-check"></i>Hosting</Link></li>
-                            <li><Link to="/domains/"><i className="fas fa-check"></i>Domeny</Link></li>
-                            <li><Link to="/google/"><i className="fas fa-check"></i>Linki Sponsorowane</Link></li>
-                            <li><Link to="/contact/"><i className="fas fa-check"></i>Kontakt</Link></li>
+                            <li className="menu-item">
+                                <Link 
+                                    to="WelcomeSection" 
+                                    activeClass="active" 
+                                    spy={true} 
+                                    smooth={true} 
+                                    offset={-100} 
+                                    duration={500}>
+                                        <i className="fas fa-check"></i>Home
+                                </Link>
+                            </li>
+                            <li className="menu-item">
+                                <Link 
+                                    to="WebsitesSection" 
+                                    activeClass="active" 
+                                    spy={true} 
+                                    smooth={true} 
+                                    offset={-100} 
+                                    duration={500}>
+                                        <i className="fas fa-check"></i>Strony WWW
+                                </Link>
+                            </li>
+                            <li className="menu-item">
+                                <Link 
+                                    to="HostingSection" 
+                                    activeClass="active" 
+                                    spy={true} 
+                                    smooth={true} 
+                                    offset={-100} 
+                                    duration={500}>
+                                        <i className="fas fa-check"></i>Hosting
+                                </Link>
+                            </li>
+                            <li className="menu-item">
+                                <Link 
+                                    to="DomainsSection" 
+                                    activeClass="active" 
+                                    spy={true} 
+                                    smooth={true} 
+                                    offset={-100} 
+                                    duration={500}>
+                                        <i className="fas fa-check"></i>Domeny
+                                </Link>
+                            </li>
+                            <li className="menu-item">
+                                <Link 
+                                    to="GoogleSection" 
+                                    activeClass="active" 
+                                    spy={true} 
+                                    smooth={true} 
+                                    offset={-100} 
+                                    duration={500}>
+                                        <i className="fas fa-check"></i>Linki Sponsorowane
+                                </Link>
+                            </li>
+                            <li className="menu-item">
+                                <Link 
+                                    to="ContactSection" 
+                                    activeClass="active" 
+                                    spy={true} 
+                                    smooth={true} 
+                                    offset={-100} 
+                                    duration={500}>
+                                        <i className="fas fa-check"></i>Kontakt
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
                     <img src={Mediasoft} alt="MediaSoft"/>

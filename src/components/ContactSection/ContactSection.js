@@ -95,7 +95,7 @@ const Container = styled.section`
 
 export default () => {
     return (
-        <SectionContainer>
+        <SectionContainer id="ContactSection">
             <BigInfo>Skontaktuj się z nami</BigInfo>
             <Container className="wrapper">
                 <article className="hours">

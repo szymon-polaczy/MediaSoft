@@ -5,7 +5,7 @@ import OurAvailableDomainsSection from './OurAvailableDomainsSection'
 
 export default () => {
     return (
-        <SectionDoubleContainer>
+        <SectionDoubleContainer id="DomainsSection">
             <OurAvailableDomainsSection/>
             <div className="image-container">
                 <img src={Hostings} alt="Hosting Logo" />

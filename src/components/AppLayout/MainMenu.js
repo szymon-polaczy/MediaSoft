@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from "gatsby"
+import { Link } from 'react-scroll'
 import styled from 'styled-components'
 
 const Navigation = styled.ul`
@@ -9,6 +9,14 @@ const Navigation = styled.ul`
     li {
         padding: 0 1rem;
         margin: .45rem 0;
+
+        a {
+            cursor: pointer;
+        }
+
+        .active {
+            color: #666;
+        }
     }
 
     @media (max-width: 1000px) {
@@ -59,12 +67,72 @@ const HeaderMenu = () => {
         <>
             <MenuBtn onClick={() => setOpen(!open)}><i class="fas fa-bars"></i></MenuBtn>
             <Navigation open={open} role="navigation">
-                <li className="menu-item"><Link to="/">Home</Link></li>
-                <li className="menu-item"><Link to="/websites/">Strony WWW</Link></li>
-                <li className="menu-item"><Link to="/hosting/">Hosting</Link></li>
-                <li className="menu-item"><Link to="/domains/">Domeny</Link></li>
-                <li className="menu-item"><Link to="/google/">Linki Sponsorowane</Link></li>
-                <li className="menu-item"><Link to="/contact/">Kontakt</Link></li>
+                <li className="menu-item">
+                    <Link 
+                        to="WelcomeSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                            Home
+                    </Link>
+                </li>
+                <li className="menu-item">
+                    <Link 
+                        to="WebsitesSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                        Strony WWW
+                    </Link>
+                </li>
+                <li className="menu-item">
+                    <Link 
+                        to="HostingSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                        Hosting
+                    </Link>
+                </li>
+                <li className="menu-item">
+                    <Link 
+                        to="DomainsSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                        Domeny
+                    </Link>
+                </li>
+                <li className="menu-item">
+                    <Link 
+                        to="GoogleSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                        Linki Sponsorowane
+                    </Link>
+                </li>
+                <li className="menu-item">
+                    <Link 
+                        to="ContactSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                        Kontakt
+                    </Link>
+                </li>
              </Navigation>
             
         </>

@@ -4,10 +4,10 @@ import WorkPerksSection from './WorkPerksSection';
 
 const WebsiteSection = () => {
 	return (
-		<>
+		<section id="WebsitesSection">
 			<WorkPerksSection/>
 			<DoneProjectsSection/>
-		</>
+		</section>
 	);
 };
 

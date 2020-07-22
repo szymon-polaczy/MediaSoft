@@ -55,7 +55,7 @@ const TrafficSignsHolder = styled.section`
 
 export default () => {
     return (
-        <TrafficSignsHolder>
+        <TrafficSignsHolder id="OfferSection">
             <h2>Co chcesz u nas sprawdzić?</h2>
             <section className="container">
                 <article>
