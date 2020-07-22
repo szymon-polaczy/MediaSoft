@@ -10,6 +10,7 @@ I'm doing this project on my free time.
 * Styled Components
 * GraphQL
 * DatoCMS
+* React-Final-Form & Fonk-Final-Form
 
 #### Disclaimer
 

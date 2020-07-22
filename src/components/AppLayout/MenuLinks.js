@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 
 const MenuLinks = () => {
     return (
-        <ul>
+        <>
             <li className="menu-item">
                 <Link 
                     to="WelcomeSection" 
@@ -70,7 +70,7 @@ const MenuLinks = () => {
                         Kontakt
                 </Link>
             </li>
-        </ul>
+        </>
     )
 }
 

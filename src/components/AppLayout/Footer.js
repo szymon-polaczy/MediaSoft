@@ -193,7 +193,9 @@ export default () => {
                     </article>
                     <nav>
                         <h4>Szybkie linki</h4>
-                        <MenuLinks/>
+                        <ul>
+                            <MenuLinks/>
+                        </ul>
                     </nav>
                     <img src={Mediasoft} alt="MediaSoft"/>
                 </div>
