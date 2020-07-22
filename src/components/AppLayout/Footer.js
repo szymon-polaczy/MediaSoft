@@ -1,7 +1,9 @@
 import React from "react"
-import { Link } from 'react-scroll'
 import styled from "styled-components"
 import Mediasoft from '../../images/mediasoft.png'
+import Check from '../../images/check-solid.svg'
+import MenuLinks from './MenuLinks'
+import { Link } from "gatsby"
 
 const MainFooter = styled.footer`
     color: #e0e0e0;
@@ -59,6 +61,11 @@ const MainFooter = styled.footer`
         color: #fff;
     }
 
+    i {
+        color: lightblue;
+        padding: 0 .65rem .65rem 0;
+    }
+
     .bottom-section {
         padding: 1rem 0;
         text-align: center;
@@ -74,13 +81,17 @@ const MainFooter = styled.footer`
         }
     }
 
-    i {
-        color: lightblue;
-        padding: 0 .65rem .65rem 0;
-    }
-
     nav ul li {
         margin: .45rem 0;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: url(${Check});
+            display: inline-block;
+            padding-right: .35rem;
+            width: 1rem;
+        }
     }
 
     @media (max-width: 800px) {
@@ -182,74 +193,7 @@ export default () => {
                     </article>
                     <nav>
                         <h4>Szybkie linki</h4>
-                        <ul>
-                            <li className="menu-item">
-                                <Link 
-                                    to="WelcomeSection" 
-                                    activeClass="active" 
-                                    spy={true} 
-                                    smooth={true} 
-                                    offset={-100} 
-                                    duration={500}>
-                                        <i className="fas fa-check"></i>Home
-                                </Link>
-                            </li>
-                            <li className="menu-item">
-                                <Link 
-                                    to="WebsitesSection" 
-                                    activeClass="active" 
-                                    spy={true} 
-                                    smooth={true} 
-                                    offset={-100} 
-                                    duration={500}>
-                                        <i className="fas fa-check"></i>Strony WWW
-                                </Link>
-                            </li>
-                            <li className="menu-item">
-                                <Link 
-                                    to="HostingSection" 
-                                    activeClass="active" 
-                                    spy={true} 
-                                    smooth={true} 
-                                    offset={-100} 
-                                    duration={500}>
-                                        <i className="fas fa-check"></i>Hosting
-                                </Link>
-                            </li>
-                            <li className="menu-item">
-                                <Link 
-                                    to="DomainsSection" 
-                                    activeClass="active" 
-                                    spy={true} 
-                                    smooth={true} 
-                                    offset={-100} 
-                                    duration={500}>
-                                        <i className="fas fa-check"></i>Domeny
-                                </Link>
-                            </li>
-                            <li className="menu-item">
-                                <Link 
-                                    to="GoogleSection" 
-                                    activeClass="active" 
-                                    spy={true} 
-                                    smooth={true} 
-                                    offset={-100} 
-                                    duration={500}>
-                                        <i className="fas fa-check"></i>Linki Sponsorowane
-                                </Link>
-                            </li>
-                            <li className="menu-item">
-                                <Link 
-                                    to="ContactSection" 
-                                    activeClass="active" 
-                                    spy={true} 
-                                    smooth={true} 
-                                    offset={-100} 
-                                    duration={500}>
-                                        <i className="fas fa-check"></i>Kontakt
-                                </Link>
-                            </li>
-                        </ul>
+                        <MenuLinks/>
                     </nav>
                     <img src={Mediasoft} alt="MediaSoft"/>
                 </div>
