@@ -141,8 +141,8 @@ class ContactForm extends Component {
                             <Field name="email" type="email">
                                 {({input, meta}) => (
                                     <div div="email-box">
-                                        <label htmlFor="form-phone-input">Numer telefonu</label>
-                                        <input {...input} pattern="[0-9]{9}" id="form-phone-input"/>
+                                        <label htmlFor="form-phone-input">Email</label>
+                                        <input {...input} id="form-phone-input"/>
                                         {meta.error && meta.touched && <span>{meta.error}</span>}
                                     </div>
                                 )}
