@@ -23,16 +23,18 @@ const Navigation = styled.ul`
         flex-flow: column;
         background: #fff;
         position: fixed;
-        right: 0;
+        left: 0;
         top: 5rem;
-        height: calc(100vh - 5rem);
-        z-index: 90;
-        transition: transform ease-in-out .35s;
-        border: 3px solid var(--theme-color);
+        width: 100vw;
+        z-index: -1;
+        transition: all ease-in-out .35s;
+        /*border: 3px solid var(--theme-color);*/
         padding: 2rem;
         background: #fff;
         font-weight: bold;
-        transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+        box-shadow: 0 .5rem .5rem #d0d0d0;
+        transform: ${({ open }) => open ? 'translateY(-100%)' : 'translateY(0)'};
+        opacity: ${({ open }) => open ? '0' : '1'};
 
         li {
             font-size: 1.25rem;

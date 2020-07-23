@@ -133,7 +133,7 @@ class ContactForm extends Component {
                                 {({input, meta}) => (
                                     <div className="fullname-box">
                                         <label htmlFor="form-fullname-input">Imię i Nazwisko</label>
-                                        <input {...input} id="form-fullname-input"/>
+                                        <input {...input} id="form-fullname-input" placeholder="Jan Kowalski"/>
                                         {meta.error && meta.touched && <span>{meta.error}</span>}
                                     </div>
                                 )}
@@ -142,7 +142,7 @@ class ContactForm extends Component {
                                 {({input, meta}) => (
                                     <div div="email-box">
                                         <label htmlFor="form-phone-input">Email</label>
-                                        <input {...input} id="form-phone-input"/>
+                                        <input {...input} id="form-phone-input" placeholder="jankowalski@email.com"/>
                                         {meta.error && meta.touched && <span>{meta.error}</span>}
                                     </div>
                                 )}
@@ -151,7 +151,7 @@ class ContactForm extends Component {
                                 {({input, meta}) => (
                                     <div className="message-box">
                                         <label htmlFor="form-message-input">Twoja wiadomość</label>
-                                        <input {...input} id="form-message-input"/>
+                                        <input {...input} id="form-message-input" placeholder="Chciałbym z wami współpracować!"/>
                                         {meta.error && meta.touched && <span>{meta.error}</span>}
                                     </div>
                                 )}
