@@ -3,7 +3,7 @@ import AppLayout from '../components/AppLayout/AppLayout'
 import WelcomeSection from '../components/WelcomeSection/WelcomeSection'
 import OfferSection from '../components/OfferSection/OfferSection'
 import WebsitesSection from '../components/WebsitesSection/WebsitesSection'
-import ContactUsSection from '../components/ContactUsSection/ContactUsSection'
+import QuickContactSection from '../components/QuickContactSection/QuickContactSection'
 import HostingSection from '../components/HostingSection/HostingSection'
 import DomainsSection from '../components/DomainsSection/DomainsSection'
 import GoogleSection from '../components/GoogleSection/GoogleSection'
@@ -36,7 +36,7 @@ export default ({data}) => {
 				<WelcomeSection/>
 				<OfferSection/>
 				<WebsitesSection/>
-				<ContactUsSection/>
+				<QuickContactSection/>
 				<HostingSection/>
 				<DomainsSection/>
 				<GoogleSection/>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 import styled from 'styled-components'
 
 const TrafficSignsHolder = styled.section`
@@ -59,16 +60,48 @@ export default () => {
             <h2>Co chcesz u nas sprawdzić?</h2>
             <section className="container">
                 <article>
-                    <a href="#websites">Strony WWW<i className="fas fa-code"></i></a>
+                    <Link 
+                        to="WebsitesSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                            Strony WWW<i className="fas fa-code"></i>
+                    </Link>
                 </article>
                 <article>
-                    <a href="#hosting">Hosting<i className="fas fa-cogs"></i></a>
+                    <Link 
+                        to="HostingSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                            Hosting<i className="fas fa-cogs"></i>
+                    </Link>
                 </article>
                 <article>
-                    <a href="#domains">Domeny<i className="fas fa-search"></i></a>
+                    <Link 
+                        to="DomainsSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                            Domeny<i className="fas fa-search"></i>
+                    </Link>
                 </article>
                 <article>
-                    <a href="#googleads">Google Adwords<i className="fas fa-chart-line"></i></a>
+                    <Link 
+                        to="GoogleSection" 
+                        activeClass="active" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-100} 
+                        duration={500}>
+                            Linki Sponsorowane<i className="fas fa-chart-line"></i>
+                    </Link>
                 </article>
             </section>
         </TrafficSignsHolder>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ContactBar = styled.section`
+const QuickContactSection = styled.section`
     background-color: #fd830d;
     color: #fff;
     padding: 2.25rem 0;
@@ -59,7 +59,7 @@ const ContactBar = styled.section`
 
 export default () => {
     return (
-        <ContactBar id="ContactUsSection">
+        <QuickContactSection id="ContactUsSection">
             <div className="wrapper">
                 <header>
                     <p>Masz pytanie? Chcesz porozmawiać o ofercie <br/>Skontaktuj się z nami!</p>
@@ -73,6 +73,6 @@ export default () => {
                     <a href="mailto:kontakt@mediasoft.com.pl">kontakt@mediasoft.com.pl</a>
                 </article>
             </div>
-        </ContactBar>
+        </QuickContactSection>
     )
 }
