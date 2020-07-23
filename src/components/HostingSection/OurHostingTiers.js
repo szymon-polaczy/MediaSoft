@@ -37,6 +37,7 @@ const OurHostingTiers = () => {
     {
         allDatoCmsHostingtier {
             nodes {
+                id,
                 title,
                 description
             }

@@ -108,7 +108,7 @@ const Project = styled.article`
 
 const setProperPerk = (project) => {
 	return (
-		<Project key={project.id}>
+		<Project key={project.id.toString()}>
 			<div className="ring"><img src={project.icon.url} alt={project.icon.alt} /></div>
 			<h3>{project.title}</h3>
 			<p>{project.description}</p>
@@ -135,12 +135,12 @@ const PerksOfWorkingWithUsHolder = () => {
 	{
 		allDatoCmsPerkofourwork {
 			nodes {
-				title
-				description
-				id
+				title,
+				description,
+				id,
 				icon {
-					url
-					alt
+					url,
+					alt,
 				}
 			}
 		}

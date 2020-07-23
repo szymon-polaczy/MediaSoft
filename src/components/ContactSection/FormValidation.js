@@ -3,13 +3,34 @@ import { Validators } from '@lemoncode/fonk';
 
 const validationSchema = {
     field: {
-        fullName: [Validators.required.validator],
-        email: [
-            Validators.required.validator,
-            Validators.email.validator,
+        fullName: [ 
+            {
+                validator: Validators.required.validator,
+                message: "Pełne imię i nazwisko jest wymagane."
+            }
         ],
-        message: [Validators.required.validator],
-        policy: [Validators.required.validator],        
+        email: [
+            {
+                validator: Validators.required.validator,
+                message: "Email jest wymagany."
+            },
+            {
+                validator: Validators.email.validator,
+                message: "Podaj poprawny adres email."
+            }
+        ],
+        message: [
+            {
+                validator: Validators.required.validator,
+                message: "Podaj wiadomość jaką chcesz do nas wysłać."
+            }
+        ],
+        policy: [
+            {
+                validator: Validators.required.validator,
+                message: "Zgoda jest wymagana do wysłania wiadomości."
+            }
+        ],        
     },
 };
 
