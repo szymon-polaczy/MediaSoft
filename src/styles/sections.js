@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 export const SectionContainer = styled.section`
     margin-top: 5rem;
+
+    @media (max-width: 600px) {
+        margin-top: 3.5rem;
+    }
 `;
 
 export const SectionDoubleContainer = styled(SectionContainer)`
