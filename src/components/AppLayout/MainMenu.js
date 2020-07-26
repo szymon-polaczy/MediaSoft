@@ -33,8 +33,8 @@ const Navigation = styled.ul`
         background: #fff;
         font-weight: bold;
         box-shadow: 0 .5rem .5rem #d0d0d0;
-        transform: ${({ open }) => open ? 'translateY(-100%)' : 'translateY(0)'};
-        opacity: ${({ open }) => open ? '0' : '1'};
+        transform: ${({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)'};
+        opacity: ${({ open }) => open ? '1' : '0'};
 
         li {
             font-size: 1.25rem;

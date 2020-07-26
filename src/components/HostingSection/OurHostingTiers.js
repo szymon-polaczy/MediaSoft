@@ -19,6 +19,7 @@ const Tier = styled.article`
     @media (max-width: 1200px) {
         h3, p {
             text-align: center;
+            padding: 0 .85rem;
         }
     }
 `

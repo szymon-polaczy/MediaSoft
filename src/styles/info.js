@@ -6,6 +6,7 @@ export const BigInfo = styled.h2`
 	letter-spacing: .05rem;
 	line-height: 120%;
 	margin: 1rem 0 1.5rem 0;
+	padding: 0 .65rem;
 
 	&::after {
 		content: '';
@@ -58,4 +59,5 @@ export const SmallInfo = styled.small`
 	letter-spacing: .04rem;
 	display: block;
 	font-size: 1.2rem;
+	padding: 0 .65rem;
 `;

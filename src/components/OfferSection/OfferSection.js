@@ -43,6 +43,12 @@ const TrafficSignsHolder = styled.section`
 
             article {
                 border: none;
+
+                a {
+                    i {
+                        margin-left: .35rem;
+                    }
+                }
             }
         }
     }
@@ -50,6 +56,7 @@ const TrafficSignsHolder = styled.section`
     @media (max-width: 750px) {
         .container {
             grid-template-columns: 1fr;
+            padding: 0 .65rem;
         }
     }
 `;

@@ -8,7 +8,7 @@ import HostingSection from '../components/HostingSection/HostingSection'
 import DomainsSection from '../components/DomainsSection/DomainsSection'
 import GoogleSection from '../components/GoogleSection/GoogleSection'
 import ContactSection from '../components/ContactSection/ContactSection'
-import { HeadProvider, Title, Meta } from 'react-head'
+import { Helmet } from 'react-helmet'
 import { graphql } from "gatsby"
 
 export const query = graphql`
@@ -18,7 +18,8 @@ export const query = graphql`
 		title,
 		description,
 		keywords,
-		author
+		author,
+		lang
       }
     }
   }
@@ -26,22 +27,24 @@ export const query = graphql`
 
 export default ({data}) => {
 	return (
-		<HeadProvider headTags={[]}>
-			<Title>{data.site.siteMetadata.title}</Title>
-			<Meta name="description" content={data.site.siteMetadata.description} />
-			<Meta name="keywords" content={data.site.siteMetadata.keywords} />
-			<Meta name="author" content={data.site.siteMetadata.author} />
-   
-			<AppLayout>
-				<WelcomeSection/>
-				<OfferSection/>
-				<WebsitesSection/>
-				<QuickContactSection/>
-				<HostingSection/>
-				<DomainsSection/>
-				<GoogleSection/>
-				<ContactSection/>
-			</AppLayout>
-		</HeadProvider>
+			<>
+				<Helmet htmlAttributes={{"lang": "en"}}>
+					<meta charSet="utf-8"/>
+					<title>{data.site.siteMetadata.title}</title>
+					<meta name="description" content={data.site.siteMetadata.description} />
+					<meta name="keywords" content={data.site.siteMetadata.keywords} />
+					<meta name="author" content={data.site.siteMetadata.author} />
+				</Helmet>
+				<AppLayout>
+					<WelcomeSection/>
+					<OfferSection/>
+					<WebsitesSection/>
+					<QuickContactSection/>
+					<HostingSection/>
+					<DomainsSection/>
+					<GoogleSection/>
+					<ContactSection/>
+				</AppLayout>
+			</>
 	)
 }

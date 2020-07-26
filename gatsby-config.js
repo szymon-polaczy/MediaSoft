@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    `gatsby-plugin-react-head`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -26,6 +26,7 @@ module.exports = {
   ],
 
   siteMetadata: {
+    lang: `pl`,
     title: `MediaSoft`,
     author: `Szymon Polaczy`,
     description: `MediaSoft Nysa oferuje: strony WWW, strony internetowe, serwery wirtualne, serwery, hosting, domeny, 

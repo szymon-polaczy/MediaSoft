@@ -52,10 +52,12 @@ const PerksHolder = styled.section`
 		flex-flow: row;
 		overflow-x: scroll;
 		max-width: 100%;
+		padding: .65rem;
 		scroll-snap-type: x mandatory;
 
 		.assets-logo {
 			grid-column: unset;
+			justify-content: center;
 		}
 	}
 `;

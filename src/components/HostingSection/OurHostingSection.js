@@ -22,9 +22,11 @@ const Heading = styled.h4`
 
     @media (max-width: 1200px) {
         text-align: center;
+        padding: 0 .65rem;
+        line-height: 120%;
 
         &::after {
-            margin: .3rem auto 0 auto;
+            margin: .3rem auto .65rem auto;
         }
     }
 `
@@ -37,6 +39,7 @@ const Info = styled.p`
 
     @media (max-width: 1200px) {
         text-align: center;
+        padding: 0 .85rem;
     }
 `;
 

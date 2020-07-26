@@ -28,6 +28,7 @@ const PerksHolder = styled.section`
 
 const Perk = styled.article`
     text-align: center;
+    padding: .65rem .35rem;
 
     img {
         width: 1.9rem;

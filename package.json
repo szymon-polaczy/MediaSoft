@@ -19,7 +19,7 @@
     "final-form": "^4.20.1",
     "gatsby": "^2.19.22",
     "gatsby-image": "^2.2.34",
-    "gatsby-plugin-react-head": "^1.1.0",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.3.4",
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-datocms": "^2.3.0",
@@ -28,7 +28,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-final-form": "^6.5.1",
-    "react-head": "^3.3.0",
+    "react-helmet": "^6.1.0",
     "react-scroll": "^1.8.0",
     "styled-components": "^5.1.1",
     "typescript": "^3.7.2"

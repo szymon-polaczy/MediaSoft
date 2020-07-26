@@ -53,6 +53,7 @@ const WelcomeSectionStyled = styled.header`
         font-size: 1.4rem;
         background: #fff;
         margin-left: .65rem;
+        text-align: center;
         margin-top: 2rem;
         cursor: pointer;
         box-shadow: -.65rem .65rem 0 var(--theme-color);
@@ -89,10 +90,11 @@ const WelcomeSectionStyled = styled.header`
                 margin-top: 2rem;
                 padding: unset;
                 text-align: center;
+                padding:0 2rem;
             }
 
             h2 {
-                margin-top: .35rem;
+                margin-top: .65rem;
                 text-align: center;
             }
 

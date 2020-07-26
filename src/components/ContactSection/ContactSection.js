@@ -3,23 +3,7 @@ import styled from 'styled-components'
 import GoogleMap from './GoogleMap'
 import Form from './Form'
 import { SectionContainer } from '../../styles/sections'
-
-const BigInfo = styled.h2`
-    text-align: center;
-    font-size: 2.5rem;
-    letter-spacing: .05rem;
-    line-height: 120%;
-    margin: 1rem 0 .65rem 0;
-
-    &::after {
-        content: '';
-        display: block;
-        width: 4rem;
-        height: 2px;
-        background-color: #444;
-        margin: .3rem auto 0 auto;
-    }
-`;
+import { BigInfo } from '../../styles/info'
 
 const Container = styled.section`
     display: grid;

@@ -16,6 +16,7 @@ const WelcomeText = styled.p`
 
     @media (max-width: 1200px) {
         text-align: center;
+        padding: 0 .65rem;
     }
 `;
 
