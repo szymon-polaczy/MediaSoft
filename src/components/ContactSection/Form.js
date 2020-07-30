@@ -27,6 +27,41 @@ const MessageFormSection = styled.section`
             box-sizing: border-box;
             border-bottom: 2px solid #444;
             padding: .35rem;
+            transition: all .15s ease-out;
+
+            &::placeholder {
+                transition: all .15s ease-out;
+            }
+
+            ~ label {
+                transition: all .15s ease-out;
+            }
+
+            &:hover {
+                border-bottom: 2px solid #000;
+                transition: all .2s ease-out;
+
+                &::placeholder {
+                    color: #222;
+                    transition: all .2s ease-out;
+                }
+            }
+
+            &:focus, &:focus-within, &:active {
+                border-bottom: 2px solid #000;
+                transform: scale(1.03);
+                transition: all .2s ease-out;
+
+                &::placeholder {
+                    color: #222;
+                    transition: all .2s ease-out;
+                }
+
+                ~ label {
+                    color: #000;
+                    transition: all .2s ease-out;
+                }
+            }
         }
 
         div:not(.buttons) {
@@ -80,16 +115,16 @@ const MessageFormSection = styled.section`
             background: linear-gradient(to right, #5B86E5, #36D1DC);
             color: #fff;
             margin: .8rem 0 .4rem 0;
-            transition: .15s transfrom ease-out;
+            transition: .15s all ease-out;
 
             &:hover {
                 transform: scale(1.1);
-                transition: .2s transfrom ease-out;
+                transition: .2s all ease-out;
             }
 
-            &:active {
-                transform: scale(.95);
-                transition: .2s transfrom ease-out;
+            &:focus, &:focus-within, &:active {
+                transform: scale(.95) skew(3deg);
+                transition: .2s all ease-out;
             }
         }
 
