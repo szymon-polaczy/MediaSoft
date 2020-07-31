@@ -123,12 +123,12 @@ const chooseOnlyPerkOrPerkAndImage = (project, index) => {
 		return setProperPerk(project);
 
 	return (
-		<>
-			<Project className="assets-logo" key="center-image-svg">
+		<React.Fragment key={project.id + "-central-immg"}>
+			<Project className="assets-logo" key="central-img">
 				<img src={AssetsLogoSVG} alt="Wybierz co potrzebujesz na swojej stronie" />
 			</Project>
 			{ setProperPerk(project) }
-		</>
+		</React.Fragment>
 	)
 }
 
