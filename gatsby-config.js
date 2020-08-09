@@ -36,7 +36,6 @@ module.exports = {
         theme_color: `#5588bb`,
         display: `standalone`,
         lang: `pl`,
-        icon: `/logo-192x192.png`,
         icons: [
           {
             src: `/favicon.ico`,
