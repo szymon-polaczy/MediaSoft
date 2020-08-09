@@ -24,7 +24,7 @@ const ProjectsHolder = styled.section`
 	flex-flow: wrap;
 	justify-content: center;
     margin-top: 1.3rem;
-    height: ${({open}) => open ? '100%' : '300px'};
+    max-height: ${({open}) => open ? '100%' : '300px'};
     overflow-y: ${({open}) => open ? 'visible' : 'hidden'};
     box-shadow: inset 0px -10px 7px 0px rgba(255,255,255,1);
 
@@ -45,9 +45,6 @@ const Project = styled.article`
     box-shadow: 0 0 .35rem #ccc;
     transition: .2s all ease-out !important;
     min-width: 320px;
-
-    width: 500px;
-    height:L 500px;
 
     @media (max-width: 700px) {
         scroll-snap-align: center;
@@ -120,7 +117,7 @@ const OurDoneProjectsHolder = () => {
   `);
 
     const GetSeeMoreBtnIfNeeded = (img_array) => {
-        const minNumberOfPhotosToActivateTheBtn = 3;
+        const minNumberOfPhotosToActivateTheBtn = 30;
         if (img_array.length > minNumberOfPhotosToActivateTheBtn && window.innerWidth > 700) 
             return (
                 <ProjectsHolderSeeMoreBtn onClick={() => setOpen(!open)}>
