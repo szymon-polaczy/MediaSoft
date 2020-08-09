@@ -65,11 +65,15 @@ const MenuBtn = styled.button`
 const HeaderMenu = () => {
     const [open, setOpen] = useState(false);
 
+    const closeMenu = () => {
+        setOpen(false);
+    }
+
     return (
         <>
             <MenuBtn onClick={() => setOpen(!open)}><i className="fas fa-bars"></i></MenuBtn>
             <Navigation open={open} role="navigation">
-                <MenuLinks/>
+                <MenuLinks closeMenu={closeMenu}/>
             </Navigation>
             
         </>
