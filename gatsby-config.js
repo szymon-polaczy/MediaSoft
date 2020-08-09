@@ -31,6 +31,7 @@ module.exports = {
         description: `Strona firmy Mediasoft ofeerująca strony WWW, hosting,  
           domeny, pozycjonwanie, google ads i wiele więcej`,
         start_url: `/`,
+        scope: `/`,
         background_color: `#ffffff`,
         theme_color: `#5588bb`,
         display: `standalone`,
