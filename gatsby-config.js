@@ -35,20 +35,27 @@ module.exports = {
         theme_color: `#5588bb`,
         display: `standalone`,
         lang: `pl`,
+        icon: `/logo-192x192.png`,
         icons: [
           {
             src: `/favicon.ico`,
             sizes: `64x64`,
           },
           {
-            src: `/logo-192x192.pmg`,
+            src: `/logo-192x192.png`,
             sizes: `192x192`,
-            type: `image/png`,
+            type: "image/png",
           },
           {
             src: `/logo-512x512.png`,
-            sizes: `5125x512`,
-            type: `image/png`,
+            sizes: `512x512`,
+            type: "image/png",
+          },
+          {
+            src: `/logo-512x512-maskable.png`,
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable"
           },
         ]
       },
