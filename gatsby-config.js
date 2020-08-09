@@ -23,6 +23,27 @@ module.exports = {
         displayName: true
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Mediasoft`,
+        short_name: `mediasoft`,
+        description: `Strona firmy Mediasoft ofeerująca strony WWW, hosting,  
+          domeny, pozycjonwanie, google ads i wiele więcej`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#5588bb`,
+        display: `standalone`,
+        lang: `pl`,
+        icons: [
+          {
+            src: `/favicon.ico`,
+            sizes: `64x64`,
+          }
+        ]
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 
   siteMetadata: {
