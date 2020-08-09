@@ -43,7 +43,12 @@ module.exports = {
         ]
       },
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/404`, `/privacy-policy`],
+      }
+    },
   ],
 
   siteMetadata: {

@@ -180,11 +180,15 @@ export default () => {
                         </p>
                         <p>
                             <i className="fas fa-phone-alt"></i>
-                            <a href="tel:501-442-493">(+48) 501 442 493</a>
+                            <a href="tel:501-442-493">
+                                (+48) 501 442 493
+                            </a>
                         </p>
                         <p>
                             <i className="far fa-envelope-open"></i>
-                            <a href="mailto:kontakt@mediasoft.com.pl">kontakt@mediasoft.com.pl</a>
+                            <a href="mailto:kontakt@mediasoft.com.pl">
+                                kontakt@mediasoft.com.pl
+                            </a>
                         </p>
                         <p>
                             <i className="far fa-calendar-alt"></i>
