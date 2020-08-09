@@ -32,6 +32,12 @@ const BigInfoSide = styled(BigInfo)`
 			margin: 0 auto;
 		}
 	}
+
+	@media (max-width: 450px) {
+		&::after {
+			width: 4rem;
+		}
+	}
 `
 
 export const BigInfoRight = styled(BigInfoSide)`

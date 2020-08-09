@@ -55,6 +55,22 @@ const QuickContactSection = styled.section`
             }
         }
     }
+
+    @media (max-width: 375px) {
+        header {
+            font-size: 1.5rem; 
+        }
+
+        article {
+            i {
+                font-size: 1.6rem;
+            }
+
+            a {
+                font-size: 1.4rem;
+            }
+        }
+    }
 `;
 
 export default () => {

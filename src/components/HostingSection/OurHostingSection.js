@@ -29,6 +29,12 @@ const Heading = styled.h4`
             margin: .3rem auto .65rem auto;
         }
     }
+
+    @media (max-width: 450px) {
+        &::after {
+            width: 4rem;
+        }
+    }
 `
 
 const Info = styled.p`

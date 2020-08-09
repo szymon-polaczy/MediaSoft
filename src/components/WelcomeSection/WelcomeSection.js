@@ -118,6 +118,18 @@ const WelcomeSectionStyled = styled.header`
             }
         }
     }
+
+    @media (max-width: 450px) {
+        .message-section {
+            h1 {
+                font-size: 3.75rem;
+            }
+
+            p {
+                padding: 0;
+            }
+        }
+    }
 `;
 
 const InterestingBackground = styled.aside`
