@@ -60,12 +60,7 @@ module.exports = {
         ]
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/404`, `/privacy-policy`],
-      }
-    },
+    `gatsby-plugin-offline`
   ],
 
   siteMetadata: {

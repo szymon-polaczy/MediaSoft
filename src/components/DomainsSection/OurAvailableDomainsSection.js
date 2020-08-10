@@ -50,7 +50,7 @@ const Domain = styled.article`
         min-width: 11rem;
     }
 
-    h4 {
+    h3 {
         color: #fd746c;
         font-size: 1.8rem;
         letter-spacing: .03rem;
@@ -77,7 +77,7 @@ const Domain = styled.article`
 const OurAvailableDomain = (available_domain) => {
   return (
       <Domain key={available_domain.id}>
-          <h4>{available_domain.domain}</h4>
+          <h3>{available_domain.domain}</h3>
           <p>Pierwszy rok <span>{available_domain.firstyearprice}zł</span></p>
           <p>Odnowienie {available_domain.normalprice}zł</p>
       </Domain>

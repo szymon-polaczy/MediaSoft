@@ -71,7 +71,7 @@ const HeaderMenu = () => {
 
     return (
         <>
-            <MenuBtn onClick={() => setOpen(!open)}><i className="fas fa-bars"></i></MenuBtn>
+            <MenuBtn onClick={() => setOpen(!open)}><i className="fas fa-bars" aria-label="open-menu-btn"></i></MenuBtn>
             <Navigation open={open} role="navigation">
                 <MenuLinks closeMenu={closeMenu}/>
             </Navigation>

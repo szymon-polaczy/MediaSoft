@@ -45,7 +45,7 @@ const MainFooter = styled.footer`
         }
     }
 
-    h4 {
+    h2 {
         color: #fff;
         text-transform: uppercase;
         font-weight: 600;
@@ -170,7 +170,7 @@ export default () => {
             <section className="top-section">
                 <div className="wrapper flex">
                     <article>
-                        <h4>Bądź w kontakcie</h4>
+                        <h2>Bądź w kontakcie</h2>
                         <p className="wrap-it">
                             <i className="fas fa-map-marker-alt"></i>
                             <span className="container">
@@ -197,7 +197,7 @@ export default () => {
                         </p>
                     </article>
                     <nav>
-                        <h4>Szybkie linki</h4>
+                        <h2>Szybkie linki</h2>
                         <ul>
                             <MenuLinks/>
                         </ul>
