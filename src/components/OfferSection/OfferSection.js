@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 import styled from 'styled-components'
 
 const TrafficSignsHolder = styled.section`
-    background: #ff677d;
+    background: #DA609E;
     padding: 3.25rem 0;
     font-size: 2.5rem;
     color: #fff;

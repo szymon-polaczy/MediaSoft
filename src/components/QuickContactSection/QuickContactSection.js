@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const QuickContactSection = styled.section`
-    background-color: #fd830d;
+    background-color: #DA609E;
     color: #fff;
     padding: 2.25rem 0;
     margin: 5rem 0;

@@ -82,9 +82,10 @@ const MainFooter = styled.footer`
     }
 
     nav ul li {
-        margin: .45rem 0;
+        margin: .65rem 0;
         display: flex;
         align-items: center;
+        font-size: 1.1rem;
 
         &::before {
             content: url(${Check});
