@@ -22,6 +22,8 @@ const Img = styled.img`
     margin: 0 auto;
     padding: 3rem;
     display: block;
+    max-width: 100%;
+    box-sizing: border-box;
 `
 
 const LinkMe = styled(Link)`

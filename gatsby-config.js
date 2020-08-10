@@ -72,11 +72,15 @@ module.exports = {
     lang: `pl`,
     title: `MediaSoft`,
     author: `Szymon Polaczy`,
-    description: `MediaSoft Nysa oferuje: strony WWW, strony internetowe, serwery wirtualne, serwery, hosting, domeny, 
-                  rejestracja domen, pozycjonowanie stron, pozycjonowanie, rejestracja stron w katalogach, 
-                  ręczne katalogowanie stron, zwiększanie PageRank, WebMonitoring.`,
-    keywords: `nysa, strony www, strony internetowe, serwery wirtualne, serwer wirtualny, hodsting, pozycjonowanie, 
-              pozycjonowanie stron, serwery, domeny, rejestracja domen, katalogowanie stron, rejestracja w katalogach, 
-              rejestracja stron w katalogach, linki sponsorowane, pagerank, zwiększanie pagerank`,
+    description: `MediaSoft Nysa oferuje: strony WWW, strony internetowe, 
+                  serwery wirtualne, serwery, hosting, domeny, rejestracja 
+                  domen, pozycjonowanie stron, pozycjonowanie, rejestracja 
+                  stron w katalogach, ręczne katalogowanie stron, 
+                  zwiększanie PageRank, WebMonitoring.`,
+    keywords: `nysa, strony www, strony internetowe, serwery wirtualne, 
+              serwer wirtualny, hodsting, pozycjonowanie, pozycjonowanie 
+              stron, serwery, domeny, rejestracja domen, katalogowanie 
+              stron, rejestracja w katalogach, rejestracja stron w 
+              katalogach, linki sponsorowane, pagerank, zwiększanie pagerank`,
   }
 }

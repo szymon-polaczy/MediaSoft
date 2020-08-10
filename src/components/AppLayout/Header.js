@@ -1,7 +1,8 @@
 import React from "react"
 import styled from 'styled-components'
 import Menu from './MainMenu'
-import Mediasoft from '../../images/mediasoft.png'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
 
 const MenuContainer = styled.header`
 	height: 5rem;
@@ -12,8 +13,9 @@ const MenuContainer = styled.header`
 	top: 0;
 	z-index: 100;
 	
-	img {
-		max-height: 2em;
+	.gatsby-image-wrapper {
+		height: 32px;
+		width: 125px;
 	}
 	
 	.wrapper {
@@ -23,13 +25,28 @@ const MenuContainer = styled.header`
 	}
 `;
 
-export default () => {
+
+const Header = () => {
+	const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "mediasoft.png" }) {
+        childImageSharp {
+          fixed(height: 32, width: 125) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
 	return (
 		<MenuContainer>
 			<div className="wrapper">
-				<img src={Mediasoft} alt="MediaSoft Logo"/>
+				<Img fluid={data.file.childImageSharp.fixed} alt="" />
 				<Menu/>
 			</div>
 		</MenuContainer>
 	)
 }
+
+export default Header
