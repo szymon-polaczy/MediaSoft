@@ -24,11 +24,11 @@ const Tier = styled.article`
     }
 `
 
-const OneHostingTier = (tier) => {
+const OneHostingTier = ({id, title, description}) => {
     return (
-        <Tier key={tier.id}>
-            <h3>{tier.title}</h3>
-            <p>{tier.description}</p>
+        <Tier key={id}>
+            <h3>{title}</h3>
+            <p>{description}</p>
         </Tier>
     )
 }

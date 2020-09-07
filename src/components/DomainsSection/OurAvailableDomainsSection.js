@@ -74,12 +74,12 @@ const Domain = styled.article`
     }
 `
 
-const OurAvailableDomain = (available_domain) => {
+const OurAvailableDomain = ({id, domain, firstyearprice, normalprice}) => {
   return (
-      <Domain key={available_domain.id}>
-          <h3>{available_domain.domain}</h3>
-          <p>Pierwszy rok <span>{available_domain.firstyearprice}zł</span></p>
-          <p>Odnowienie {available_domain.normalprice}zł</p>
+      <Domain key={id}>
+          <h3>{domain}</h3>
+          <p>Pierwszy rok <span>{firstyearprice}zł</span></p>
+          <p>Odnowienie {normalprice}zł</p>
       </Domain>
   )
 }

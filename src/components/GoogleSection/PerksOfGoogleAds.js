@@ -56,12 +56,12 @@ const Perk = styled.article`
     }
 `;
 
-const OnePerkOfGoogleAds = (perk) => {
+const OnePerkOfGoogleAds = ({id, icon, title, description}) => {
     return (
-        <Perk key={perk.id}>
-            <img src={perk.icon.url} alt={perk.icon.alt}/>
-            <h3><b>{perk.title}</b></h3>
-            <p>{perk.description}</p>
+        <Perk key={id}>
+            <img src={icon.url} alt={icon.alt}/>
+            <h3><b>{title}</b></h3>
+            <p>{description}</p>
         </Perk>
     )
 }
