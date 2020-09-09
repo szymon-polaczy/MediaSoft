@@ -42,7 +42,7 @@ const Header = () => {
 	return (
 		<MenuContainer>
 			<div className="wrapper">
-				<Img fluid={data.file.childImageSharp.fixed} alt="" />
+				<Img fixed={data.file.childImageSharp.fixed} alt="" />
 				<Menu/>
 			</div>
 		</MenuContainer>
