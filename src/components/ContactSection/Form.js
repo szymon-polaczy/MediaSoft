@@ -142,7 +142,23 @@ const MessageFormSection = styled.section`
 			}
 		}
 	}
+
+	.disabled {
+		background: #ccc;
+		color: #fff;
+		transform: scale(.9)
+		pointer-events: none;
+	}
 `;
+
+const disableSubmit = () => {
+	document.querySelector('#submit-btn').setAttribute('disabled', 'true')
+	document.querySelector('#submit-btn').setAttribute('class', 'disabled')
+	setTimeout(() => {
+		document.querySelector('#submit-btn').removeAttribute('disabled')
+		document.querySelector('#submit-btn').removeAttribute('class')
+	}, 3000)
+}
 
 class ContactForm extends Component {
 	render() {
@@ -159,6 +175,7 @@ class ContactForm extends Component {
 							}, (error) => {
 								console.log(error.text);
 							});
+							disableSubmit();
 					}}
 					initialValues={{
 						fullName: '',
@@ -206,7 +223,7 @@ class ContactForm extends Component {
 								)}
 							</Field>
 							<div className="buttons">
-								<button type="submit">Submit</button>
+								<button type="submit" id="submit-btn">Submit</button>
 							</div>
 						</form>
 					)}
