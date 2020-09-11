@@ -22,7 +22,11 @@ const MessageFormSection = styled.section`
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 
-		input {
+		textarea {
+			resize: none;
+		}
+
+		input, textarea {
 			border: none;
 			outline: none;
 			box-sizing: border-box;
@@ -78,7 +82,7 @@ const MessageFormSection = styled.section`
 			margin-right: 10px;
 		}
 
-		.message-box {
+		.message-box, .title-box {
 			grid-column: 1 / span 2;
 		}
 
@@ -180,6 +184,7 @@ class ContactForm extends Component {
 					initialValues={{
 						fullName: '',
 						email: '',
+						title: '',
 						message: '',
 						policy: null,
 					}}
@@ -197,9 +202,18 @@ class ContactForm extends Component {
 							</Field>
 							<Field name="email" type="email">
 								{({input, meta}) => (
-									<div div="email-box">
+									<div className="email-box">
 										<label htmlFor="form-phone-input">Email</label>
 										<input {...input} id="form-phone-input" placeholder="jankowalski@email.com"/>
+										{meta.error && meta.touched && <span>{meta.error}</span>}
+									</div>
+								)}
+							</Field>
+							<Field name="title">
+								{({input, meta}) => (
+									<div className="title-box">
+										<label htmlFor="form-title-input">Tytuł</label>
+										<input {...input} id="form-title-input" placeholder="Wspólna praca nad nowym projektem!?"/>
 										{meta.error && meta.touched && <span>{meta.error}</span>}
 									</div>
 								)}
@@ -208,7 +222,7 @@ class ContactForm extends Component {
 								{({input, meta}) => (
 									<div className="message-box">
 										<label htmlFor="form-message-input">Twoja wiadomość</label>
-										<input {...input} id="form-message-input" placeholder="Chciałbym z wami współpracować!"/>
+										<textarea rows="3" {...input} id="form-message-input" placeholder="Chciałbym z wami współpracować!"/>
 										{meta.error && meta.touched && <span>{meta.error}</span>}
 									</div>
 								)}

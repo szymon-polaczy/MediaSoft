@@ -19,6 +19,12 @@ const validationSchema = {
                 message: "Podaj poprawny adres email."
             }
         ],
+        title: [
+            {
+                validator: Validators.required.validator,
+                message: "Podaj tytuł swojej wiadomości."
+            }
+        ],
         message: [
             {
                 validator: Validators.required.validator,
