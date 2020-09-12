@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Form, Field } from 'react-final-form'
 import { formValidation } from './FormValidation'
@@ -110,6 +110,11 @@ const MessageFormSection = styled.section`
 			color: #f33;
 		}
 
+		.user-info {
+			color: #222;
+			grid-column: 1 / span 2;
+		}
+
 		button {
 			border: none;
 			outline: none;
@@ -136,7 +141,7 @@ const MessageFormSection = styled.section`
 		@media (max-width: 550px) {
 			grid-template-columns: 1fr;
 
-			.message-box, .checkbox-box {
+			.message-box, .checkbox-box, .user-info {
 				grid-column: unset;
 			}
 
@@ -164,8 +169,9 @@ const disableSubmit = () => {
 	}, 3000)
 }
 
-class ContactForm extends Component {
-	render() {
+const ContactForm = () => {
+	const [userInfo, setUserInfo] = useState('');
+
 		return (
 			<MessageFormSection>
 				<h2>Wypełnij formularz</h2>
@@ -175,11 +181,11 @@ class ContactForm extends Component {
 					onSubmit={() => {
 						emailjs.sendForm('service_xuu4z8k', 'template_54zt0z9', '#contact-form', 'user_C1OXTe9qBeqb5ZOmCejLc')
 							.then((result) => {
-								console.log(result.text);
+								setUserInfo('Twoja wiadomośc została wysłana poprawnie');
 							}, (error) => {
-								console.log(error.text);
+								setUserInfo('Podczas wysyłania twojej wiadomości pojawił się błąd - Wiadomość nie została wysłana.');
 							});
-							disableSubmit();
+						disableSubmit();
 					}}
 					initialValues={{
 						fullName: '',
@@ -239,12 +245,12 @@ class ContactForm extends Component {
 							<div className="buttons">
 								<button type="submit" id="submit-btn">Submit</button>
 							</div>
+							<span className="user-info">{userInfo}</span>
 						</form>
 					)}
 				/>
 			</MessageFormSection>
 		)
-	}
 }  
 
 export default ContactForm;
