@@ -70,12 +70,12 @@ const MessageFormSection = styled.section`
 			}
 		}
 
-		div:not(.buttons) {
+		.fullname-box, .email-box, .title-box, .message-box, .checkbox-box {
 			display: flex;
 			margin-top: 1.65rem;
 		}
 
-		div:not(.buttons):not(.checkbox-box) {
+		.fullname-box, .email-box, .title-box, .message-box {
 			flex-flow: column;
 		}
 
@@ -142,7 +142,7 @@ const MessageFormSection = styled.section`
 		@media (max-width: 550px) {
 			grid-template-columns: 1fr;
 
-			.message-box, .checkbox-box, .user-info {
+			.message-box, .checkbox-box, .user-info, .title-box {
 				grid-column: unset;
 			}
 
@@ -159,6 +159,15 @@ const MessageFormSection = styled.section`
 		transform: scale(.9)
 		pointer-events: none;
 	}
+
+	#g-recaptcha {
+		grid-column: 1 / span 2;
+		margin-top: 1rem;
+	
+		@media (max-width: 550px) {
+			grid-column: unset;
+		}
+	 }
 `;
 
 const disableSubmit = () => {
