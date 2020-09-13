@@ -171,6 +171,7 @@ const disableSubmit = () => {
 }
 
 let captcha = null;
+let token = null;
 const onLoadRecaptcha = () => {
 	if (captcha) {
 		captcha.reset();
@@ -179,8 +180,34 @@ const onLoadRecaptcha = () => {
 }
 
 const verifyCallback = (recaptchaToken) => {
+	token = recaptchaToken;
 	console.log(recaptchaToken, "<= your recaptcha token");
+	
+	postData('https://www.google.com/recaptcha/api/siteverify', { secret: CAPTCHA_SECRET, response: token})
+  .then(data => {
+    console.log(data); // JSON data parsed by `data.json()` call
+  });
 }
+
+async function postData(url = '', data = {}) {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
+
+
 
 const ContactForm = () => {
 	const [userInfo, setUserInfo] = useState('');
@@ -190,6 +217,14 @@ const ContactForm = () => {
 				<h2>Wypełnij formularz</h2>
 				<small>Odpowiadamy naprawdę szybko!</small>
 
+				<ReCaptcha
+					ref={(el) => {captcha = el;}}
+					size="invisible"
+					render="explicit"
+					sitekey="6LfcocsZAAAAAK0AVEGaO8Ibs8tZvp3y_u0pwvOS"
+					onloadCallback={onLoadRecaptcha}
+					verifyCallback={verifyCallback}
+				/>
 				<Form 
 					onSubmit={() => {
 						emailjs.sendForm('service_xuu4z8k', 'template_54zt0z9', '#contact-form', 'user_C1OXTe9qBeqb5ZOmCejLc')
@@ -255,14 +290,6 @@ const ContactForm = () => {
 									</div>
 								)}
 							</Field>
-							<ReCaptcha
-								ref={(el) => {captcha = el;}}
-								size="invisible"
-								render="explicit"
-								sitekey="6LfcocsZAAAAAK0AVEGaO8Ibs8tZvp3y_u0pwvOS"
-								onloadCallback={onLoadRecaptcha}
-								verifyCallback={verifyCallback}
-						/>
 							<div className="buttons">
 								<button type="submit" id="submit-btn">Submit</button>
 							</div>
@@ -270,6 +297,7 @@ const ContactForm = () => {
 						</form>
 					)}
 				/>
+				
 			</MessageFormSection>
 		)
 }  
