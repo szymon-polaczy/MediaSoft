@@ -15,6 +15,7 @@
   "dependencies": {
     "@lemoncode/fonk": "^1.3.0",
     "@lemoncode/fonk-final-form": "^2.3.4",
+    "@pittica/gatsby-plugin-recaptcha": "^1.0.0",
     "babel-plugin-styled-components": "^1.10.7",
     "emailjs-com": "^2.6.3",
     "final-form": "^4.20.1",
@@ -33,6 +34,7 @@
     "react-final-form": "^6.5.1",
     "react-helmet": "^6.1.0",
     "react-html-parser": "^2.0.2",
+    "react-recaptcha-google": "^1.1.1",
     "react-scroll": "^1.8.0",
     "styled-components": "^5.1.1",
     "typescript": "^3.7.2"

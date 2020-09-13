@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Form, Field } from 'react-final-form'
 import { formValidation } from './FormValidation'
 import emailjs from 'emailjs-com'
+import { ReCaptcha } from 'react-recaptcha-google'
 
 const MessageFormSection = styled.section`
 	grid-area: form;
@@ -169,6 +170,18 @@ const disableSubmit = () => {
 	}, 3000)
 }
 
+let captcha = null;
+const onLoadRecaptcha = () => {
+	if (captcha) {
+		captcha.reset();
+		captcha.execute();
+	}
+}
+
+const verifyCallback = (recaptchaToken) => {
+	console.log(recaptchaToken, "<= your recaptcha token");
+}
+
 const ContactForm = () => {
 	const [userInfo, setUserInfo] = useState('');
 
@@ -242,6 +255,14 @@ const ContactForm = () => {
 									</div>
 								)}
 							</Field>
+							<ReCaptcha
+								ref={(el) => {captcha = el;}}
+								size="invisible"
+								render="explicit"
+								sitekey="6LfcocsZAAAAAK0AVEGaO8Ibs8tZvp3y_u0pwvOS"
+								onloadCallback={onLoadRecaptcha}
+								verifyCallback={verifyCallback}
+						/>
 							<div className="buttons">
 								<button type="submit" id="submit-btn">Submit</button>
 							</div>
