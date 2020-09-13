@@ -175,10 +175,10 @@ function recaptchaLoaded() {
 	console.log("Recaptcha is loaded");
 }
 
-const [isVerified, setIsVerified] = useState(false);
+let isVerified = false;
 function verifyCallback(response) {
 	if (response)
-		setIsVerified(true);
+		isVerified = true;
 }
 
 const ContactForm = () => {
