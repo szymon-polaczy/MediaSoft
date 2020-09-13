@@ -183,7 +183,7 @@ const verifyCallback = (recaptchaToken) => {
 	token = recaptchaToken;
 	console.log(recaptchaToken, "<= your recaptcha token");
 
-	postData('https://www.google.com/recaptcha/api/siteverify', { secret: env.CAPTCHA_SECRET, response: token})
+	postData('https://www.google.com/recaptcha/api/siteverify', { secret: $CAPTCHA_SECRET, response: token})
   .then(data => {
     console.log(data); // JSON data parsed by `data.json()` call
   });
