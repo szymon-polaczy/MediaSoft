@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import AppLayout from '../components/AppLayout/AppLayout'
 import WelcomeSection from '../components/WelcomeSection/WelcomeSection'
 import OfferSection from '../components/OfferSection/OfferSection'
@@ -10,7 +10,6 @@ import GoogleSection from '../components/GoogleSection/GoogleSection'
 import ContactSection from '../components/ContactSection/ContactSection'
 import { Helmet } from 'react-helmet'
 import { graphql } from "gatsby"
-import { loadReCaptcha } from 'react-recaptcha-google'
 
 export const query = graphql`
   query {
@@ -27,8 +26,6 @@ export const query = graphql`
 `
 
 export default ({data}) => {
-	useEffect(() => loadReCaptcha(), []);
-
 	return (
 			<>
 				<Helmet htmlAttributes={{"lang": "en"}}>
@@ -37,6 +34,8 @@ export default ({data}) => {
 					<meta name="description" content={data.site.siteMetadata.description} />
 					<meta name="keywords" content={data.site.siteMetadata.keywords} />
 					<meta name="author" content={data.site.siteMetadata.author} />
+					<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" 
+						async defer></script>
 				</Helmet>
 				<AppLayout>
 					<WelcomeSection/>
