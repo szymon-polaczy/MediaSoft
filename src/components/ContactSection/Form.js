@@ -198,7 +198,7 @@ async function postData(url = '', data = {}) {
     //credentials: 'same-origin', // include, *same-origin, omit
     headers: {
       'Content-Type': 'application/json',
-			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Origin': 'https://media-soft.netlify.app/',
 			'Access-Control-Allow-Methods': 'POST'
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
