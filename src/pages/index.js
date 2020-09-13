@@ -34,8 +34,7 @@ export default ({data}) => {
 					<meta name="description" content={data.site.siteMetadata.description} />
 					<meta name="keywords" content={data.site.siteMetadata.keywords} />
 					<meta name="author" content={data.site.siteMetadata.author} />
-					<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" 
-						async defer></script>
+					<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script> 
 				</Helmet>
 				<AppLayout>
 					<WelcomeSection/>

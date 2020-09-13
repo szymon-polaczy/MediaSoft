@@ -176,9 +176,15 @@ function recaptchaLoaded() {
 }
 
 let isVerified = false;
-function verifyCallback(response) {
+function verifyCaptcha(response) {
+	console.log(response);
 	if (response)
 		isVerified = true;
+}
+
+
+function expiredCaptcha() {
+	isVerified = false;
 }
 
 const ContactForm = () => {
@@ -258,10 +264,11 @@ const ContactForm = () => {
 								)}
 							</Field>
 							<Recaptcha
-								sitekey="6LfcocsZAAAAAK0AVEGaO8Ibs8tZvp3y_u0pwvOS"
+								sitekey="6LfIqMsZAAAAAPl6BP3bLn5BAtC8RgqwRGAItZxp"
 								render="explicit"
 								onloadCallback={recaptchaLoaded}
-								verifyCallback={verifyCallback}
+								verifyCallback={verifyCaptcha}
+								expiredCallback={expiredCaptcha}
 								/>
 							<div className="buttons">
 								<button type="submit" id="submit-btn">Submit</button>
