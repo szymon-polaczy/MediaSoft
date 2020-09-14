@@ -2,7 +2,7 @@ import { createFinalFormValidation } from '@lemoncode/fonk-final-form'
 import { Validators } from '@lemoncode/fonk';
 
 const checkboxValidator = ({ values }) => {
-	const succeeded = values.policy;
+	const succeeded = values.policy || false;
 
 	return {
 		succeeded,
@@ -44,7 +44,7 @@ const validationSchema = {
 			}
 		],   
 			policy: [checkboxValidator],
-		},
+	},
 };
 
 export const formValidation = createFinalFormValidation(validationSchema);

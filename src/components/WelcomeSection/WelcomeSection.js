@@ -21,11 +21,10 @@ const WelcomeSectionStyled = styled.header`
 
 	.message-section {
 		padding-left: 3vw;
-		box-sizing: border-box;
 
 		h1 {
+			margin-top: 2.5rem;
 			font-size: 4.5rem;
-			padding-right: 5vw;
 
 			span {
 				color: var(--theme-color);
@@ -41,9 +40,8 @@ const WelcomeSectionStyled = styled.header`
 			line-height: 165%;
 			text-align: justify;
 			padding-right: 5vw;
-			margin-top: 2rem;
-			font-size: 1.1rem;
-			letter-spacing: 1px;
+			font-size: 1.2rem;
+			margin: 2rem 0;
 		}
 	}
 
@@ -52,10 +50,7 @@ const WelcomeSectionStyled = styled.header`
 		outline: none;
 		padding: 1rem 2rem;
 		font-size: 1.4rem;
-		background: #fff;
 		margin-left: .65rem;
-		text-align: center;
-		margin-top: 2rem;
 		cursor: pointer;
 		box-shadow: -.65rem .65rem 0 var(--theme-color);
 		transition: .15s all ease-out;
@@ -81,21 +76,16 @@ const WelcomeSectionStyled = styled.header`
 		display: flex;
 		flex-flow: column;
 		padding: 0 2rem;
-		min-height: calc(100vh - 5rem);
 		justify-content: center;
 
 		.message-section {
-			padding: 0;
+			padding: unset;
 
 			h1 {
-				margin-top: 2rem;
-				padding: unset;
 				text-align: center;
-				padding:0 2rem;
 			}
 
 			h2 {
-				margin-top: .65rem;
 				text-align: center;
 			}
 
@@ -103,7 +93,6 @@ const WelcomeSectionStyled = styled.header`
 				text-align: center;
 				padding: 0 2rem;
 				font-size: unset;
-				line-height: 150%;
 			}
 		}
 

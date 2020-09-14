@@ -16,5 +16,3 @@ I'm doing this project on my free time.
 
 I'm building this and at the same time learning about these technologies because my employer never wanted me to use them, so this is my 
 chance to show him and the company that we can work better when using what's already out there instead of building everything from ground up.
-
-## The reCaptcha isn't working correctly

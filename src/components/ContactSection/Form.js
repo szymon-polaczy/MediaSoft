@@ -120,31 +120,24 @@ const MessageFormSection = styled.section`
 			border: none;
 			outline: none;
 			padding: .45rem 2.5rem;
-			font-size: 1.05rem;
-			letter-spacing: 0.02rem;
+			font-size: 1rem;
 			border-radius: .25rem;
 			background: linear-gradient(to right, #5B86E5, #36D1DC);
 			color: #fff;
 			margin: .8rem 0 .4rem 0;
-			transition: .15s all ease-out;
+			transition: .2s all ease-out;
 
 			&:hover {
 				transform: scale(1.1);
-				transition: .2s all ease-out;
 			}
 
 			&:focus, &:focus-within, &:active {
 				transform: scale(.95) skew(3deg);
-				transition: .2s all ease-out;
 			}
 		}
 
 		@media (max-width: 550px) {
-			grid-template-columns: 1fr;
-
-			.message-box, .checkbox-box, .user-info, .title-box {
-				grid-column: unset;
-			}
+			all: unset;
 
 			.checkbox-box input {
 				width: 2rem;
@@ -163,6 +156,11 @@ const MessageFormSection = styled.section`
 	#g-recaptcha {
 		grid-column: 1 / span 2;
 		margin-top: 1rem;
+		max-width: 100%;
+
+		div, iframe {
+			width: 100% !important;
+		}
 	
 		@media (max-width: 550px) {
 			grid-column: unset;

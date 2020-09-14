@@ -5,8 +5,7 @@ export const BigInfo = styled.h2`
 	font-size: 2.5rem;
 	letter-spacing: .05rem;
 	line-height: 120%;
-	margin: 1rem 0 1.5rem 0;
-	padding: 0 .65rem;
+	margin: 1rem .65rem 1.5rem .65rem;
 
 	&::after {
 		content: '';
