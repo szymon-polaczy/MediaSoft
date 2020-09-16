@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Form, Field } from 'react-final-form'
 import { formValidation } from './FormValidation'
-import emailjs from 'emailjs-com'
 import Recaptcha from 'react-recaptcha'
 
 const MessageFormSection = styled.section`
@@ -181,16 +180,14 @@ function recaptchaLoaded() {
 	console.log("Recaptcha is loaded");
 }
 
-let isVerified = false;
+let token = null;
 function verifyCaptcha(response) {
-	console.log(response);
-	if (response)
-		isVerified = true;
+	token = response;
 }
 
 
 function expiredCaptcha() {
-	isVerified = false;
+	token = null;
 }
 
 const ContactForm = () => {
@@ -201,18 +198,16 @@ const ContactForm = () => {
 				<h2>Wypełnij formularz</h2>
 				<small>Odpowiadamy naprawdę szybko!</small>
 				<Form 
-					onSubmit={() => {
-						if (isVerified) {
-							emailjs.sendForm('service_xuu4z8k', 'template_54zt0z9', '#contact-form', 'user_C1OXTe9qBeqb5ZOmCejLc')
-								.then((result) => {
-									setUserInfo('Twoja wiadomośc została wysłana poprawnie');
-								}, (error) => {
-									setUserInfo('Podczas wysyłania twojej wiadomości pojawił się błąd - Wiadomość nie została wysłana.');
-								});
-							disableSubmit();
-						} else {
-							alert('Please verify');
-						}
+					onSubmit={(values) => {
+						const xhttp = new XMLHttpRequest();
+						xhttp.onreadystatechange = function() {
+							if (this.readyState === 4 && this.status === 200) {
+								setUserInfo(this.responseText);
+							}
+						};
+						xhttp.open("GET", `http://localhost/Mailer-for-Mediasoft/mail.php?title=${values.title}&fullName=${values.fullName}&policy=${values.policy}&message=${values.message}&email=${values.email}&token=${token}`);
+						xhttp.send();
+						disableSubmit();
 					}}
 					initialValues={{
 						fullName: '',
