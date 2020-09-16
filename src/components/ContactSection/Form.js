@@ -156,7 +156,7 @@ const MessageFormSection = styled.section`
 	#g-recaptcha {
 		grid-column: 1 / span 2;
 		margin-top: 1rem;
-		max-width: 100%;
+		max-width: 305px;
 
 		div, iframe {
 			width: 100% !important;
@@ -176,7 +176,6 @@ const disableSubmit = () => {
 		document.querySelector('#submit-btn').removeAttribute('class')
 	}, 3000)
 }
-
 
 function recaptchaLoaded() {
 	console.log("Recaptcha is loaded");
