@@ -205,7 +205,7 @@ const ContactForm = () => {
 								setUserInfo(this.responseText);
 							}
 						};
-						xhttp.open("GET", `http://localhost/Mailer-for-Mediasoft/mail.php?title=${values.title}&fullName=${values.fullName}&policy=${values.policy}&message=${values.message}&email=${values.email}&token=${token}`);
+						xhttp.open("GET", `https://mailer-for-mediasoft.000webhostapp.com/?title=${values.title}&fullName=${values.fullName}&policy=${values.policy}&message=${values.message}&email=${values.email}&token=${token}`);
 						xhttp.send();
 						disableSubmit();
 					}}
