@@ -176,6 +176,7 @@ const disableSubmit = () => {
 	}, 3000)
 }
 
+//Without this function Recaptcha won't load properly
 function recaptchaLoaded() {
 	console.log("Recaptcha is loaded");
 }
@@ -184,7 +185,6 @@ let token = null;
 function verifyCaptcha(response) {
 	token = response;
 }
-
 
 function expiredCaptcha() {
 	token = null;
@@ -198,14 +198,17 @@ const ContactForm = () => {
 				<h2>Wypełnij formularz</h2>
 				<small>Odpowiadamy naprawdę szybko!</small>
 				<Form 
-					onSubmit={(values) => {
+					onSubmit={({title, fullName, message, policy, email}) => {
 						const xhttp = new XMLHttpRequest();
 						xhttp.onreadystatechange = function() {
-							if (this.readyState === 4 && this.status === 200) {
+							if (this.readyState === 4 && this.status === 200)
 								setUserInfo(this.responseText);
-							}
 						};
-						xhttp.open("GET", `https://mailer-for-mediasoft.000webhostapp.com/?title=${values.title}&fullName=${values.fullName}&policy=${values.policy}&message=${values.message}&email=${values.email}&token=${token}`);
+						let url = `https://mailer-for-mediasoft.000webhostapp.com`;
+						xhttp.open(
+							"GET",
+							`${url}/?title=${title}&fullName=${fullName}&policy=${policy}&message=${message}&email=${email}&token=${token}`
+						);
 						xhttp.send();
 						disableSubmit();
 					}}
