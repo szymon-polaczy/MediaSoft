@@ -4,7 +4,7 @@ Website made using react with gatsby for the company that I work for.
 This project is my own idea as the current company website is old and needs to be rebuild.
 I'm doing this project on my free time.
 
-### What I'm using [Biggest Things - Not everything]
+### What I'm using
 * React
 * GatsbyJS
 * Styled Components
